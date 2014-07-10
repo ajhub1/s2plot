@@ -1,4 +1,8 @@
-namespace s2plot {
-	public:
-		printfred();
+namespace s2plot 
+{
+	class s2plotobject 
+	{
+		public:
+			int printfred();
+	};
 };
