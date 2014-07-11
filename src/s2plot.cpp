@@ -9,3 +9,8 @@ int s2plotobject::printfred()
 	printf("Freddie was here!");
 	return 0;
 }
+
+s2plotobject::s2plotobject()
+{
+	
+}
