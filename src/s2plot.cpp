@@ -6,7 +6,7 @@ using namespace s2plot;
 
 int s2plotobject::printfred()
 {
-	printf("Freddie was here!");
+	printf("\nFreddie was here!\n");
 	return 0;
 }
 
