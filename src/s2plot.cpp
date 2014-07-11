@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include "s2plot.h"
+#include <omega.h>
+#include "s2plot/s2plot.h"
 
 using namespace s2plot;
 
