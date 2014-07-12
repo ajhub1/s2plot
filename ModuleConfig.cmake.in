@@ -1,0 +1,9 @@
+if(OMEGA_OS_WIN)
+    set(@MODULE_LIB_NAME@_LIB 
+        optimized ${OMEGA_LIB_DIR_RELEASE}/@MODULE_LIB_NAME@.lib
+        debug ${OMEGA_LIB_DIR_DEBUG}/@MODULE_LIB_NAME@.lib)
+elseif(OMEGA_OS_LINUX)
+    set(@MODULE_LIB_NAME@_LIB ${OMEGA_BINARY_DIR}/bin/@MODULE_LIB_NAME@.so)
+elseif(OMEGA_OS_OSX)
+    set(@MODULE_LIB_NAME@_LIB ${OMEGA_BINARY_DIR}/bin/lib@MODULE_LIB_NAME@.dylib)
+endif()
