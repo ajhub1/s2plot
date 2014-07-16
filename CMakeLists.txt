@@ -56,6 +56,6 @@ file(APPEND ${CMAKE_BINARY_DIR}/OmegalibConfig.cmake ${COMMENT})
 file(APPEND ${CMAKE_BINARY_DIR}/OmegalibConfig.cmake ${OUTPUT})
 
 # replace template with s2plot and append
-file(READ ${CMAKE_SOURCE_DIR}/CMakeModules/ModuleConfig.cmake.in SECTION_CONTENT_TEMPLATE)
+file(READ ModuleConfig.cmake.in SECTION_CONTENT_TEMPLATE)
 string(REPLACE "@MODULE_LIB_NAME@" "s2plot" SECTION_CONTENT ${SECTION_CONTENT_TEMPLATE})
 file(APPEND ${CMAKE_BINARY_DIR}/OmegalibConfig.cmake ${SECTION_CONTENT})
