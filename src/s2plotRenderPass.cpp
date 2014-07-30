@@ -15,7 +15,7 @@ void s2plotRenderPass::render(Renderer* client, const DrawContext& context)
 	printf("\nFreddie was here!\n");
 }
 
-~s2plotRenderPass()
+s2plotRenderPass::~s2plotRenderPass()
 {
 	
 }
