@@ -10,7 +10,7 @@ namespace s2plot
 	{
 		public:
 			s2plotRenderPass(Renderer* client);
-			~s2plotRenderPass();
+			virtual ~s2plotRenderPass();
 			virtual void render(Renderer* client, const DrawContext& context);			
 	};
 }

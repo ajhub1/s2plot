@@ -9,7 +9,7 @@ namespace s2plot
 	{
 		public:
 			s2plotEngine();
-			~s2plotEngine();
+			virtual ~s2plotEngine();
 			virtual void initializeRenderer(Renderer* r);
 			void dispose();
 	};

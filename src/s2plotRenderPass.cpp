@@ -8,7 +8,7 @@ s2plotRenderPass::s2plotRenderPass(Renderer* client): RenderPass(client, "s2plot
 	
 }
 
-virtual void s2plotRenderPass::render(Renderer* client, const DrawContext& context)
+void s2plotRenderPass::render(Renderer* client, const DrawContext& context)
 {
 	// render code here
 	
