@@ -14,7 +14,7 @@ s2plotEngine::~s2plotEngine()
 	
 }
 
-virtual void initializeRenderer(Renderer* r) 
+virtual void s2plotEngine::initializeRenderer(Renderer* r) 
 { 
 	r->addRenderPass(new s2plotRenderPass(r), true);
 }
