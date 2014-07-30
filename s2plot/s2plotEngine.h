@@ -8,7 +8,7 @@ namespace s2plot
 	class s2plotEngine: public EngineModule
 	{
 		public:
-			s2plotEngine(): EngineModule("s2plot");
+			s2plotEngine();
 			~s2plotEngine();
 			virtual void initializeRenderer(Renderer* r);
 			void dispose();
