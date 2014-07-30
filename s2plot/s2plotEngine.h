@@ -11,6 +11,6 @@ namespace s2plot
 			s2plotEngine(): EngineModule("s2plotModule");
 			~s2plotEngine();
 			virtual void initializeRenderer(Renderer* r);
-			void s2plotModule::dispose();
+			void s2plotEngine::dispose();
 	};
 }
