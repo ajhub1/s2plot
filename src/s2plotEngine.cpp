@@ -4,7 +4,7 @@ using namespace s2plot;
 using namespace omega;
 
 
-s2plotEngine::s2plotEngine(): EngineModule("s2plotModule")
+s2plotEngine::s2plotEngine()
 {
 	
 }

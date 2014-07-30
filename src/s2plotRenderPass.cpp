@@ -3,7 +3,7 @@
 using namespace s2plot;
 using namespace omega;
 
-s2plotRenderPass::s2plotRenderPass(Renderer* client): RenderPass(client, "s2plotRenderPAss")
+s2plotRenderPass::s2plotRenderPass(Renderer* client): RenderPass(client, "s2plotRenderPass")
 {
 	
 }

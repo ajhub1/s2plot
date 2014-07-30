@@ -5,7 +5,7 @@ namespace s2plot
 {
 	using namespace omega;
 	
-	class s2plotEngine: EngineModule("s2plotModule")
+	class s2plotEngine: public EngineModule
 	{
 		public:
 			s2plotEngine();
