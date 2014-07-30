@@ -9,9 +9,10 @@ namespace s2plot
 	class s2plotModule
 	{
 		public:
-			int printfred();
 			s2plotModule();
 			~s2plotModule();
+			void s2plotShutdown();
+			void initializeController();
 			int run(int argc, char** argv);
 	};
 }
