@@ -21,6 +21,6 @@ s2plotModule::~s2plotModule()
 
 int s2plotModule::run(int argc, char** argv)
 {
-	Application<s2plotEngine> app("s2plotapp");
+	Application<s2plotEngine> app("s2plot");
     return omain(app, argc, argv);
 }

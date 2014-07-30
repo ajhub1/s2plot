@@ -15,7 +15,7 @@ virtual void render(Renderer* client, const DrawContext& context)
 	printf("\nFreddie was here!\n");
 }
 
-virtual ~s2plotRenderPass()
+~s2plotRenderPass()
 {
 	
 }
