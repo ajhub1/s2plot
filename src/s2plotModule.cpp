@@ -9,7 +9,7 @@ int s2plotModule::printfred()
 	return 0;
 }
 
-s2plotModule::s2plotModule(): EngineModule("s2plotModule")
+s2plotModule::s2plotModule()
 {
 	
 }
@@ -19,12 +19,8 @@ s2plotModule::~s2plotModule()
 	
 }
 
-virtual void initializeRenderer(Renderer* r) 
-{ 
-	r->addRenderPass(new s2plotRenderPass(r), true);
-}
-
-void s2plotModule::dispose()
+int s2plotModule::run(int argc, char** argv)
 {
-    getEngine()->removeRenderPass("s2plotRenderPass");
+	Application<s2plotEngine> app("s2plotapp");
+    return omain(app, argc, argv);
 }

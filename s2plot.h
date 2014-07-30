@@ -3,5 +3,6 @@
 
 #include "s2plot/s2plot/s2plotModule.h"
 #include "s2plot/s2plot/s2plotRenderPass.h"
+#include "s2plot/s2plot/s2plotEngine.h"
 
 #endif

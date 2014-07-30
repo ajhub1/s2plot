@@ -3,7 +3,8 @@
 
         # Set module name and source files here
         add_library(${MODULE_NAME} MODULE 
-                s2plot.cpp)
+                s2plotModule.cpp
+		s2plotRenderPass.cpp)
 
         # Set the module library dependencies here
         target_link_libraries(${MODULE_NAME}

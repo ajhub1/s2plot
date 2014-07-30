@@ -6,15 +6,12 @@ namespace s2plot
 {
 	using namespace omega;
 	
-	class s2plotModule: Public EngineModule
+	class s2plotModule
 	{
 		public:
 			int printfred();
 			s2plotModule();
-			virtual ~s2plotModule();
-			virtual void dispose();
-			virtual void initialize();
-			virtual void initializeRenderer(Renderer* r);
-			
+			~s2plotModule();
+			int run(int argc, char** argv);
 	};
 }
