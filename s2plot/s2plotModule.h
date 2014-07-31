@@ -14,5 +14,9 @@ namespace s2plot
 			void s2plotShutdown();
 			void initializeController();
 			int run(int argc, char** argv);
+			typedef void (*callback_function)(void);
+			
+		private:
+				
 	};
 }

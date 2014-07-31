@@ -12,5 +12,11 @@ namespace s2plot
 			virtual ~s2plotEngine();
 			virtual void initializeRenderer(Renderer* r);
 			void dispose();
+			void sets2plotDrawPointer();
+			void s2plotEngine::render();
+			
+		private:
+			s2plotRenderPass* renderpass;
+			s2plotModule::callback_function s2plotDraw;
 	};
 }
