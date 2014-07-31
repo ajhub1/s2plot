@@ -17,8 +17,8 @@ s2plotEngine::~s2plotEngine()
 void s2plotEngine::initializeRenderer(Renderer* r) 
 { 
 	renderpass = new s2plotRenderPass(r);
-	s2plotDraw = render;
-	renderpass->sets2plotDrawPointer(s2plotModule::callback_function s2plotDraw)
+	//s2plotDraw = render;
+	//renderpass->sets2plotDrawPointer(s2plotModule::callback_function s2plotDraw)
 	r->addRenderPass(renderpass);
 }
 
