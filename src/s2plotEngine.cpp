@@ -17,8 +17,8 @@ s2plotEngine::~s2plotEngine()
 void s2plotEngine::initializeRenderer(Renderer* r) 
 { 
 	renderpass = new s2plotRenderPass(r);
-	//s2plotDraw = &s2plotEngine::render;
-	//renderpass->sets2plotDrawPointer(s2plotModule::callback_function s2plotDraw)
+	s2plotDraw = &s2plotEngine::render;
+	renderpass->sets2plotDrawPointer(s2plotModule::callback_function s2plotDraw)
 	r->addRenderPass(renderpass);
 }
 
@@ -27,7 +27,7 @@ void s2plotEngine::sets2plotDrawPointer(s2plotModule::callback_function drawFunc
 	s2plotDraw = drawFunction;
 }
 
-void s2plotEngine::render()
+void render()
 {
 	printf("/nfreddie was here!/n");
 }
