@@ -13,7 +13,7 @@ namespace s2plot
 			virtual void initializeRenderer(Renderer* r);
 			void dispose();
 			void sets2plotDrawPointer();
-			void s2plotEngine::render();
+			void render();
 			
 		private:
 			s2plotRenderPass* renderpass;
