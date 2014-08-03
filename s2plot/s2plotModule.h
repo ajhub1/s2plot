@@ -14,6 +14,9 @@ namespace s2plot
 			void initialize();
 			void initializeRenderer(Renderer* r);
 			void update(const UpdateContext& context);	
-			void s2plotDraw();		
+			void s2plotDraw();	
+			
+		private:
+				List< Ref<s2plotRenderPass> > myRenderPasses;
 	};
 }
