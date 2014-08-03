@@ -17,6 +17,6 @@ namespace s2plot
 			void s2plotDraw();	
 			
 		private:
-				List< Ref<s2plotRenderPass> > myRenderPasses;
+				//List< Ref<s2plotRenderPass> > myRenderPasses;
 	};
 }

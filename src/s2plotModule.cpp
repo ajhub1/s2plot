@@ -49,5 +49,5 @@ void s2plotModule::initializeRenderer(Renderer* r)
     s2plotRenderPass* s2plotrp = new s2plotRenderPass(r, "s2plotRenderPass");
     s2plotrp->setUserData(this);
     r->addRenderPass(s2plotrp);
-    myRenderPasses.push_back(s2plotrp);
+    //myRenderPasses.push_back(s2plotrp);
 }
