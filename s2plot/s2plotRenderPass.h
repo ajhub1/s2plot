@@ -9,7 +9,7 @@ namespace s2plot
 	class s2plotRenderPass: public RenderPass
 	{
 		public:
-			s2plotRenderPass(Renderer* client);
+			s2plotRenderPass(Renderer* client, const String& name);
 			virtual ~s2plotRenderPass();
 			virtual void render(Renderer* client, const DrawContext& context);	
 			void initialize();		
