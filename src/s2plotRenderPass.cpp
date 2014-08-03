@@ -3,24 +3,26 @@
 using namespace s2plot;
 using namespace omega;
 
-s2plotRenderPass::s2plotRenderPass(Renderer* client): RenderPass(client, "s2plotRenderPass")
+s2plotRenderPass::s2plotRenderPass(Renderer* client, const String& name): RenderPass(client, name)
 {
 	
+}
+
+void s2plotRenderPass::initialize()
+{
+	RenderPass::initialize();
+
+    myModule = (s2plotModule*) getUserData();
 }
 
 void s2plotRenderPass::render(Renderer* client, const DrawContext& context)
 {
 	// render code here
-	s2plotDraw ();
+	myModule-s2plotDraw();
 
 }
 
 s2plotRenderPass::~s2plotRenderPass()
 {
 	
-}
-
-void s2plotRenderPass::sets2plotDrawPointer(s2plotModule::callback_function drawFunction)
-{
-	s2plotDraw = drawFunction;
 }

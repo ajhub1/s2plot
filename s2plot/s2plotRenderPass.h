@@ -12,9 +12,9 @@ namespace s2plot
 			s2plotRenderPass(Renderer* client);
 			virtual ~s2plotRenderPass();
 			virtual void render(Renderer* client, const DrawContext& context);	
-			void sets2plotDrawPointer(s2plotModule::callback_function drawFunction);		
+			void initialize();		
 			
 		private:
-			s2plotModule::callback_function s2plotDraw;
+			s2plotModule* myModule;
 	};
 }

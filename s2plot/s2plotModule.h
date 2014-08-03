@@ -10,14 +10,10 @@ namespace s2plot
 	{
 		public:
 			s2plotModule();
-			~s2plotModule();
-			void s2plotShutdown();
-			void initializeController();
-			int run(int argc, char** argv);
-			void draw();
-			typedef void (*callback_function)(void);
-			
-		private:
-				
+			virtual ~s2plotModule();
+			void initialize();
+			s2plotModule* createAndInitialize();
+			void update(const UpdateContext& context);	
+			void s2plotDraw();		
 	};
 }
