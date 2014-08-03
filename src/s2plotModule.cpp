@@ -4,19 +4,6 @@ using namespace s2plot;
 using namespace omega;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-// Python wrapper code.
-#ifdef OMEGA_USE_PYTHON
-#include "omega/PythonInterpreterWrapper.h"
-BOOST_PYTHON_MODULE(s2plotModule)
-{
-	// methods to make accessable through the python interface
-	PYAPI_REF_BASE_CLASS(s2plotModule)
-		PYAPI_STATIC_REF_GETTER(s2plotModule, createAndInitialize)
-		;
-}
-#endif
-
-///////////////////////////////////////////////////////////////////////////////////////////////////
 s2plotModule* s2plotModule::createAndInitialize()
 {
 	s2plotModule* instance = new s2plotModule();
