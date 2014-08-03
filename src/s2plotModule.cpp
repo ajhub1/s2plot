@@ -4,14 +4,6 @@ using namespace s2plot;
 using namespace omega;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-s2plotModule* s2plotModule::createAndInitialize()
-{
-	s2plotModule* instance = new s2plotModule();
-	ModuleServices::addModule(instance);
-	instance->doInitialize(Engine::instance());
-	return instance;
-}
-
 void s2plotModule::s2plotDraw()
 {
 	printf("/nFreddie was here!/n");
@@ -25,7 +17,7 @@ s2plotModule::s2plotModule(): EngineModule("s2plotModule")
 
 s2plotModule::~s2plotModule()
 {
-	getEngine()->removeRenderPass("s2plotRenderPass");
+
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////

@@ -12,7 +12,6 @@ namespace s2plot
 			s2plotModule();
 			virtual ~s2plotModule();
 			void initialize();
-			s2plotModule* createAndInitialize();
 			void update(const UpdateContext& context);	
 			void s2plotDraw();		
 	};
