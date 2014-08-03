@@ -4,7 +4,8 @@
         # Set module name and source files here
         add_library(${MODULE_NAME} MODULE 
                 s2plotModule.cpp
-		s2plotEngine.cpp
+		s2plotPoint.cpp
+		s2plotRenderableCube.cpp
 		s2plotRenderPass.cpp)
 
         # Set the module library dependencies here
