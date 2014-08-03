@@ -18,7 +18,7 @@ void s2plotRenderPass::initialize()
 void s2plotRenderPass::render(Renderer* client, const DrawContext& context)
 {
 	// render code here
-	myModule-s2plotDraw();
+	myModule->s2plotDraw();
 
 }
 
