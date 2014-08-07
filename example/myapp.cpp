@@ -18,7 +18,7 @@ class s2plotAppRenderPass: public RenderPass
         }
     };
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+// this is the standard way of implementing an s2plot application
 class s2plotApp: public EngineModule
 {
 	public:
@@ -36,7 +36,7 @@ class s2plotApp: public EngineModule
 	private:
 		s2plotModule* mys2plot;
 };
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int main(int argc, char** argv)
 {
 	Application<s2plotApp> app("s2plotApp");
