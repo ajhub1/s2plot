@@ -33,6 +33,7 @@
 #include <stdio.h>
 #include <omega.h>
 #include <omegaGl.h>
+#include <vector>
 
 namespace s2plot 
 {
@@ -47,8 +48,11 @@ namespace s2plot
 			void initializeRenderer(Renderer* r);
 			void update(const UpdateContext& context);	
 			void s2plotDraw();	
+			void s2plotSort();
 			
 		private:
-				//List< Ref<s2plotRenderPass> > myRenderPasses;
+			vector<s2plot::RenderableObject> sceneObjects;
+			vector<s2plot::coord> vertexData;
+			vector <s2plot::RenderableFacet> facets;
 	};
 }
