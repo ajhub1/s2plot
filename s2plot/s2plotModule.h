@@ -51,9 +51,8 @@ namespace s2plot
 			void s2plotSort();
 			
 		private:
-			vector<int> test;
-			//vector<s2plot::RenderableObject> sceneObjects;
-			//vector<s2plot::coord> vertexData;
+			vector<s2plot::RenderableObject>* sceneObjects;
+			vector<float>* vertexData;
 			//vector <s2plot::RenderableFacet> facets;
 	};
 }

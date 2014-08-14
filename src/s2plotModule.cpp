@@ -49,7 +49,7 @@ void s2plotModule::s2plotDraw()
  * */
 s2plotModule::s2plotModule(): EngineModule("s2plotModule")
 {
-	
+	this.initialize();
 }
 
 s2plotModule::~s2plotModule()
@@ -61,7 +61,7 @@ s2plotModule::~s2plotModule()
 void s2plotModule::initialize()
 {
 	// setup the data structures for handling objects internally
-
+	sceneObjects = new 
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
