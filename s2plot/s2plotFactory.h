@@ -27,37 +27,27 @@
  * D.G.Barnes, C.J.Fluke, P.D.Bourke & O.T.Parry, 2006, Publications
  * of the Astronomical Society of Australia, 23(2), 82-93.
  *
- * s2plotModule
+ * s2plotFactory
  * 
  ******************************************************************************/
 #include <stdio.h>
 #include <omega.h>
 #include <omegaGl.h>
-#include <vector>
 #include "s2plot/s2plot.h"
 
 namespace s2plot 
 {
 	using namespace omega;
 	
-	class s2plotModule: public EngineModule
+	class s2plotFactory
 	{
 		public:
-			s2plotModule();
-			virtual ~s2plotModule();
-			void initialize();
-			void initializeRenderer(Renderer* r);
-			void update(const UpdateContext& context);	
-			void Draw();	
-			bool deleteObject(int objectId);
-			int addObject(s2plotRenderableObject* object);
-			s2plotFactory* createFactory();
+			s2plotFactory(s2plotModule* mod);
+			virtual ~s2plotFactory();
+			int ns2sphere();
 			
 		private:
-			void sortFacets();
-			vector<s2plotRenderableObject*> sceneObjects;
-			vector<float> vertexData;
-			static int objectId;
-			//vector<s2plot::RenderableFacet>* facets;
+			s2plotModule* module;
+			
 	};
 }

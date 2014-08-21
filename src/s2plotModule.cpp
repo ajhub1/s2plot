@@ -38,7 +38,7 @@ using namespace omega;
 /* Draw function - the call back from the s2plotModules Render Pass
  * 
  * */
-void s2plotModule::s2plotDraw()
+void s2plotModule::Draw()
 {
 	// call draw on all objects
 	printf("/nFreddie was here!/n");
@@ -49,7 +49,7 @@ void s2plotModule::s2plotDraw()
  * */
 s2plotModule::s2plotModule(): EngineModule("s2plotModule")
 {
-	this.initialize();
+	this->initialize();
 }
 
 s2plotModule::~s2plotModule()
@@ -57,14 +57,14 @@ s2plotModule::~s2plotModule()
 
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 void s2plotModule::initialize()
 {
 	// setup the data structures for handling objects internally
-	sceneObjects = new 
+	
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 void s2plotModule::update(const UpdateContext& context)
 {
 	/* delete any geometry as instructed by the user and handle any other events
@@ -72,13 +72,34 @@ void s2plotModule::update(const UpdateContext& context)
 	 * array back to front based on camera position 
 	 * 
 	 * */
-	
+	sortFacets();
 	
 }
-//////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 void s2plotModule::initializeRenderer(Renderer* r)
 {
     s2plotRenderPass* s2plotrp = new s2plotRenderPass(r, "s2plotRenderPass");
     s2plotrp->setUserData(this);
     r->addRenderPass(s2plotrp);
+}
+
+void s2plotModule::sortFacets()
+{
+	printf("\nSorted\n");
+}
+
+int s2plotModule::addObject(s2plot::s2plotRenderableObject* object)
+{
+	objectId++;
+	return 0;
+}
+
+bool s2plotModule::deleteObject(int objectId)
+{
+	return true;
+}
+
+s2plotFactory* s2plotModule::createFactory()
+{
+	return new s2plotFactory(this);
 }

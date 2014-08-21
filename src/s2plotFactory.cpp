@@ -30,34 +30,27 @@
  * s2plotModule
  * 
  ******************************************************************************/
-#include <stdio.h>
-#include <omega.h>
-#include <omegaGl.h>
-#include <vector>
 #include "s2plot/s2plot.h"
 
-namespace s2plot 
+using namespace s2plot;
+using namespace omega;
+
+s2plotFactory()
 {
-	using namespace omega;
+
+}
+
+s2plotFactory::s2plotFactory(s2plotModule* mod)
+{
+	s2plotModule* module = mod;
+}
+
+s2plotFactory::~s2plotFactory()
+{
+
+}
+
+int s2plotFactory::ns2sphere()
+{
 	
-	class s2plotModule: public EngineModule
-	{
-		public:
-			s2plotModule();
-			virtual ~s2plotModule();
-			void initialize();
-			void initializeRenderer(Renderer* r);
-			void update(const UpdateContext& context);	
-			void Draw();	
-			bool deleteObject(int objectId);
-			int addObject(s2plotRenderableObject* object);
-			s2plotFactory* createFactory();
-			
-		private:
-			void sortFacets();
-			vector<s2plotRenderableObject*> sceneObjects;
-			vector<float> vertexData;
-			static int objectId;
-			//vector<s2plot::RenderableFacet>* facets;
-	};
 }
