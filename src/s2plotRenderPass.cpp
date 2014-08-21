@@ -56,7 +56,7 @@ void s2plotRenderPass::render(Renderer* client, const DrawContext& context)
 	 * to s2plotModules architecture
 	 * */
 	
-	myModule->s2plotDraw();
+	myModule->Draw();
 
 }
 

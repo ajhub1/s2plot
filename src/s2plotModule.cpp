@@ -88,7 +88,7 @@ void s2plotModule::sortFacets()
 	printf("\nSorted\n");
 }
 
-int s2plotModule::addObject(s2plot::s2plotRenderableObject* object)
+int s2plotModule::addObject(s2plotRenderableObject* object)
 {
 	objectId++;
 	return 0;

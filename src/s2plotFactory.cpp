@@ -35,11 +35,6 @@
 using namespace s2plot;
 using namespace omega;
 
-s2plotFactory()
-{
-
-}
-
 s2plotFactory::s2plotFactory(s2plotModule* mod)
 {
 	s2plotModule* module = mod;

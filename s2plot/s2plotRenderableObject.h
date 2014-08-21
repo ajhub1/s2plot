@@ -1,3 +1,7 @@
+
+#ifndef S2PLOTRENDERABLEOBJECT_H
+#define S2PLOTRENDERABLEOBJECT_H
+
 #include <stdio.h>
 #include <iostream>
 #include <omega.h>
@@ -21,3 +25,4 @@ namespace s2plot
 		virtual void draw() {}
   };
 }
+#endif

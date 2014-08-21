@@ -30,6 +30,10 @@
  * s2plotFactory
  * 
  ******************************************************************************/
+
+#ifndef S2PLOTFACTORY_H
+#define S2PLOTFACTORY_H
+
 #include <stdio.h>
 #include <omega.h>
 #include <omegaGl.h>
@@ -51,3 +55,4 @@ namespace s2plot
 			
 	};
 }
+#endif

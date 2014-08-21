@@ -1,5 +1,5 @@
-#ifndef __S2PLOT__
-#define __S2PLOT__
+#ifndef S2PLOT_H
+#define S2PLOT_H
 
 #include "s2plot/s2plot/s2plotModule.h"
 #include "s2plot/s2plot/s2plotRenderPass.h"
@@ -7,6 +7,6 @@
 #include "s2plot/s2plot/s2plotRenderableObject.h"
 #include "s2plot/s2plot/s2plotRenderablePolyObject.h"
 #include "s2plot/s2plot/s2plotRenderableCube.h"
-#inlcude "s2plot/s2plot/s2plotFactory.h"
+#include "s2plot/s2plot/s2plotFactory.h"
 
 #endif

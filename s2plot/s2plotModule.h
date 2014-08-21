@@ -30,6 +30,9 @@
  * s2plotModule
  * 
  ******************************************************************************/
+#ifndef S2PLOTMODULE_H
+#define S2PLOTMODULE_H
+
 #include <stdio.h>
 #include <omega.h>
 #include <omegaGl.h>
@@ -39,6 +42,8 @@
 namespace s2plot 
 {
 	using namespace omega;
+	class s2plotFactory;
+	class s2plotRenderableObject;
 	
 	class s2plotModule: public EngineModule
 	{
@@ -61,3 +66,4 @@ namespace s2plot
 			//vector<s2plot::RenderableFacet>* facets;
 	};
 }
+#endif
