@@ -48,10 +48,12 @@ namespace s2plot
 		public:
 			s2plotFactory(s2plotModule* mod);
 			virtual ~s2plotFactory();
+			int createProgram();
 			int ns2sphere();
 			
 		private:
 			s2plotModule* module;
+			s2plotProgram* prog;
 			
 	};
 }

@@ -8,5 +8,7 @@
 #include "s2plot/s2plot/s2plotRenderablePolyObject.h"
 #include "s2plot/s2plot/s2plotRenderableCube.h"
 #include "s2plot/s2plot/s2plotFactory.h"
+#include "s2plot/s2plot/s2plotProgram.h"
+#include "s2plot/s2plot/s2plotShader.h"
 
 #endif

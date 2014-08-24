@@ -38,6 +38,7 @@ using namespace omega;
 s2plotFactory::s2plotFactory(s2plotModule* mod)
 {
 	s2plotModule* module = mod;
+	printf("\n factory created\n");
 }
 
 s2plotFactory::~s2plotFactory()
@@ -45,7 +46,19 @@ s2plotFactory::~s2plotFactory()
 
 }
 
+int s2plotFactory::createProgram()
+{
+	printf("\nprog\n");
+}
+
+
+
 int s2plotFactory::ns2sphere()
 {
+	
+	s2plotProgram s2prog;
+	s2prog.s2plotProgramInit("vertexShader.vert","fragmentShader.frag"); 
+	
+	
 	printf("\ncreated a sphere\n");
 }
