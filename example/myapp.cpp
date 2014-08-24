@@ -5,19 +5,6 @@ using namespace omega;
 using namespace s2plot;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// The following is an additional custom render pass if the user requires to add some openGL outside of s2plot
-class s2plotAppRenderPass: public RenderPass
-    {
-    public:
-        s2plotAppRenderPass(Renderer* client): RenderPass(client, "s2plotAppRenderPass") 
-        {}
-
-        virtual void render(Renderer* client, const DrawContext& context)
-        {  
-          printf("\nRoger was here!\n");
-        }
-    };
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // this is the standard way of implementing an s2plot application
 class s2plotApp: public EngineModule
 {
@@ -37,11 +24,6 @@ class s2plotApp: public EngineModule
 			factory = mys2plot->createFactory();
 			mydraw();
 		}
-	
-		virtual void initializeRenderer(Renderer* r) 
-        { 
-            r->addRenderPass(new s2plotAppRenderPass(r));
-        }
 	
 	private:
 		s2plotModule* mys2plot;
