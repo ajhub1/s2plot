@@ -62,7 +62,7 @@ namespace s2plot
 			void sortFacets();
 			vector<s2plotRenderableObject*> sceneObjects;
 			vector<float> vertexData;
-			static int objectId;
+			int objectId;
 			//vector<s2plot::RenderableFacet>* facets;
 	};
 }

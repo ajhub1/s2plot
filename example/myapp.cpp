@@ -23,7 +23,7 @@ class s2plotApp: public EngineModule
 {
 	public:
 	
-		mydraw()
+		void mydraw()
 		{
 			//draw code goes here
 			factory->ns2sphere();
