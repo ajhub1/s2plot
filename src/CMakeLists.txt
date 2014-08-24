@@ -8,7 +8,10 @@
 		s2plotPoint.cpp
 		s2plotRenderableCube.cpp
 		s2plotModule.cpp
-		s2plotRenderPass.cpp)
+		s2plotRenderPass.cpp
+                s2plotProgram.cpp
+                s2plotShader.cpp
+		)
 
         # Set the module library dependencies here
         target_link_libraries(${MODULE_NAME}
