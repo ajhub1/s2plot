@@ -44,7 +44,7 @@ ModuleServices::addModule: CameraController
 Engine: Running with sound disabled.
 Death switch timeout: 240 seconds
 [EQ] NodeImpl::NodeImpl
-[EQ] NodeImpl::configInit 9dfe4bcb6090338b:e0288be8927aa0fc
+[EQ] NodeImpl::configInit a4182d453d612f:be13244cfe14916a
 @Renderer::Initialize: id = 0
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< DISPLAY INITIALIZATION
 
@@ -56,3 +56,5 @@ Creating death switch thread
 Renderer(0): adding render pass s2plotRenderPass
 Renderer(0): adding render pass console
 Engine::refreshPointer: creating pointer 0
+EqualizerDisplaySystem::killCluster
+number of nodes: 1
