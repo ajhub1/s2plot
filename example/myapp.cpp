@@ -22,10 +22,20 @@ class s2plotAppRenderPass: public RenderPass
 class s2plotApp: public EngineModule
 {
 	public:
+	
+		mydraw()
+		{
+			//draw code goes here
+			factory->ns2sphere();
+		}
+	
+	
 		s2plotApp()
 		{
 			mys2plot = new s2plotModule();
 			ModuleServices::addModule(mys2plot);
+			factory = mys2plot->createFactory();
+			mydraw();
 		}
 	
 		virtual void initializeRenderer(Renderer* r) 
@@ -35,6 +45,7 @@ class s2plotApp: public EngineModule
 	
 	private:
 		s2plotModule* mys2plot;
+		s2plotFactory* factory;
 };
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int main(int argc, char** argv)

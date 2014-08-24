@@ -47,5 +47,5 @@ s2plotFactory::~s2plotFactory()
 
 int s2plotFactory::ns2sphere()
 {
-	
+	printf("\ncreated a sphere\n");
 }
