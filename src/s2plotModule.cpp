@@ -41,7 +41,11 @@ using namespace omega;
 void s2plotModule::Draw()
 {
 	// call draw on all objects
-	printf("/nFreddie was here!/n");
+	//printf("/n s2plotModule::Draw()  was here!/n");
+	
+	
+		
+	
 }
 
 /* Constructor - creates an engine module with the name "s2plotModule"
@@ -86,7 +90,7 @@ void s2plotModule::initializeRenderer(Renderer* r)
 
 void s2plotModule::sortFacets()
 {
-	printf("\nSorted\n");
+	//printf("\nSorted\n");
 }
 
 int s2plotModule::addObject(s2plotRenderableObject* object)

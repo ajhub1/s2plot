@@ -1,13 +1,11 @@
 #ifndef S2_PLOT_PROGRAM
 #define S2_PLOT_PROGRAM
 
+using namespace omega;
+using namespace s2plot;
+
 class s2plotProgram
 {
-		private:
-			std::vector<GLuint> shaderList;
-			
-
-
 		public:
 		
 			GLuint theProgram;
@@ -19,6 +17,10 @@ class s2plotProgram
 			GLuint CreateProgram(const std::vector<GLuint> &shaderList);
 			
 			//~s2plotProgram();
+		private:
+			std::vector<GLuint> shaderList;
+			std::string strvs;	//stores text file
+			std::string strfs;
 };
 
 

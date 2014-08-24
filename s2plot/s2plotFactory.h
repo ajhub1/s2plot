@@ -50,10 +50,15 @@ namespace s2plot
 			virtual ~s2plotFactory();
 			int createProgram();
 			int ns2sphere();
-			
+			enum vaIndices{
+				VA_POSITION_INDEX,
+				VA_COLOR_INDEX,
+				VA_NORMAL_INDEX,
+				VA_TEXTURE_INDEX,
+			};
 		private:
 			s2plotModule* module;
-			s2plotProgram* prog;
+		
 			
 	};
 }
