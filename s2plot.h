@@ -11,4 +11,9 @@
 #include "s2plot/s2plot/s2plotProgram.h"
 #include "s2plot/s2plot/s2plotShader.h"
 
+#include "s2plot/s2plot/glm/glm.hpp"
+
+#define GLM_FORCE_RADIANS
+#include "s2plot/s2plot/glm/gtc/matrix_transform.hpp"
+
 #endif
