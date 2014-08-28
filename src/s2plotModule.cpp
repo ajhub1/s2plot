@@ -93,7 +93,7 @@ void s2plotModule::initialize()
 {
 	// setup the data structures for handling objects internally
 	objectId = 0;
-	
+	facets = new vector<s2plot::s2plotPrimiticeFacet*>();
 }
 
 ////////////////////////////////////////////////////////////////////////////////
