@@ -56,7 +56,37 @@ void s2plotRenderPass::render(Renderer* client, const DrawContext& context)
 	 * to s2plotModules architecture
 	 * */
 	
+	if(context.task == DrawContext::SceneDrawTask)
+	{
+		client->getRenderer()->beginDraw3D(context);
+	if(oglError) return;
+	
+	//s2plotProgram* s2prog = new s2plotProgram();
+	//glUseProgram(s2prog->theProgram);
+	
+	/*
+	// Enable depth testing and lighting.
+		glEnable(GL_DEPTH_TEST);
+	if(oglError) return;
+		glEnable(GL_LIGHTING);
+	if(oglError) return;
+	
+		// Setup light.
+		glEnable(GL_LIGHT0);
+	if(oglError) return;
+		glEnable(GL_COLOR_MATERIAL);
+	if(oglError) return;
+		glLightfv(GL_LIGHT0, GL_DIFFUSE, Color(1.0, 1.0, 1.0).data());
+	if(oglError) return;
+		glLightfv(GL_LIGHT0, GL_POSITION, Vector3s(0.0f, 0.0f, 1.0f).data());
+	if(oglError) return;
+	**/
 	myModule->Draw();
+	
+	if(oglError) return;
+		client->getRenderer()->endDraw();
+	if(oglError) return;
+	}
 
 }
 

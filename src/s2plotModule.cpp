@@ -31,6 +31,7 @@
  * 
  ******************************************************************************/
 #include "s2plot/s2plot.h"
+#include <omp.h>
 
 using namespace s2plot;
 using namespace omega;
@@ -41,7 +42,33 @@ using namespace omega;
 void s2plotModule::Draw()
 {
 	// call draw on all objects
-	//printf("/n s2plotModule::Draw()  was here!/n");
+	GLfloat sampleTriangle[] = {			//remember specify coordinates anti clockwise ->normal openGL convention
+				1.0f, 0.0f, 1.0f, 1.0f, //1
+				1.0f, 0.0f, 0.0f, 0.0f,
+				0.0f, 0.0f, 0.0f, 0.0f,
+				
+				0.0f, 1.0f, 1.0f, 1.0f, //3
+				0.0f, 1.0f, 0.0f, 0.0f,
+				0.0f, 0.0f, 0.0f, 0.0f,
+				
+				-1.0f, 0.0f, 1.0f, 1.0f, //2
+				0.0f, 0.0f, 1.0f, 0.0f,
+				0.0f, 0.0f, 0.0f, 0.0f,
+				
+				//0.0f, 0.0f, 1.0f, 1.0f, //4
+				//0.0f, 0.0f, 1.0f, 0.0f,
+				//0.0f, 0.0f, 0.0f, 0.0f,
+			};
+				
+			GLuint sampleVBO;	//remember unsigne int here
+			glGenBuffers(1, &sampleVBO);		//1 = number of vbos to make
+			glBindBuffer(GL_ARRAY_BUFFER, sampleVBO);
+			glBufferData(GL_ARRAY_BUFFER, sizeof(sampleTriangle), sampleTriangle, GL_STATIC_DRAW);
+			GLsizei sizeOfVector4InBytes = sizeof(GLfloat) * 12;
+			
+			glEnableVertexAttribArray(0);
+			glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE,  sizeOfVector4InBytes, 0);
+			glDrawArrays(GL_TRIANGLES, 0, 3);
 	
 	
 		
@@ -77,7 +104,7 @@ void s2plotModule::update(const UpdateContext& context)
 	 * array back to front based on camera position 
 	 * 
 	 * */
-	sortFacets();
+	sortFacets(0, facets->size());
 	
 }
 ////////////////////////////////////////////////////////////////////////////////
@@ -88,9 +115,36 @@ void s2plotModule::initializeRenderer(Renderer* r)
     r->addRenderPass(s2plotrp);
 }
 
-void s2plotModule::sortFacets()
+void s2plotModule::sortFacets(int beg, int end)
 {
-	//printf("\nSorted\n");
+	//get camera position 
+	if(beg < end)
+	{
+		int p = partition(facets, beg, end);
+		
+		sortFacets(facets, beg, p - 1);
+		sortFacets(facets, p + 1, end);		
+	}	
+}
+
+int s2plotModule::partition(int beg, int end)
+{
+	
+	int p = beg, pivot = facets->at(beg), loc;
+	
+	for (loc = beg + 1; loc <= end; loc++)
+	{
+		if (pivot > facets->at(loc))
+		{
+			facets->at(p) = facets->at(loc);
+			facets->at(loc) = facets->at(p + 1);
+			facets->at(p + 1) = pivot;
+			
+			p = p + 1;
+		}
+	}
+	
+	return p;
 }
 
 int s2plotModule::addObject(s2plotRenderableObject* object)
