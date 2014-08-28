@@ -14,7 +14,8 @@ namespace s2plot
   class s2plotPrimitiveFacet: public s2plotRenderableObject
   {
   public:
-    virtual void draw();
+    virtual void draw()=0;
+    virtual GLfloat getDistance()=0;
  };
 }
 #endif
