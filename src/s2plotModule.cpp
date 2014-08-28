@@ -122,8 +122,8 @@ void s2plotModule::sortFacets(int beg, int end)
 	{
 		int p = partition(beg, end);
 		
-		sortFacets(facets, beg, p - 1);
-		sortFacets(facets, p + 1, end);		
+		sortFacets(beg, p - 1);
+		sortFacets(p + 1, end);		
 	}	
 }
 
@@ -131,7 +131,7 @@ int s2plotModule::partition(int beg, int end)
 {
 	
 	int p = beg, loc;
-	facet* pivot = facets->at(beg);
+	s2plotPrimitiveFacet* pivot = facets->at(beg);
 	
 	for (loc = beg + 1; loc <= end; loc++)
 	{
