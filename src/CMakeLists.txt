@@ -11,6 +11,10 @@
 		s2plotRenderPass.cpp
                 s2plotProgram.cpp
                 s2plotShader.cpp
+                s2plotTriangle.cpp
+                s2plotPrimitiveFacet.cpp
+                s2plotRenderablePloyObject.cpp
+                s2plotTransform.cpp
 		)
 
         # Set the module library dependencies here

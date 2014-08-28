@@ -49,13 +49,18 @@ namespace s2plot
 			s2plotFactory(s2plotModule* mod);
 			virtual ~s2plotFactory();
 			int createProgram();
+			
 			int ns2sphere();
+			int s2cube(int size);
+			
+			//TODO temp
 			enum vaIndices{
 				VA_POSITION_INDEX,
 				VA_COLOR_INDEX,
 				VA_NORMAL_INDEX,
 				VA_TEXTURE_INDEX,
 			};
+			
 		private:
 			s2plotModule* module;
 		

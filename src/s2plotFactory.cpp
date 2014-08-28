@@ -57,54 +57,16 @@ int s2plotFactory::ns2sphere()
 {
 	printf("\ns2sphere\n");
 	
-	//s2plotProgram* s2prog;
-	//s2prog->s2plotProgramInit("vertexShader.vert","fragmentShader.frag"); 
-	
-	
-	
-//float[] sampleTriangle {			//remember specify coordinates anti clockwise ->normal openGL convention
-	//1.0f, 0.0f, 0.0f, 1.0f,
-	//1.0f, 0.0f, 0.0f, 0.0f,
-	//0.0f, 0.0f, 0.0f, 0.0f,
-	
-	//0.0f, 1.0f, 0.0f, 1.0f,
-	//0.0f, 1.0f, 0.0f, 0.0f,
-	//0.0f, 0.0f, 0.0f, 0.0f,
-	
-	//-1.0f, 0.0f, 0.0f, 1.0f,
-	//0.0f, 0.0f, 1.0f, 0.0f,
-	//0.0f, 0.0f, 0.0f, 0.0f,
-//}
-	
-//glEnableVertexAttrib(vaIndices::VA_POSITION_INDEX);
-//glEnableVertexAttrib(vaIndices::VA_COLOR_INDEX);
-//glEnableVertexAttrib(vaIndices::VA_NORMAL_INDEX);
 
-//glVertexAttributePointer(vaIndices::VA_POSITION_INDEX, 4, GL_FLOAT, GL_FALSE, sizeOfVector4InBytes, 0, 0);
-//glVertexAttributePointer(vaIndices::VA_COLOR_INDEX, 4, GL_FLOAT, GL_FALSE, sizeOfVector4InBytes * 2, sizeOfVector4InBytes * 1);
-//glVertexAttributePointer(vaIndices::VA_NORMAL_INDEX, 4, GL_FLOAT, GL_FALSE, sizeOfVector4InBytes * 2, sizeOfVector4InBytes * 2);
-
-
-	
-	
-//GLuint sampleVBO;	//remember unsigne int here
-
-//glGenBuffers(1, &sampleVBO);		//1 = number of vbos to make
-
-//glBindBuffer(GL_ARRAY_BUFFER, sampleVBO);
-
-//glBufferData(GL_ARRAY_BUFFER, sizeof(sampleTriangle), sampleTriangle, GL_STATIC_DRAW);
-	
-	
-	
-//glUseProgram(s2prog->thisProgram);
-	
-	
-	//GLuint vao;
-//glGenVertexArrays(1, &vao);
-//glBindVertexArray(vao);
-	
-	//glDrawArrays(GL_TRIANGLES, 0, 3);
 	
 	printf("\ncreated a sphere\n");
+}
+
+
+int s2plotFactory::s2cube(int size)
+{
+	printf("\n s2cube\n");
+	//s2plotTriangle facets[12];
+	
+	
 }
