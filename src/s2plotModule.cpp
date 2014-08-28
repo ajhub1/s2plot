@@ -93,7 +93,7 @@ void s2plotModule::initialize()
 {
 	// setup the data structures for handling objects internally
 	objectId = 0;
-	facets = new vector<s2plot::s2plotPrimiticeFacet*>();
+	facets = new vector<s2plotPrimitiveFacet*>();
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -120,7 +120,7 @@ void s2plotModule::sortFacets(int beg, int end)
 	//get camera position 
 	if(beg < end)
 	{
-		int p = partition(facets, beg, end);
+		int p = partition(beg, end);
 		
 		sortFacets(facets, beg, p - 1);
 		sortFacets(facets, p + 1, end);		
@@ -130,11 +130,12 @@ void s2plotModule::sortFacets(int beg, int end)
 int s2plotModule::partition(int beg, int end)
 {
 	
-	int p = beg, pivot = facets->at(beg), loc;
+	int p = beg, loc;
+	facet* pivot = facets->at(beg);
 	
 	for (loc = beg + 1; loc <= end; loc++)
 	{
-		if (pivot > facets->at(loc))
+		if (pivot->getDistance() > facets->at(loc)->getDistance())
 		{
 			facets->at(p) = facets->at(loc);
 			facets->at(loc) = facets->at(p + 1);
