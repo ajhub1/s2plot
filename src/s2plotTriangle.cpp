@@ -12,7 +12,7 @@ s2plotTriangle::s2plotTriangle()
 	
 }
 
-s2plotTriangle::draw()
+void s2plotTriangle::draw()
 {
 	printf("triangle draw\n");
 	

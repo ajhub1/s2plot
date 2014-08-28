@@ -1,7 +1,5 @@
 #ifndef S2PLOTTRIANGLE_H
 #define S2PLOTTRIANGLE_H
-#include <stdio.h>
-#include <iostream>
 #include <omega.h>
 #include <omegaGl.h>
 #include "s2plot/s2plot.h"
