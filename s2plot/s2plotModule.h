@@ -59,7 +59,8 @@ namespace s2plot
 			s2plotFactory* createFactory();
 			
 		private:
-			void sortFacets();
+			void sortFacets(int beg, int end);
+			int partition(int beg, int end);
 			vector<s2plotRenderableObject*> sceneObjects;
 			vector<float> vertexData;
 			int objectId;
