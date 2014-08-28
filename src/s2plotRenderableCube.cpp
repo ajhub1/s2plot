@@ -4,17 +4,47 @@
 
 using namespace s2plot;
 using namespace omega;
+using namespace glm;
 
-
-s2plotRenderableCube::s2plotRenderableCube(float x, float y, float z, int numPoints, int render_type, float mySize)
+s2plotRenderableCube::s2plotRenderableCube()
 {
-  id = 0; // should auto generates
-  x = x;
-  y = y;
-  z = z;
-  render_type = render_type; // 0 = shaded
-  points = new int[numPoints];
-  size = mySize;
+	printf("\n s2cube\n");
+	s2plotTriangle* facets[12];
+	
+	//vertices
+	vec4 p0(0.0f,0.0f,0.0f,0.0f);
+	vec4 p1(0.0f,1.0f,0.0f,0.0f);
+	vec4 p2(1.0f,0.0f,0.0f,0.0f);
+	vec4 p3(1.0f,1.0f,0.0f,0.0f);
+	
+	vec4 p4(0.0f,0.0f,1.0f,0.0f);
+	vec4 p5(0.0f,1.0f,1.0f,0.0f);
+	vec4 p6(1.0f,0.0f,1.0f,0.0f);
+	vec4 p7(1.0f,1.0f,1.0f,0.0f);
+
+	//front face
+	facets[0] = new s2plotTriangle(p0,p1,p2);
+	facets[1] = new s2plotTriangle(p1,p2,p3);
+	
+	//right face
+	facets[2] = new s2plotTriangle(p2,p5,p3);
+	facets[3] = new s2plotTriangle(p3,p5,p7);
+	
+	//back face
+	facets[4] = new s2plotTriangle(p5,p4,p7);
+	facets[5] = new s2plotTriangle(p7,p4,p6);
+	
+	//left face
+	facets[6] = new s2plotTriangle(p4,p0,p6);
+	facets[7] = new s2plotTriangle(p6,p0,p1);
+	
+	//top face
+	facets[8] = new s2plotTriangle(p1,p6,p7);
+	facets[9] = new s2plotTriangle(p1,p3,p7);
+	
+	//bottom face
+	facets[10] = new s2plotTriangle(p0,p4,p5);
+	facets[11] = new s2plotTriangle(p5,p0,p2);
 }
 
 // ================================================
@@ -22,58 +52,7 @@ s2plotRenderableCube::s2plotRenderableCube(float x, float y, float z, int numPoi
 // ================================================
 void s2plotRenderableCube::draw()
 {
-	std::cout << "blah" << size;
-	glEnable(GL_DEPTH_TEST);
-	if(oglError) return;
-	glEnable(GL_LIGHTING);
-	if(oglError) return;
-	// Setup light.
-	glEnable(GL_LIGHT0);
-	if(oglError) return;
-	glEnable(GL_COLOR_MATERIAL);
-	if(oglError) return;
-	glLightfv(GL_LIGHT0, GL_DIFFUSE, Color(1.0, 1.0, 1.0).data());
-	if(oglError) return;
-	glLightfv(GL_LIGHT0, GL_POSITION, Vector3s(0.0f, 0.0f, 1.0f).data());
-	if(oglError) return;
 
-	// Draw a rotating cube.
-	glTranslatef(0, 2, -2); 
-	glRotatef(10, 1, 0, 0);
-	glPolygonMode(GL_FRONT_AND_BACK,GL_LINE);
-	glBegin(GL_QUADS);
-	 
-	glVertex3f(size,size,size);
-	glVertex3f(-size,size,size);
-	glVertex3f(-size,-size,size);
-	glVertex3f(size,-size,size);
-	 
-	glVertex3f(size,size,-size);
-	glVertex3f(-size,size,-size);
-	glVertex3f(-size,-size,-size);
-	glVertex3f(size,-size,-size);
-	 
-	glVertex3f(size,size,size);
-	glVertex3f(size,-size,size);
-	glVertex3f(size,-size,-size);
-	glVertex3f(size,size,-size);
-	 
-	glVertex3f(-size,size,size);
-	glVertex3f(-size,-size,size);
-	glVertex3f(-size,-size,-size);
-	glVertex3f(-size,size,-size);
-	 
-	glVertex3f(size,size,size);
-	glVertex3f(-size,size,size);
-	glVertex3f(-size,size,-size);
-	glVertex3f(size,size,-size);
-	 
-	glVertex3f(size,-size,size);
-	glVertex3f(-size,-size,size);
-	glVertex3f(-size,-size,-size);
-	glVertex3f(size,-size,-size);
-
-	glEnd();
 }
 
 void s2plotRenderableObject::registerDrawFunction(void (*fp)())

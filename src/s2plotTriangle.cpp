@@ -14,7 +14,7 @@ s2plotTriangle::s2plotTriangle()
 
 s2plotTriangle::s2plotTriangle(glm::vec4 p0, glm::vec4 p1, glm::vec4 p2)
 {
-	printf("triangle created\n");
+	printf("triangle created %f \n", p0.x);
 	
 	
 	
