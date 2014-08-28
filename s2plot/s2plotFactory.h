@@ -51,7 +51,7 @@ namespace s2plot
 			int createProgram();
 			
 			int ns2sphere();
-			int s2cube(int size);
+			int s2cube(float size);
 			
 			//TODO temp
 			enum vaIndices{

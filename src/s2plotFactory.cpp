@@ -63,14 +63,17 @@ int s2plotFactory::ns2sphere()
 }
 
 
-int s2plotFactory::s2cube(int size)
+int s2plotFactory::s2cube(float size)
 {
 	using namespace glm;
 	
 	printf("\n s2cube\n");
-	//s2plotTriangle facets[12] = new s2plotTriangle[12];
-	
-	//facets[0] = new s2plotTriangle(vec4(0,0,0));
+	s2plotTriangle* facets[12];
+	vec4 p0(0.0f,0.0f,0.0f,0.0f);
+	vec4 p1(0.0f,0.0f,0.0f,0.0f);
+	vec4 p2(0.0f,0.0f,0.0f,0.0f);
+	//facets[0] = new s2plotTriangle();
+	//facets[0]->draw();
 	
 	
 }

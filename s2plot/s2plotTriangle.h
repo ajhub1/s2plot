@@ -4,7 +4,6 @@
 #include <omegaGl.h>
 #include "s2plot/s2plot.h"
 
-
 namespace s2plot
 {
   using namespace omega;
@@ -13,12 +12,14 @@ namespace s2plot
   {
 	  public:
 	  
-		//glm::vec4 positions;
-		//glm::vec4 colour;
-		//glm::vec4 normals;
+		glm::vec4 positions;
+		glm::vec4 colour;
+		glm::vec4 normals;
 	  
-		s2plotTriangle();
+		s2plotTriangle(); //TODO any future use? 
+		s2plotTriangle(glm::vec4 p0, glm::vec4 p1, glm::vec4 p2);
 		void draw();
+		GLfloat getDistance();
   };
  
 }
