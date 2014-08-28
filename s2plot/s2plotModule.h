@@ -44,6 +44,7 @@ namespace s2plot
 	using namespace omega;
 	class s2plotFactory;
 	class s2plotRenderableObject;
+	class s2plotPrimitiveFacet;
 	
 	class s2plotModule: public EngineModule
 	{
@@ -64,7 +65,7 @@ namespace s2plot
 			vector<s2plotRenderableObject*> sceneObjects;
 			vector<float> vertexData;
 			int objectId;
-			vector<s2plot::s2plotPrimitiveFacet*>* facets;
+			vector<s2plotPrimitiveFacet*>* facets;
 	};
 }
 #endif
