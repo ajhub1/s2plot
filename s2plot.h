@@ -1,6 +1,12 @@
 #ifndef S2PLOT_H
 #define S2PLOT_H
 
+//GLM headers - declare at top
+#include "s2plot/s2plot/glm/glm.hpp"
+#define GLM_FORCE_RADIANS
+#include "s2plot/s2plot/glm/gtc/matrix_transform.hpp"
+
+
 #include "s2plot/s2plot/s2plotModule.h"
 #include "s2plot/s2plot/s2plotRenderPass.h"
 #include "s2plot/s2plot/s2plotPoint.h"
@@ -14,9 +20,5 @@
 #include "s2plot/s2plot/s2plotTriangle.h"
 #include "s2plot/s2plot/s2plotTransform.h"
 
-#include "s2plot/s2plot/glm/glm.hpp"
-
-#define GLM_FORCE_RADIANS
-#include "s2plot/s2plot/glm/gtc/matrix_transform.hpp"
 
 #endif
