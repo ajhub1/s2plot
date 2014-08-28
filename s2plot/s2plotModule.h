@@ -64,7 +64,7 @@ namespace s2plot
 			vector<s2plotRenderableObject*> sceneObjects;
 			vector<float> vertexData;
 			int objectId;
-			//vector<s2plot::RenderableFacet>* facets;
+			vector<s2plot::s2plotPrimitiveFacet*>* facets;
 	};
 }
 #endif
