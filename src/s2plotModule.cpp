@@ -42,36 +42,7 @@ using namespace omega;
 void s2plotModule::Draw()
 {
 	// call draw on all objects
-	GLfloat sampleTriangle[] = {			//remember specify coordinates anti clockwise ->normal openGL convention
-				1.0f, 0.0f, 1.0f, 1.0f, //1
-				1.0f, 0.0f, 0.0f, 0.0f,
-				0.0f, 0.0f, 0.0f, 0.0f,
-				
-				0.0f, 1.0f, 1.0f, 1.0f, //3
-				0.0f, 1.0f, 0.0f, 0.0f,
-				0.0f, 0.0f, 0.0f, 0.0f,
-				
-				-1.0f, 0.0f, 1.0f, 1.0f, //2
-				0.0f, 0.0f, 1.0f, 0.0f,
-				0.0f, 0.0f, 0.0f, 0.0f,
-				
-				//0.0f, 0.0f, 1.0f, 1.0f, //4
-				//0.0f, 0.0f, 1.0f, 0.0f,
-				//0.0f, 0.0f, 0.0f, 0.0f,
-			};
-				
-			GLuint sampleVBO;	//remember unsigne int here
-			glGenBuffers(1, &sampleVBO);		//1 = number of vbos to make
-			glBindBuffer(GL_ARRAY_BUFFER, sampleVBO);
-			glBufferData(GL_ARRAY_BUFFER, sizeof(sampleTriangle), sampleTriangle, GL_STATIC_DRAW);
-			GLsizei sizeOfVector4InBytes = sizeof(GLfloat) * 12;
-			
-			glEnableVertexAttribArray(0);
-			glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE,  sizeOfVector4InBytes, 0);
-			glDrawArrays(GL_TRIANGLES, 0, 3);
-	
-	
-		
+	cameraPosition = getDefaultCamera()->getPosition();
 	
 }
 
@@ -113,6 +84,7 @@ void s2plotModule::initializeRenderer(Renderer* r)
     s2plotRenderPass* s2plotrp = new s2plotRenderPass(r, "s2plotRenderPass");
     s2plotrp->setUserData(this);
     r->addRenderPass(s2plotrp);
+    //camera = r->getEngine()->getDefaultCamera();
 }
 
 void s2plotModule::sortFacets(int beg, int end)
@@ -151,7 +123,7 @@ int s2plotModule::partition(int beg, int end)
 int s2plotModule::addObject(s2plotRenderableObject* object)
 {
 	objectId++;
-	return 0;
+	return objectId;
 }
 
 bool s2plotModule::deleteObject(int objectId)

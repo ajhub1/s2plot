@@ -66,6 +66,8 @@ namespace s2plot
 			vector<float> vertexData;
 			int objectId;
 			vector<s2plotPrimitiveFacet*>* facets;
+			vector3f cameraPosition;
+			//Camera* camera;
 	};
 }
 #endif
