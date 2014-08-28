@@ -42,7 +42,6 @@ using namespace omega;
 void s2plotModule::Draw()
 {
 	// call draw on all objects
-	cameraPosition = getDefaultCamera()->getPosition();
 	
 }
 
@@ -84,7 +83,7 @@ void s2plotModule::initializeRenderer(Renderer* r)
     s2plotRenderPass* s2plotrp = new s2plotRenderPass(r, "s2plotRenderPass");
     s2plotrp->setUserData(this);
     r->addRenderPass(s2plotrp);
-    //camera = r->getEngine()->getDefaultCamera();
+    cameraPosition = r->getEngine()->getDefaultCamera()->getPosition();
 }
 
 void s2plotModule::sortFacets(int beg, int end)
