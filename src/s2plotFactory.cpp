@@ -66,7 +66,7 @@ int s2plotFactory::ns2sphere()
 int s2plotFactory::s2cube(int size)
 {
 	printf("\n s2cube\n");
-	
+	//s2plotTriangle facets[12];
 	
 	
 }

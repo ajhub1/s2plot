@@ -51,8 +51,9 @@ namespace s2plot
 			int createProgram();
 			
 			int ns2sphere();
-			int s2cube();
+			int s2cube(int size);
 			
+			//TODO temp
 			enum vaIndices{
 				VA_POSITION_INDEX,
 				VA_COLOR_INDEX,
