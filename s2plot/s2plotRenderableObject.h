@@ -16,13 +16,8 @@ namespace s2plot
   {   
 	  public:
 		int id;
-		float x;
-		float y;
-		float z;
 		enum render_type {SHADED = 0, WIRE_FRAME = 1};
 		bool isVisible;
-		virtual void registerDrawFunction(void (*fp)());
-		virtual void draw() {}
   };
 }
 #endif

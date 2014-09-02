@@ -15,6 +15,7 @@
                 s2plotPrimitiveFacet.cpp
                 s2plotRenderablePloyObject.cpp
                 s2plotTransform.cpp
+                s2plotVertex.cpp
 		)
 
         # Set the module library dependencies here

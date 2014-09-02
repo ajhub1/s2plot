@@ -1,5 +1,6 @@
-#include <stdio.h>
-#include <iostream>
+#ifndef S2PLOTRENDERABLEPOLYOBJECT_H
+#define S2PLOTRENDERABLEPOLYOBJECT_H	
+
 #include <omega.h>
 #include <omegaGl.h>
 #include "s2plot/s2plot.h"
@@ -10,12 +11,9 @@ namespace s2plot
   
   class s2plotRenderablePolyObject: public s2plotRenderableObject
   {
-  protected:
-    int* points;
   public:
-    //virtual void addPoint(s2plotPoint point);
-    //virtual void removePoint(s2plotPoint point);
-    virtual void addPoint();
-    virtual void removePoint();
+	//virtual s2plotTriangle** s2plotRenderableCube::getFacets() = 0;
   };
 }
+
+#endif

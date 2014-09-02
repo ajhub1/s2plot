@@ -7,17 +7,21 @@ using namespace omega;
 s2plotTriangle::s2plotTriangle()
 {
 	printf("default triangle created\n");
-	
+	//const int numVertices= 3;
 	
 	
 }
 
-s2plotTriangle::s2plotTriangle(glm::vec4 p0, glm::vec4 p1, glm::vec4 p2)
+s2plotTriangle::s2plotTriangle(s2plotVertex p0, s2plotVertex p1, s2plotVertex p2)
 {
-	printf("triangle created %f \n", p0.x);
+	printf("triangle created  \n");
+
+	s2plotVertex vertices[NUMBER_OF_VERTICES_PER_TRIANGLE];
 	
-	
-	
+	vertices[0] = p0;
+	vertices[1] = p1;
+	vertices[2] = p2;
+
 }
 
 void s2plotTriangle::draw()
@@ -34,4 +38,10 @@ GLfloat s2plotTriangle::getDistance()
 	
 	
 	
+}
+
+GLfloat* s2plotTriangle::getVertexData()
+{
+	printf("get vertices\n");
+	return NULL;
 }

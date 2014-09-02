@@ -4,6 +4,8 @@
 #include <omegaGl.h>
 #include "s2plot/s2plot.h"
 
+#define NUMBER_OF_VERTICES_PER_TRIANGLE 3
+
 namespace s2plot
 {
   using namespace omega;
@@ -11,15 +13,17 @@ namespace s2plot
   class s2plotTriangle: public s2plotPrimitiveFacet
   {
 	  public:
-	  
-		glm::vec4 positions;
-		glm::vec4 colour;
-		glm::vec4 normals;
+		
+		s2plotVertex vertices[];
 	  
 		s2plotTriangle(); //TODO any future use? 
-		s2plotTriangle(glm::vec4 p0, glm::vec4 p1, glm::vec4 p2);
+		s2plotTriangle(s2plotVertex p0, s2plotVertex p1, s2plotVertex p2);
 		void draw();
 		GLfloat getDistance();
+		GLfloat* getVertexData();
+	  
+	  private:
+		//const int numVertices;
   };
  
 }

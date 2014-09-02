@@ -1,26 +1,33 @@
-#include "s2plot/s2plot.h"
 #include <omegaGl.h>
 #include <omega.h>
+#include "s2plot/s2plot.h"
 
 using namespace s2plot;
 using namespace omega;
 using namespace glm;
 
+
 s2plotRenderableCube::s2plotRenderableCube()
 {
 	printf("\n s2cube\n");
-	s2plotTriangle* facets[12];
+	
+	init();
+}
+
+void s2plotRenderableCube::init()
+{
+	s2plotTriangle* facets[NUMBER_OF_FACETS];
 	
 	//vertices
-	vec4 p0(0.0f,0.0f,0.0f,0.0f);
-	vec4 p1(0.0f,1.0f,0.0f,0.0f);
-	vec4 p2(1.0f,0.0f,0.0f,0.0f);
-	vec4 p3(1.0f,1.0f,0.0f,0.0f);
+	s2plotVertex p0(0.0f,0.0f,0.0f,0.0f);
+	s2plotVertex p1(0.0f,1.0f,0.0f,0.0f);
+	s2plotVertex p2(1.0f,0.0f,0.0f,0.0f);
+	s2plotVertex p3(1.0f,1.0f,0.0f,0.0f);
 	
-	vec4 p4(0.0f,0.0f,1.0f,0.0f);
-	vec4 p5(0.0f,1.0f,1.0f,0.0f);
-	vec4 p6(1.0f,0.0f,1.0f,0.0f);
-	vec4 p7(1.0f,1.0f,1.0f,0.0f);
+	s2plotVertex p4(0.0f,0.0f,1.0f,0.0f);
+	s2plotVertex p5(0.0f,1.0f,1.0f,0.0f);
+	s2plotVertex p6(1.0f,0.0f,1.0f,0.0f);
+	s2plotVertex p7(1.0f,1.0f,1.0f,0.0f);
 
 	//front face
 	facets[0] = new s2plotTriangle(p0,p1,p2);
@@ -45,31 +52,31 @@ s2plotRenderableCube::s2plotRenderableCube()
 	//bottom face
 	facets[10] = new s2plotTriangle(p0,p4,p5);
 	facets[11] = new s2plotTriangle(p5,p0,p2);
+	
 }
 
-// ================================================
-// ====== RenderableObject function declarations 
-// ================================================
-void s2plotRenderableCube::draw()
+s2plotTriangle** s2plotRenderableCube::getFacets()
 {
-
+	return facets;
 }
 
-void s2plotRenderableObject::registerDrawFunction(void (*fp)())
+GLfloat* s2plotRenderableCube::getVertexData()
 {
-  std:cout << "Hello from registerDrawFunction";
-  
+	GLfloat* vertexDataObject = new GLfloat[144];	//TODO magic number, remember to free memory
+	
+	for (int i = 0; i < NUMBER_OF_FACETS; i++)
+	{
+		for (int j = 0; j < 12; j++)
+		{
+			
+			//vertexDataObject[i*12] = facets[i]->getVertexData()[j];
+		}
+	}
+	
+	return vertexDataObject;
 }
-
-// ================================================
-// ====== RenderablePolyObject function declarations 
-// ================================================
-void s2plotRenderablePolyObject::addPoint()
+GLuint** s2plotRenderableCube::getVertexIndices()
 {
-  std:cout << "Hello from addPoints";
-}
-
-void s2plotRenderablePolyObject::removePoint()
-{
-  std:cout << "Hello from removePoint";
+	return NULL;
+	
 }

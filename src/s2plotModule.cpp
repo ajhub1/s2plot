@@ -42,7 +42,7 @@ using namespace omega;
 void s2plotModule::Draw()
 {
 	// call draw on all objects
-	//printf("x:%f \t y:%f \tz:%f", cameraPosition[0], cameraPosition[1], cameraPosition[2]);
+
 }
 
 /* Constructor - creates an engine module with the name "s2plotModule"
@@ -84,12 +84,12 @@ void s2plotModule::initializeRenderer(Renderer* r)
     s2plotRenderPass* s2plotrp = new s2plotRenderPass(r, "s2plotRenderPass");
     s2plotrp->setUserData(this);
     r->addRenderPass(s2plotrp);
-    cameraPosition = r->getEngine()->getDefaultCamera()->getPosition();
+    camera = r->getEngine()->getDefaultCamera();
 }
 
 void s2plotModule::sortFacets(int beg, int end)
 {
-	//get camera position 
+	cameraPosition = camera->getPosition();
 	if(beg < end)
 	{
 		int p = partition(beg, end);

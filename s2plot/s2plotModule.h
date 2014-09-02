@@ -67,7 +67,7 @@ namespace s2plot
 			int objectId;
 			vector<s2plotPrimitiveFacet*>* facets;
 			Vector3f cameraPosition;
-			//Camera* camera;
+			Camera* camera;
 	};
 }
 #endif
