@@ -42,7 +42,7 @@ using namespace omega;
 void s2plotModule::Draw()
 {
 	// call draw on all objects
-	printf("x:%f \t y:%f \tz:%f", cameraPosition[0], cameraPosition[1], cameraPosition[2]);
+
 }
 
 /* Constructor - creates an engine module with the name "s2plotModule"
