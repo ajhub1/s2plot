@@ -24,7 +24,7 @@ namespace s2plot
 			vec4 getColour();
 			vec4 getNormal();
 			
-			s2plotVertex* getVertexData();
+			GLfloat* getVertexData();
 			
 		  private:
 		    glm::vec4 position;

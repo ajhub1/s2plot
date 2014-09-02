@@ -14,16 +14,17 @@ namespace s2plot
   {
 	  public:
 		
-		s2plotVertex vertices[];
-	  
+		s2plotVertex vertices[]; //TODO make private
 		s2plotTriangle(); //TODO any future use? 
 		s2plotTriangle(s2plotVertex p0, s2plotVertex p1, s2plotVertex p2);
 		void draw();
 		GLfloat getDistance();
 		GLfloat* getVertexData();
-	  
+		GLuint* getVertexIndices();
+		
 	  private:
 		//const int numVertices;
+		GLfloat vdata[];
   };
  
 }

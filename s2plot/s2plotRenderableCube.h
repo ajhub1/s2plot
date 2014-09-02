@@ -16,8 +16,7 @@ namespace s2plot
   public:
 	s2plotRenderableCube();
     s2plotTriangle** getFacets();
-    GLfloat* getVertexData();
-    GLuint** getVertexIndices();
+    GLuint* getVertexIndices();
     
   private:
     void init();
