@@ -60,21 +60,7 @@ s2plotTriangle** s2plotRenderableCube::getFacets()
 	return facets;
 }
 
-GLfloat* s2plotRenderableCube::getVertexData()
-{
-	GLfloat* vertexDataObject = new GLfloat[144];	//TODO magic number, remember to free memory
-	
-	for (int i = 0; i < NUMBER_OF_FACETS; i++)
-	{
-		for (int j = 0; j < 12; j++)
-		{
-			
-			//vertexDataObject[i*12] = facets[i]->getVertexData()[j];
-		}
-	}
-	
-	return vertexDataObject;
-}
+
 GLuint** s2plotRenderableCube::getVertexIndices()
 {
 	return NULL;

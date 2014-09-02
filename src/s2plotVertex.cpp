@@ -49,28 +49,9 @@ vec4 s2plotVertex::getNormal()
 
 GLfloat* getVertexData()
 {
-	GLfloat* vdata[12];
-	int sizeOfVertex = 12;	//TODO fix later
+
 	
-	for (int i = 0; i < 3; i++)
-	{
-		vdata[i*sizeOfVertex] = getPosition().x;
-		vdata[i*sizeOfVertex * sizeof(float)+1] = getPosition().y;
-		vdata[i*sizeOfVertex * sizeof(float)+2] = getPosition().z;
-		vdata[i*sizeOfVertex * sizeof(float)+3] = getPosition().w;
-		
-		vdata[i*sizeOfVertex + 4] = getColour().r;
-		vdata[i*sizeOfVertex + 4 * sizeof(float)+1] = getColour().g;
-		vdata[i*sizeOfVertex + 4 * sizeof(float)+2] = getColour().b;
-		vdata[i*sizeOfVertex + 4 * sizeof(float)+3] = getColour().a;
-		
-		vdata[i*sizeOfVertex + 8] = getNormal().x;
-		vdata[i*sizeOfVertex + 8 * sizeof(float)+1] = getNormal().y;
-		vdata[i*sizeOfVertex + 8 * sizeof(float)+2] = getNormal().z;
-		vdata[i*sizeOfVertex + 8 * sizeof(float)+3] = getNormal().w;
-	}
-	
-	return vdata;
+	return NULL;
 }
 
 
