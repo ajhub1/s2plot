@@ -123,12 +123,16 @@ int s2plotModule::partition(int beg, int end)
 int s2plotModule::addObject(s2plotRenderableObject* object)
 {
 	objectId++;
+	sceneObjects->push_back(make_pair(objectId,object));
 	return objectId;
 }
 
-bool s2plotModule::deleteObject(int objectId)
+bool s2plotModule::deleteObject(int objId)
 {
-	return true;
+	beforeSize = sceneObjects->size();
+	sceneObjects->erase(sceneObjects->begin() + objId)
+	afterSize = sceneObjects->size();
+	return (beforeSize > afterSize);
 }
 
 s2plotFactory* s2plotModule::createFactory()

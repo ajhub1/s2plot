@@ -37,6 +37,7 @@
 #include <omega.h>
 #include <omegaGl.h>
 #include <vector>
+#include <utility>
 #include "s2plot/s2plot.h"
 
 namespace s2plot 
@@ -55,14 +56,14 @@ namespace s2plot
 			void initializeRenderer(Renderer* r);
 			void update(const UpdateContext& context);	
 			void Draw();	
-			bool deleteObject(int objectId);
+			bool deleteObject(int objId);
 			int addObject(s2plotRenderableObject* object);
 			s2plotFactory* createFactory();
 			
 		private:
 			void sortFacets(int beg, int end);
 			int partition(int beg, int end);
-			vector<s2plotRenderableObject*> sceneObjects;
+			vector<pair<int, s2plotRenderableObject*>* sceneObjects;
 			vector<float> vertexData;
 			int objectId;
 			vector<s2plotPrimitiveFacet*>* facets;
