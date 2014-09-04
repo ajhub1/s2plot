@@ -57,16 +57,15 @@ namespace s2plot
 			void update(const UpdateContext& context);	
 			void Draw();	
 			bool deleteObject(int objId);
-			int addObject(s2plotRenderableObject* object);
+			void addObject(s2plotRenderableObject* object);
 			s2plotFactory* createFactory();
 			
 		private:
 			void sortFacets(int beg, int end);
 			int partition(int beg, int end);
-			vector<pair<int, s2plotRenderableObject*>* sceneObjects;
-			vector<float> vertexData;
-			int objectId;
+			vector<s2plotRenderableObject*>* sceneObjects;
 			vector<s2plotPrimitiveFacet*>* facets;
+			vector<GLfloat> vertexData;
 			Vector3f cameraPosition;
 			Camera* camera;
 	};

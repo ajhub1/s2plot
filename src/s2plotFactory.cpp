@@ -63,11 +63,20 @@ int s2plotFactory::ns2sphere()
 	printf("\ncreated a sphere\n");
 }
 
-
-int s2plotFactory::s2cube(float size, vec4 position)
-{
-	printf("\n s2cube\n");
+/*
+ * calculate the centroid of the cube.
+ * the old S2PLOT API uses two XYZ structs, we calculate centroid based on
+ * these x, y, z points. we pass 1.0f as the w value.
+ */
+s2plotRenderableCube* s2plotFactory::ns2scube(float x1, float y1, float z1, float x2, 
+										float y2, float z2, float red, 
+										float green, float blue, float alpha)
+{	
+	GLfloat size = fabs(x1 - x2);
+	vec4 centroid = vec4((x1 + (0.5 * x2)), (y1 + (0.5 * y2)), 
+					(z1 + (0.5 * z2)), 1.0f);
 	
-	s2plotRenderableCube cube;
-	
+	s2plotRenderableCube* cube = new s2plotRenderableCube(size, centroid);
+	module->addObject(cube);
+	return cube;
 }

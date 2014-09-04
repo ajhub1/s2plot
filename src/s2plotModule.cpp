@@ -56,15 +56,17 @@ s2plotModule::s2plotModule(): EngineModule("s2plotModule")
 
 s2plotModule::~s2plotModule()
 {
-
+	// TO DO FREE MEMORY FOR DATA STRUCTURES
+	
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 void s2plotModule::initialize()
 {
 	// setup the data structures for handling objects internally
-	objectId = 0;
+	sceneObjects = new vector<s2plotRenderableObject*>();
 	facets = new vector<s2plotPrimitiveFacet*>();
+	vertexData = new vector<GLfloat>(); // TODO: fix the type of this vector
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -75,6 +77,8 @@ void s2plotModule::update(const UpdateContext& context)
 	 * array back to front based on camera position 
 	 * 
 	 * */
+	
+	cameraPosition = camera->getPosition();
 	sortFacets(0, facets->size());
 	
 }
@@ -87,9 +91,9 @@ void s2plotModule::initializeRenderer(Renderer* r)
     camera = r->getEngine()->getDefaultCamera();
 }
 
+////////////////////////////////////////////////////////////////////////////////
 void s2plotModule::sortFacets(int beg, int end)
 {
-	cameraPosition = camera->getPosition();
 	if(beg < end)
 	{
 		int p = partition(beg, end);
@@ -99,6 +103,7 @@ void s2plotModule::sortFacets(int beg, int end)
 	}	
 }
 
+////////////////////////////////////////////////////////////////////////////////
 int s2plotModule::partition(int beg, int end)
 {
 	
@@ -107,7 +112,8 @@ int s2plotModule::partition(int beg, int end)
 	
 	for (loc = beg + 1; loc <= end; loc++)
 	{
-		if (pivot->getDistance() > facets->at(loc)->getDistance())
+		if (pivot->getDistance(cameraPosition) > 
+			facets->at(loc)->getDistance(cameraPosition))
 		{
 			facets->at(p) = facets->at(loc);
 			facets->at(loc) = facets->at(p + 1);
@@ -120,21 +126,44 @@ int s2plotModule::partition(int beg, int end)
 	return p;
 }
 
-int s2plotModule::addObject(s2plotRenderableObject* object)
+////////////////////////////////////////////////////////////////////////////////
+void s2plotModule::addObject(s2plotRenderableObject* object)
 {
-	objectId++;
-	sceneObjects->push_back(make_pair(objectId,object));
-	return objectId;
+	// push object, then facets, then vertexData into their datastructures
+	sceneObjects->push_back(object);
+	facets->insert(facets->end(), object->getFacets()->begin(), 
+					objects->getFacets()->end());
+	vertexData->insert(vertexData->end(), 
+						object.getVertexIndices(vertexData->size()).begin(), 
+						objects.getVertexIndices(vertexData->size()).end());
 }
 
-bool s2plotModule::deleteObject(int objId)
+////////////////////////////////////////////////////////////////////////////////
+bool s2plotModule::deleteObject(s2plotRenderableObject* object)
 {
-	beforeSize = sceneObjects->size();
-	sceneObjects->erase(sceneObjects->begin() + objId)
-	afterSize = sceneObjects->size();
-	return (beforeSize > afterSize);
+	// find the object
+	iterator objectIterator = sceneObjects->begin();
+	while (objectIterator != sceneObjects->end())
+	{
+		if (sceneObject->at(objectIterator) == object)
+		{
+			// find the facets
+			iterator facetIterator = object->getFacets()->begin();
+			while (facetIterator != facets->end())
+			{
+				if (facets->at(facetIterator) == object->getFacets())
+				{
+					// delete the facets
+				}
+				++facetIterator;
+			}
+			// delete the object
+		}
+		++objectIterator;
+	}
 }
 
+////////////////////////////////////////////////////////////////////////////////
 s2plotFactory* s2plotModule::createFactory()
 {
 	return new s2plotFactory(this);
