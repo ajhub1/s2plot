@@ -49,8 +49,6 @@ vec4 s2plotVertex::getNormal()
 
 GLfloat* getVertexData()
 {
-
-	
 	return NULL;
 }
 

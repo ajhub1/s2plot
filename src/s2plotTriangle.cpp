@@ -4,34 +4,32 @@ using namespace s2plot;
 using namespace omega;
 
 
-s2plotTriangle::s2plotTriangle()
+s2plotTriangle::s2plotTriangle(GLuint baseOffset, s2plotVertex p0, s2plotVertex p1, s2plotVertex p2)
 {
-	printf("default triangle created\n");
-	//const int numVertices= 3;
-	
-	
-}
-
-s2plotTriangle::s2plotTriangle(s2plotVertex p0, s2plotVertex p1, s2plotVertex p2)
-{
-	printf("triangle created  \n");
-
 	s2plotVertex vertices[NUMBER_OF_VERTICES_PER_TRIANGLE];
-	GLfloat vdata[12];
-		
 	vertices[0] = p0;
 	vertices[1] = p1;
 	vertices[2] = p2;
-
+	
+	
+	//TODO use initializer list, recommended for C++??, ask adam
+	this.baseOffset = baseOffset;
 }
 
-void s2plotTriangle::draw()
+void s2plotTriangle::draw(const GLfloat* indices)
 {
 	printf("triangle draw\n");
-	
+	glDrawRangeElements(GL_TRIANGLE, baseOffset, baseOffset + 3, 3, GL_UNSIGNED_INT, 0);
 	
 	
 }
+
+void s2plotTriangle::setBaseOffset(GLuint baseOffset)
+{
+	this.baseOffset = baseOffset;
+}
+
+
 
 GLfloat s2plotTriangle::getDistance()
 {
@@ -41,7 +39,7 @@ GLfloat s2plotTriangle::getDistance()
 	
 }
 
-GLfloat* s2plotTriangle::getVertexData()
+std::vector<GLfloat> s2plotTriangle::getVertexData()
 {
 	int sizeOfVertex = 12;	//TODO fix later
 	

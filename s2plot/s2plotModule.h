@@ -63,7 +63,7 @@ namespace s2plot
 		private:
 			void sortFacets(int beg, int end);
 			int partition(int beg, int end);
-			vector<pair<int, s2plotRenderableObject*>* sceneObjects;
+			vector<s2plotRenderableObject*>* sceneObjects;
 			vector<float> vertexData;
 			int objectId;
 			vector<s2plotPrimitiveFacet*>* facets;

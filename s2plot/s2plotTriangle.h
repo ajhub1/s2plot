@@ -13,18 +13,19 @@ namespace s2plot
   class s2plotTriangle: public s2plotPrimitiveFacet
   {
 	  public:
-		
-		s2plotVertex vertices[]; //TODO make private
-		s2plotTriangle(); //TODO any future use? 
-		s2plotTriangle(s2plotVertex p0, s2plotVertex p1, s2plotVertex p2);
+		s2plotTriangle(GLuint baseOffset, s2plotVertex p0, s2plotVertex p1, s2plotVertex p2);
 		void draw();
-		GLfloat getDistance();
-		GLfloat* getVertexData();
-		GLuint* getVertexIndices();
+		void setBaseOffset(GLuint baseOffset);
 		
+		GLfloat getDistance();
+		std::vector<GLfloat> getVertexData();
+		std::vector<GLuint> getVertexIndices();
+		
+		//static get size method??
 	  private:
-		//const int numVertices;
-		GLfloat vdata[];
+		GLuint baseOffset;
+		s2plotVertex vertices[];
+		std::vector<GLfloat> vdata;
   };
  
 }

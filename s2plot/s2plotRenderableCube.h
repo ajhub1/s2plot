@@ -5,6 +5,7 @@
 #include "s2plot/s2plot.h"
 
 #define NUMBER_OF_FACETS 12
+#define NUMBER_OF_INDICES 12 * 3 //NUMBER_OF_FACETS * VERTEX PER FACET, formula holds only if primitive is composed of same type of facets
 
 namespace s2plot
 {
@@ -14,13 +15,16 @@ namespace s2plot
   class s2plotRenderableCube: public s2plotRenderablePolyObject
   {
   public:
-	s2plotRenderableCube();
+	s2plotRenderableCube(GLuint baseOffset);
     s2plotTriangle** getFacets();
-    GLuint* getVertexIndices();
+    void updateFacetOffsets(GLuint baseOffset);
+    std::vector<GLuint> getVertexIndices();
     
   private:
-    void init();
+    void init(GLuint baseOffset);
     s2plotTriangle* facets[];
+    std::vector<GLuint> indices;
+    GLuint baseOffset;
   };
 }
 

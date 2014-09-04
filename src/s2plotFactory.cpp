@@ -68,6 +68,6 @@ int s2plotFactory::s2cube(float size, vec4 position)
 {
 	printf("\n s2cube\n");
 	
-	s2plotRenderableCube cube;
+	s2plotRenderableCube cube(0);//TODO base offset
 	
 }

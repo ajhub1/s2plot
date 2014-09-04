@@ -130,7 +130,7 @@ int s2plotModule::addObject(s2plotRenderableObject* object)
 bool s2plotModule::deleteObject(int objId)
 {
 	beforeSize = sceneObjects->size();
-	sceneObjects->erase(sceneObjects->begin() + objId)
+	sceneObjects->erase(sceneObjects->begin() + objId);
 	afterSize = sceneObjects->size();
 	return (beforeSize > afterSize);
 }
