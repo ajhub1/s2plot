@@ -52,9 +52,9 @@ namespace s2plot
 			int createProgram();
 			
 			int ns2sphere();
-			s2plotRenderableCube* ns2scube(float x1, float y1, float z1, float x2, 
-										float y2, float z2, float red, 
-										float green, float blue, float alpha);
+			s2plotRenderableCube* ns2scube(float x1, float y1, float z1, 
+										float x2, float y2, float z2, 
+										float red, float green, float blue, float alpha);
 										
 			//TODO temp
 			enum vaIndices{

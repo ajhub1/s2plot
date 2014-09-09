@@ -16,7 +16,7 @@ namespace s2plot
   {   
 	  public:
 		int id;
-		virtual std::vector<s2plotPrimitiveFacet*>* getFacets() = 0;
+		virtual std::vector<s2plotPrimitiveFacet*> getFacets() = 0;
 		virtual std::vector<GLuint>* getVertexIndices() = 0;
   };
 }

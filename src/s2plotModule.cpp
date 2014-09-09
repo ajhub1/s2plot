@@ -35,7 +35,7 @@
 
 using namespace s2plot;
 using namespace omega;
-
+using namespace std;
 /* Draw function - the call back from the s2plotModules Render Pass
  * 
  * */
@@ -64,9 +64,9 @@ s2plotModule::~s2plotModule()
 void s2plotModule::initialize()
 {
 	// setup the data structures for handling objects internally
-	sceneObjects = new vector<s2plotRenderableObject*>();
-	facets = new vector<s2plotPrimitiveFacet*>();
-	vertexData = new vector<GLfloat>(); // TODO: fix the type of this vector
+	sceneObjects = new vector<s2plotRenderableObject*>(500);
+	facets = new vector<s2plotPrimitiveFacet*>(500);
+	vertexData = new vector<GLfloat>(500); // TODO: fix the type of this vector
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -131,16 +131,23 @@ void s2plotModule::addObject(s2plotRenderableObject* object)
 {
 	// push object, then facets, then vertexData into their datastructures
 	sceneObjects->push_back(object);
-	facets->insert(facets->end(), object->getFacets()->begin(), 
-					object->getFacets()->end());
+
+	
+	vector<s2plotPrimitiveFacet*>::iterator it = object->getFacets().begin();
+	vector<s2plotPrimitiveFacet*>::iterator it2 = object->getFacets().end();
+	printf("temp cheeeese  \n");
+	cout << "yes:  " << (*it).dummy()[0]->getPosition().x << endl;
+	facets->push_back(*it);
+	printf("insert aftet\n");
 	vertexData->insert(vertexData->end(), 
 						object->getVertexIndices()->begin(), 
 						object->getVertexIndices()->end());
+
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 bool s2plotModule::deleteObject(s2plotRenderableObject* object)
-{
+{/*
 	// find the object
 	vector<s2plotRenderableObject*>::iterator objectIterator = sceneObjects->begin();
 	
@@ -168,7 +175,7 @@ bool s2plotModule::deleteObject(s2plotRenderableObject* object)
 			// delete the object
 		}
 		++objectIterator;
-	}
+	}*/
 	return true;
 }
 
