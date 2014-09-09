@@ -56,7 +56,7 @@ namespace s2plot
 			void initializeRenderer(Renderer* r);
 			void update(const UpdateContext& context);	
 			void Draw();	
-			bool deleteObject(int objId);
+			bool deleteObject(s2plotRenderableObject* object);
 			void addObject(s2plotRenderableObject* object);
 			s2plotFactory* createFactory();
 			
@@ -65,7 +65,7 @@ namespace s2plot
 			int partition(int beg, int end);
 			vector<s2plotRenderableObject*>* sceneObjects;
 			vector<s2plotPrimitiveFacet*>* facets;
-			vector<GLfloat> vertexData;
+			vector<GLfloat>* vertexData;
 			Vector3f cameraPosition;
 			Camera* camera;
 	};

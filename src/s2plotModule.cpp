@@ -132,35 +132,44 @@ void s2plotModule::addObject(s2plotRenderableObject* object)
 	// push object, then facets, then vertexData into their datastructures
 	sceneObjects->push_back(object);
 	facets->insert(facets->end(), object->getFacets()->begin(), 
-					objects->getFacets()->end());
+					object->getFacets()->end());
 	vertexData->insert(vertexData->end(), 
-						object.getVertexIndices(vertexData->size()).begin(), 
-						objects.getVertexIndices(vertexData->size()).end());
+						object->getVertexIndices()->begin(), 
+						object->getVertexIndices()->end());
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 bool s2plotModule::deleteObject(s2plotRenderableObject* object)
 {
 	// find the object
-	iterator objectIterator = sceneObjects->begin();
+	vector<s2plotRenderableObject*>::iterator objectIterator = sceneObjects->begin();
+	
+	
+	
 	while (objectIterator != sceneObjects->end())
 	{
-		if (sceneObject->at(objectIterator) == object)
+		if (sceneObjects->at(1) == object)
 		{
 			// find the facets
-			iterator facetIterator = object->getFacets()->begin();
+			vector<s2plotPrimitiveFacet*>::iterator facetIterator = object->getFacets()->begin();
+			
 			while (facetIterator != facets->end())
 			{
-				if (facets->at(facetIterator) == object->getFacets())
+				for (int i = 0; i < object->getFacets()->size(); i++) 
 				{
-					// delete the facets
+					if (facets->at(facetIterator - object->getFacets()->begin()) == object->getFacets()->at(i))
+					{
+						// delete the facets
+					}
 				}
+				
 				++facetIterator;
 			}
 			// delete the object
 		}
 		++objectIterator;
 	}
+	return true;
 }
 
 ////////////////////////////////////////////////////////////////////////////////

@@ -16,8 +16,8 @@ namespace s2plot
   {   
 	  public:
 		int id;
-		enum render_type {SHADED = 0, WIRE_FRAME = 1};
-		bool isVisible;
+		virtual std::vector<s2plotPrimitiveFacet*>* getFacets() = 0;
+		virtual std::vector<GLuint>* getVertexIndices() = 0;
   };
 }
 #endif

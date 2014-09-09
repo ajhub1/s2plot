@@ -13,7 +13,7 @@ s2plotTriangle::s2plotTriangle(GLuint baseOffset, s2plotVertex p0, s2plotVertex 
 	
 	
 	//TODO use initializer list, recommended for C++??, ask adam
-	this.baseOffset = baseOffset;
+	this->baseOffset = baseOffset;
 }
 
 void s2plotTriangle::draw(const GLfloat* indices)
@@ -21,17 +21,20 @@ void s2plotTriangle::draw(const GLfloat* indices)
 	printf("triangle draw\n");
 	glDrawRangeElements(GL_TRIANGLE, baseOffset, baseOffset + 3, 3, GL_UNSIGNED_INT, 0);
 	
-	
 }
 
 void s2plotTriangle::setBaseOffset(GLuint baseOffset)
 {
-	this.baseOffset = baseOffset;
+	this->baseOffset = baseOffset;
+}
+
+std::vector<s2plotPrimitiveFacet>* s2plotTriangle::getFacets()
+{
+	return NULL; //TODO FIX
 }
 
 
-
-GLfloat s2plotTriangle::getDistance()
+GLfloat s2plotTriangle::getDistance(Vector3f cameraPosition)
 {
 	printf("triangle getDistance\n");
 	

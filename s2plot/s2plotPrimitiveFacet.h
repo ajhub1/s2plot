@@ -12,7 +12,8 @@ namespace s2plot
   {
   public:
     virtual void draw()=0;
-    virtual GLfloat getDistance()=0;
+    virtual GLfloat getDistance(Vector3f cameraPosition)=0;
+	virtual void setBaseOffset(GLuint baseOffset) =0;
  };
 }
 #endif

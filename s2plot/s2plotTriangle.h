@@ -14,13 +14,13 @@ namespace s2plot
   {
 	  public:
 		s2plotTriangle(GLuint baseOffset, s2plotVertex p0, s2plotVertex p1, s2plotVertex p2);
-		void draw();
+		void draw(const GLfloat* indices);
 		void setBaseOffset(GLuint baseOffset);
 		
-		GLfloat getDistance();
+		GLfloat getDistance(Vector3f cameraPosition);	//TODO IMPORTANT this Vector3f is not glm but omegalib one??
 		std::vector<GLfloat> getVertexData();
-		std::vector<GLuint> getVertexIndices();
-		
+		std::vector<GLuint>* getVertexIndices();
+		virtual std::vector<s2plotPrimitiveFacet*>* getFacets();
 		//static get size method??
 	  private:
 		GLuint baseOffset;

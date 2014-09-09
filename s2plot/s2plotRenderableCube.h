@@ -15,14 +15,14 @@ namespace s2plot
   class s2plotRenderableCube: public s2plotRenderablePolyObject
   {
   public:
-	s2plotRenderableCube(GLuint baseOffset);
-    s2plotTriangle** getFacets();
+	s2plotRenderableCube(GLuint baseOffset, GLfloat size, glm::vec4 position);
+    std::vector<s2plotPrimitiveFacet*>* getFacets();
     void updateFacetOffsets(GLuint baseOffset);
-    std::vector<GLuint> getVertexIndices();
+    std::vector<GLuint>* getVertexIndices();
     
   private:
     void init(GLuint baseOffset);
-    s2plotTriangle* facets[];
+    std::vector<s2plotPrimitiveFacet*> facets;
     std::vector<GLuint> indices;
     GLuint baseOffset;
   };
