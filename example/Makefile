@@ -102,41 +102,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named myapp
+# Target rules for targets named s2plotApp
 
 # Build rule for target.
-myapp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 myapp
-.PHONY : myapp
+s2plotApp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 s2plotApp
+.PHONY : s2plotApp
 
 # fast build rule for target.
-myapp/fast:
-	$(MAKE) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/build
-.PHONY : myapp/fast
+s2plotApp/fast:
+	$(MAKE) -f CMakeFiles/s2plotApp.dir/build.make CMakeFiles/s2plotApp.dir/build
+.PHONY : s2plotApp/fast
 
-myapp.o: myapp.cpp.o
-.PHONY : myapp.o
+s2plotApp.o: s2plotApp.cpp.o
+.PHONY : s2plotApp.o
 
 # target to build an object file
-myapp.cpp.o:
-	$(MAKE) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/myapp.cpp.o
-.PHONY : myapp.cpp.o
+s2plotApp.cpp.o:
+	$(MAKE) -f CMakeFiles/s2plotApp.dir/build.make CMakeFiles/s2plotApp.dir/s2plotApp.cpp.o
+.PHONY : s2plotApp.cpp.o
 
-myapp.i: myapp.cpp.i
-.PHONY : myapp.i
+s2plotApp.i: s2plotApp.cpp.i
+.PHONY : s2plotApp.i
 
 # target to preprocess a source file
-myapp.cpp.i:
-	$(MAKE) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/myapp.cpp.i
-.PHONY : myapp.cpp.i
+s2plotApp.cpp.i:
+	$(MAKE) -f CMakeFiles/s2plotApp.dir/build.make CMakeFiles/s2plotApp.dir/s2plotApp.cpp.i
+.PHONY : s2plotApp.cpp.i
 
-myapp.s: myapp.cpp.s
-.PHONY : myapp.s
+s2plotApp.s: s2plotApp.cpp.s
+.PHONY : s2plotApp.s
 
 # target to generate assembly for a file
-myapp.cpp.s:
-	$(MAKE) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/myapp.cpp.s
-.PHONY : myapp.cpp.s
+s2plotApp.cpp.s:
+	$(MAKE) -f CMakeFiles/s2plotApp.dir/build.make CMakeFiles/s2plotApp.dir/s2plotApp.cpp.s
+.PHONY : s2plotApp.cpp.s
 
 # Help Target
 help:
@@ -145,11 +145,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... myapp"
 	@echo "... rebuild_cache"
-	@echo "... myapp.o"
-	@echo "... myapp.i"
-	@echo "... myapp.s"
+	@echo "... s2plotApp"
+	@echo "... s2plotApp.o"
+	@echo "... s2plotApp.i"
+	@echo "... s2plotApp.s"
 .PHONY : help
 
 

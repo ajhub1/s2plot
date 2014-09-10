@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/adam/Desktop/s2plot/example/myapp.cpp" "/home/adam/Desktop/s2plot/example/CMakeFiles/myapp.dir/myapp.cpp.o"
+  "/home/adam/Desktop/s2plot/example/s2plotApp.cpp" "/home/adam/Desktop/s2plot/example/CMakeFiles/s2plotApp.dir/s2plotApp.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

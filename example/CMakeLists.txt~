@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8.1) 
+project(myapp)
+find_package(Omegalib)
+include_directories(${OMEGA_INCLUDE_DIRS})
+add_executable(myapp myapp.cpp)
+target_link_libraries(myapp ${OMEGA_LIB} ${s2plot_LIB})

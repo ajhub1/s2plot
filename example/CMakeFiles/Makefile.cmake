@@ -50,5 +50,5 @@ SET(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 SET(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/myapp.dir/DependInfo.cmake"
+  "CMakeFiles/s2plotApp.dir/DependInfo.cmake"
   )

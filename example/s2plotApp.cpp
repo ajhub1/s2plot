@@ -4,7 +4,7 @@
 using namespace omega;
 using namespace s2plot;
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // this is the standard way of implementing an s2plot application
 class s2plotApp: public EngineModule
 {
@@ -13,7 +13,8 @@ class s2plotApp: public EngineModule
 		void mydraw()
 		{
 			//draw code goes here
-			factory->ns2sphere();
+			glm::vec4 pos(0.0f,0.0f,0.0f,0.0f);
+			factory->ns2scube(0.0f, 0.0f, 0.0f, 10.0f, 10.0f, 10.0f, 1.0f, 1.0f,  1.0f, 1.0f);
 		}
 	
 	
