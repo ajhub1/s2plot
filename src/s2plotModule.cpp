@@ -127,55 +127,120 @@ int s2plotModule::partition(int beg, int end)
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-void s2plotModule::addObject(s2plotRenderableObject* object)
+void s2plotModule::addObject(s2plotRenderablePolyObject* object)
 {
 	// push object, then facets, then vertexData into their datastructures
 	sceneObjects->push_back(object);
-
-	
-	vector<s2plotPrimitiveFacet*>::iterator it = object->getFacets().begin();
-	vector<s2plotPrimitiveFacet*>::iterator it2 = object->getFacets().end();
-	printf("temp cheeeese  \n");
-	cout << "yes:  " << (*it).dummy()[0]->getPosition().x << endl;
-	facets->push_back(*it);
-	printf("insert aftet\n");
+	facets->insert(facets->end(), object->getFacets()->begin(), 
+						object->getFacets()->end());
 	vertexData->insert(vertexData->end(), 
 						object->getVertexIndices()->begin(), 
 						object->getVertexIndices()->end());
 
 }
-
 ////////////////////////////////////////////////////////////////////////////////
-bool s2plotModule::deleteObject(s2plotRenderableObject* object)
-{/*
-	// find the object
-	vector<s2plotRenderableObject*>::iterator objectIterator = sceneObjects->begin();
+void s2plotModule::addObject(s2plotPrimitiveFacet* facet)
+{
+	// push object, then facet (facet only has one facet), then vertexData into 
+	// their datastructures
+	sceneObjects->push_back(facet);
+	facets->push_back(facet);
+	vertexData->insert(vertexData->end(), 
+						facet->getVertexIndices()->begin(), 
+						facet->getVertexIndices()->end());
+
+}
+/* This delete method is not efficient and needs a better solution
+ * O(mn) where m is the size of the vector of all facets in the scene and n is
+ * the size of the vector of facets belonging to the object being deleted. So 2
+ * nested loops. There must be a better solution here maybe keep an indicie 
+ * value. 
+ * 
+ * */
+////////////////////////////////////////////////////////////////////////////////
+bool s2plotModule::deleteObject(s2plotRenderablePolyObject* object)
+{
+	// iterator for the object vector
+	vector<s2plotRenderableObject*>::iterator objectIterator = 
+														sceneObjects->begin();
 	
-	
+	// loop through the object vector searching for the object
 	
 	while (objectIterator != sceneObjects->end())
 	{
-		if (sceneObjects->at(1) == object)
+		if ((s2plotRenderablePolyObject*) &(*objectIterator) == object)
 		{
+			// delete the object from the sceneobjects vector
+			sceneObjects->erase(objectIterator);
 			// find the facets
-			vector<s2plotPrimitiveFacet*>::iterator facetIterator = object->getFacets()->begin();
 			
+			// iterator for the facet vector
+			vector<s2plotPrimitiveFacet*>::iterator facetIterator = 
+															facets->begin();
+			// find the objects associated facets
 			while (facetIterator != facets->end())
 			{
 				for (int i = 0; i < object->getFacets()->size(); i++) 
 				{
-					if (facets->at(facetIterator - object->getFacets()->begin()) == object->getFacets()->at(i))
+					if ((*facetIterator) == 
+												object->getFacets()->at(i))
 					{
-						// delete the facets
+						// delete the facet out of the facet vector
+						facets->erase(facetIterator);		
 					}
 				}
 				
 				++facetIterator;
 			}
-			// delete the object
+			// delete the object including facets and verticies
+			delete object;
 		}
 		++objectIterator;
-	}*/
+	}
+	return true;
+}
+////////////////////////////////////////////////////////////////////////////////
+bool s2plotModule::deleteObject(s2plotPrimitiveFacet* facet)
+{
+	// iterator for the object vector
+	vector<s2plotRenderableObject*>::iterator objectIterator = 
+														sceneObjects->begin();
+	
+	// loop through the object vector searching for the facet object
+	
+	while (objectIterator != sceneObjects->end())
+	{
+		if ((s2plotPrimitiveFacet*) &(*objectIterator) == facet)
+		{
+			// delete facet object from the sceneobjects vector
+			sceneObjects->erase(objectIterator);
+			
+		}
+		
+		++objectIterator;
+	}
+	
+	// iterator for the facet vector
+	vector<s2plotPrimitiveFacet*>::iterator facetIterator = 
+													facets->begin();
+	// find the facet in the facet vector
+	while (facetIterator != facets->end())
+	{
+
+		if ((*facetIterator) == facet)
+		{
+			// delete the facet out of the facet vector
+			facets->erase(facetIterator);	
+			break;	
+		}
+		
+		++facetIterator;
+	}
+				
+
+	// delete the object including facets and verticies
+	delete facet;
+
 	return true;
 }
 

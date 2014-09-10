@@ -21,7 +21,6 @@ namespace s2plot
 		std::vector<GLfloat> getVertexData();
 		std::vector<GLuint>* getVertexIndices();
 		virtual std::vector<s2plotPrimitiveFacet*> getFacets();
-		s2plotVertex* dummy();
 		//static get size method??
 	  private:
 		GLuint baseOffset;

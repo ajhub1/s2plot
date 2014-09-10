@@ -11,8 +11,8 @@ namespace s2plot
   
   class s2plotRenderablePolyObject: public s2plotRenderableObject
   {
-  public:
-	//virtual s2plotTriangle** s2plotRenderableCube::getFacets() = 0;
+	public:
+		virtual std::vector<s2plotPrimitiveFacet*>* getFacets() = 0;
   };
 }
 

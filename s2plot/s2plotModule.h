@@ -45,6 +45,7 @@ namespace s2plot
 	using namespace omega;
 	class s2plotFactory;
 	class s2plotRenderableObject;
+	class s2plotRenderablePolyObject;
 	class s2plotPrimitiveFacet;
 	
 	class s2plotModule: public EngineModule
@@ -56,8 +57,10 @@ namespace s2plot
 			void initializeRenderer(Renderer* r);
 			void update(const UpdateContext& context);	
 			void Draw();	
-			bool deleteObject(s2plotRenderableObject* object);
-			void addObject(s2plotRenderableObject* object);
+			bool deleteObject(s2plotRenderablePolyObject* object);
+			void addObject(s2plotRenderablePolyObject* object);
+			bool deleteObject(s2plotPrimitiveFacet* facet);
+			void addObject(s2plotPrimitiveFacet* facet);
 			s2plotFactory* createFactory();
 			
 		private:

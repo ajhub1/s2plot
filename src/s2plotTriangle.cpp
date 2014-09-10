@@ -45,13 +45,6 @@ GLfloat s2plotTriangle::getDistance(Vector3f cameraPosition)
 	
 }
 
-s2plotVertex* s2plotTriangle::dummy()
-{
-	printf("triangle dummy %f\n", + vertices[0]->getPosition().x);
-	return vertices;
-}
-
-
 std::vector<GLuint>* s2plotTriangle::getVertexIndices()
 {
 	return NULL;

@@ -13,7 +13,7 @@
                 s2plotShader.cpp
                 s2plotTriangle.cpp
                 s2plotPrimitiveFacet.cpp
-                s2plotRenderablePloyObject.cpp
+                s2plotRenderablePolyObject.cpp
                 s2plotTransform.cpp
                 s2plotVertex.cpp
 		)

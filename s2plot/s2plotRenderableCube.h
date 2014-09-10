@@ -17,13 +17,14 @@ namespace s2plot
   public:
 	s2plotRenderableCube(GLuint baseOffset, GLfloat size, glm::vec4 position);
 	void updateFacetOffsets(GLuint baseOffset);
-    std::vector<s2plotPrimitiveFacet*> getFacets();
+    std::vector<s2plotPrimitiveFacet*>* getFacets();
     std::vector<GLuint>* getVertexIndices();
     
   private:
     void init(GLuint baseOffset);
-    std::vector<s2plotPrimitiveFacet*> facets;
+    std::vector<s2plotPrimitiveFacet*>* facets;
     std::vector<GLuint>* indices;
+    s2plotVertex* vertices[8];
     GLuint baseOffset;
   };
 }
