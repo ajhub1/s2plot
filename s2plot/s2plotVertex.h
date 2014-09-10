@@ -12,25 +12,29 @@ namespace s2plot
 	  class s2plotVertex 
 	  {
 		  public:
-			s2plotVertex();
 			s2plotVertex(GLfloat x, GLfloat y, GLfloat z, GLfloat w);
 			//~s2plotVertex();
+			/**
+			void setPosition(vec4* position);
+			void setColour(vec4* colour);
+			void setNormal(vec4* normal);
 			
-			void setPosition(vec4 position);
-			void setColour(vec4 colour);
-			void setNormal(vec4 normal);
+			vec4* getPosition();
+			vec4* getColour();
+			vec4* getNormal();
 			
-			vec4 getPosition();
-			vec4 getColour();
-			vec4 getNormal();
-			
-			GLfloat* getVertexData();
+			GLfloat* getVertexData();*/
 			
 		  private:
-		    glm::vec4 position;
-			glm::vec4 colour;
-			glm::vec4 normal;
-			//glm::vec2 tex; //
+			struct s2vec4 {
+				GLfloat x;
+				GLfloat y;
+				GLfloat z;
+				GLfloat w;
+			};
+			s2vec4* position;
+			s2vec4* colour;
+			s2vec4* normal;
 	  };
 }
 

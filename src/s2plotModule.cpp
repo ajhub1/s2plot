@@ -50,7 +50,7 @@ void s2plotModule::Draw()
  * */
 s2plotModule::s2plotModule(): EngineModule("s2plotModule")
 {
-	this->initialize();
+	initialize();
 	
 }
 
@@ -64,9 +64,9 @@ s2plotModule::~s2plotModule()
 void s2plotModule::initialize()
 {
 	// setup the data structures for handling objects internally
-	sceneObjects = new vector<s2plotRenderableObject*>(500);
-	facets = new vector<s2plotPrimitiveFacet*>(500);
-	vertexData = new vector<GLfloat>(500); // TODO: fix the type of this vector
+	sceneObjects = new vector<s2plotRenderableObject*>(0);
+	facets = new vector<s2plotPrimitiveFacet*>(0);
+	vertexData = new vector<GLfloat>(0); // TODO: fix the type of this vector
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -125,19 +125,25 @@ int s2plotModule::partition(int beg, int end)
 	
 	return p;
 }
+////////////////////////////////////////////////////////////////////////////////
+
 
 ////////////////////////////////////////////////////////////////////////////////
-void s2plotModule::addObject(s2plotRenderablePolyObject* object)
+s2plotRenderablePolyObject* s2plotModule::addObject(s2plotRenderablePolyObject* object)
 {
 	// push object, then facets, then vertexData into their datastructures
 	sceneObjects->push_back(object);
+	
 	facets->insert(facets->end(), object->getFacets()->begin(), 
 						object->getFacets()->end());
+	
 	vertexData->insert(vertexData->end(), 
 						object->getVertexIndices()->begin(), 
 						object->getVertexIndices()->end());
-
+	return object;
 }
+////////////////////////////////////////////////////////////////////////////////
+
 ////////////////////////////////////////////////////////////////////////////////
 void s2plotModule::addObject(s2plotPrimitiveFacet* facet)
 {
@@ -150,6 +156,8 @@ void s2plotModule::addObject(s2plotPrimitiveFacet* facet)
 						facet->getVertexIndices()->end());
 
 }
+////////////////////////////////////////////////////////////////////////////////
+
 /* This delete method is not efficient and needs a better solution
  * O(mn) where m is the size of the vector of all facets in the scene and n is
  * the size of the vector of facets belonging to the object being deleted. So 2

@@ -76,8 +76,8 @@ s2plotRenderableCube* s2plotFactory::ns2scube(float x1, float y1, float z1, floa
 	vec4 centroid = vec4((x1 + (0.5 * x2)), (y1 + (0.5 * y2)), 
 					(z1 + (0.5 * z2)), 1.0f);
 	
-	s2plotRenderableCube* cube = new s2plotRenderableCube(0, size, centroid);
-	module->addObject(cube);
-	return cube;
+	//s2plotRenderableCube* cube = new s2plotRenderableCube(0, size, centroid);
+	return (s2plotRenderableCube*) module->addObject(new s2plotRenderableCube(0, size, centroid));
+	
 }
 

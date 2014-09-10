@@ -58,7 +58,7 @@ namespace s2plot
 			void update(const UpdateContext& context);	
 			void Draw();	
 			bool deleteObject(s2plotRenderablePolyObject* object);
-			void addObject(s2plotRenderablePolyObject* object);
+			s2plotRenderablePolyObject* addObject(s2plotRenderablePolyObject* object);
 			bool deleteObject(s2plotPrimitiveFacet* facet);
 			void addObject(s2plotPrimitiveFacet* facet);
 			s2plotFactory* createFactory();
