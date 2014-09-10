@@ -22,6 +22,9 @@
         target_link_libraries(${MODULE_NAME}
                 omega)
 
+	# Debugging
+	set (CMAKE_BUILD_TYPE debug)
+
         #------------------------------------------------------------------------------
         # DO NOT MODIFY ANYTHING BELOW AFTER THIS LINE
         set_target_properties(${MODULE_NAME} PROPERTIES PREFIX "")

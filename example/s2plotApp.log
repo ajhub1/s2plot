@@ -22,3 +22,4 @@ PythonInterpreter::addPythonPath: /home/adam/Desktop/omegalib/source/modules
 PythonInterpreter: starting interactive shell thread.
 Python Interpreter initialized.
 ModuleServices::addModule: s2plotModule
+~EngineModule s2plotModule

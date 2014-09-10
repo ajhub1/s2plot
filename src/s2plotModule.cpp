@@ -64,9 +64,9 @@ s2plotModule::~s2plotModule()
 void s2plotModule::initialize()
 {
 	// setup the data structures for handling objects internally
-	sceneObjects = new vector<s2plotRenderableObject*>(0);
-	facets = new vector<s2plotPrimitiveFacet*>(0);
-	vertexData = new vector<GLfloat>(0); // TODO: fix the type of this vector
+	sceneObjects = new vector<s2plotRenderableObject*>();
+	facets = new vector<s2plotPrimitiveFacet*>();
+	vertexData = new vector<GLfloat>(); // TODO: fix the type of this vector
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -79,7 +79,7 @@ void s2plotModule::update(const UpdateContext& context)
 	 * */
 	
 	cameraPosition = camera->getPosition();
-	sortFacets(0, facets->size());
+	//sortFacets(0, facets->size());
 	
 }
 ////////////////////////////////////////////////////////////////////////////////
