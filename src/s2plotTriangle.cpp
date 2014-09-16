@@ -5,19 +5,40 @@ using namespace s2plot;
 using namespace omega;
 using namespace std;
 
-s2plotTriangle::s2plotTriangle(GLuint baseOffset, s2plotVertex* p0, s2plotVertex* p1, s2plotVertex* p2)
+s2plotTriangle::s2plotTriangle(GLuint offset, s2plotVertex* p0, s2plotVertex* p1, s2plotVertex* p2)
 {
 	vertices[0] = p0;
 	vertices[1] = p1;
 	vertices[2] = p2;
-	
-	
-	//TODO use initializer list, recommended for C++??, ask adam
-	this->baseOffset = baseOffset;
-	
+	baseOffset = offset;
 	printf("triangle constructed\n");
 }
 
+s2plotTriangle::s2plotTriangle(const s2plotTriangle& that)
+{	
+	vertices[0] = that.vertices[0]; // TODO if seg fault find me
+	vertices[1] = that.vertices[1];
+	vertices[2] = that.vertices[2];
+	baseOffset = that.baseOffset;
+}
+
+s2plotTriangle& s2plotTriangle::operator=(const s2plotTriangle& that)
+{
+		if (this != &that)
+		{
+			vertices[0] = that.vertices[0]; // TODO if seg fault find me
+			vertices[1] = that.vertices[1];
+			vertices[2] = that.vertices[2];
+			baseOffset = that.baseOffset;
+		}
+		return *this;
+}
+
+s2plotTriangle::~s2plotTriangle()
+{
+	//delete []vertices; // TODO maybe we should use new and then need to delete the array
+}
+		
 void s2plotTriangle::draw(const GLfloat* indices)
 {
 	printf("triangle draw\n");

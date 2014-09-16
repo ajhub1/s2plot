@@ -14,6 +14,38 @@ s2plotRenderableCube::s2plotRenderableCube(GLuint baseOffset, GLfloat size, glm:
 	init(baseOffset);
 }
 
+s2plotRenderableCube::s2plotRenderableCube(const s2plotRenderableCube& that)
+{
+	this->init(that.baseOffset);
+}
+
+s2plotRenderableCube& s2plotRenderableCube::operator=(const s2plotRenderableCube& that)
+{
+	if (this != &that)
+	{
+		this->init(that.baseOffset);
+	}
+	return *this;
+}
+s2plotRenderableCube::~s2plotRenderableCube()
+{
+	//TODO make sure this is corret way to do this 
+	
+	for (int i = 0; i < 8; i++)
+	{
+		delete vertices[i];
+	}
+	//we do not delete vertices because its a local variable
+	
+	for (vector<s2plotPrimitiveFacet*>::iterator it = facets->begin(); it != facets->end(); ++it) 
+	{ 
+	   delete *it; 
+	}
+	
+	delete indices;
+	delete facets;
+}
+	
 void s2plotRenderableCube::init(GLuint baseOffset)
 {
 	facets = new vector<s2plotPrimitiveFacet*>();
@@ -32,6 +64,8 @@ void s2plotRenderableCube::init(GLuint baseOffset)
 	vertices[5] = new s2plotVertex(0.0f,1.0f,1.0f,0.0f);
 	vertices[6] = new s2plotVertex(1.0f,0.0f,1.0f,0.0f);
 	vertices[7] = new s2plotVertex(1.0f,1.0f,1.0f,0.0f);
+	
+
 
 	//front face
 	facets->push_back(new s2plotTriangle(baseOffset + 12 * 0 ,vertices[0] ,vertices[1] ,vertices[2]));	//*0 for readability

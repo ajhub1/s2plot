@@ -13,7 +13,11 @@ namespace s2plot
   class s2plotTriangle: public s2plotPrimitiveFacet
   {
 	  public:
-		s2plotTriangle(GLuint baseOffset, s2plotVertex* p0, s2plotVertex* p1, s2plotVertex* p2);
+		s2plotTriangle(GLuint offset, s2plotVertex* p0, s2plotVertex* p1, s2plotVertex* p2);
+		s2plotTriangle(const s2plotTriangle& that);
+		s2plotTriangle& operator=(const s2plotTriangle& that);
+		~s2plotTriangle();
+		
 		void draw(const GLfloat* indices);
 		void setBaseOffset(GLuint baseOffset);
 		
