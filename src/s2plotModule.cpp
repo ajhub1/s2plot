@@ -172,14 +172,14 @@ s2plotRenderablePolyObject* s2plotModule::addObject(s2plotRenderablePolyObject*
 													object)
 {
 	// push object, then facets, then vertexData into their datastructures
-	//vector<int>* test2 = new vector<int>();
-	//test->push_back(5);
-	//facets->insert(facets->end(), object->getFacets()->begin(), 
-						//object->getFacets()->end());
+	sceneObjects->push_back(object);
 	
-	//vertexData->insert(vertexData->end(), 
-						//object->getVertexIndices()->begin(), 
-						//object->getVertexIndices()->end());
+	facets->insert(facets->end(), object->getFacets()->begin(), 
+						object->getFacets()->end());
+	
+	vertexData->insert(vertexData->end(), 
+						object->getVertexIndices()->begin(), 
+						object->getVertexIndices()->end());
 	return object;
 }
 
@@ -188,11 +188,13 @@ void s2plotModule::addObject(s2plotPrimitiveFacet* facet)
 {
 	// push object, then facet (facet only has one facet), then vertexData into 
 	// their datastructures
-
+	sceneObjects->push_back(object);
+	
 	facets->push_back(facet);
+	
 	vertexData->insert(vertexData->end(), 
 						facet->getVertexIndices()->begin(), 
-						facet->getVertexIndices()->end());*/
+						facet->getVertexIndices()->end());
 
 }
 
@@ -218,6 +220,7 @@ bool s2plotModule::deleteObject(s2plotRenderablePolyObject* object)
 		{
 			// delete the object from the sceneobjects vector
 			sceneObjects->erase(objectIterator);
+			
 			// find the facets
 			
 			// iterator for the facet vector

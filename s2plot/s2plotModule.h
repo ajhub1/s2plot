@@ -70,15 +70,12 @@ namespace s2plot
 		private:
 			void sortFacets(int beg, int end);
 			int partition(int beg, int end);
-			//vector<s2plotRenderableObject*>* sceneObjects;
-			s2plotRenderableObject** sceneObjects;
-			//vector<s2plotPrimitiveFacet*>* facets;
-			s2plotPrimitiveFacet** facets;
-			//vector<GLfloat>* vertexData;
+			vector<s2plotRenderableObject*>* sceneObjects;
+			vector<s2plotPrimitiveFacet*>* facets;
+			vector<GLfloat>* vertexData;
 			Vector3f cameraPosition;
 			Camera* camera;
 			void callBack();
-			vector<int>* test;
 			vector<callback_function>* callBacks;
 	};
 }
