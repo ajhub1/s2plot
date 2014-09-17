@@ -23,6 +23,7 @@ namespace s2plot
 	void updateFacetOffsets(GLuint baseOffset);
     std::vector<s2plotPrimitiveFacet*>* getFacets();
     std::vector<GLuint>* getVertexIndices();
+    int getTestPrint();
     
   private:
     void init(GLuint baseOffset);

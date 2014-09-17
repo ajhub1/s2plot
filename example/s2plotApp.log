@@ -22,4 +22,12 @@ PythonInterpreter::addPythonPath: /home/adam/Desktop/omegalib/source/modules
 PythonInterpreter: starting interactive shell thread.
 Python Interpreter initialized.
 ModuleServices::addModule: s2plotModule
-~EngineModule s2plotModule
+ModuleServices::addModule: Module_1
+Service added: MouseService
+Service added: KeyboardService
+Service added: ViewRayService
+Initializing mission control server on port 22500
+ModuleServices::addModule: MissionControlClient
+Mission control connection open (id=0)
+ServiceManager::initialize
+Event buffer allocated. Max events: 512

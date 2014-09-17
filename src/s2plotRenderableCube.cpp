@@ -117,3 +117,8 @@ void s2plotRenderableCube::updateFacetOffsets(GLuint baseOffset)
 		facets->at(i)->setBaseOffset(baseOffset + 12 * i);
 	}
 }
+
+int s2plotRenderableCube::getTestPrint()
+{
+	return 1;
+}

@@ -31,10 +31,12 @@
  * 
  ******************************************************************************/
 #include "s2plot/s2plot.h"
+#include <omicron.h>
 #include <omp.h>
 
 using namespace s2plot;
 using namespace omega;
+using namespace omicron;
 using namespace std;
 /* Draw function - the call back from the s2plotModules Render Pass
  * 
@@ -46,7 +48,8 @@ void s2plotModule::Draw()
 }
 
 /* Constructor - creates an engine module with the name "s2plotModule"
- * 
+ * The module handles event call backs data structures and the 
+ * renderpass
  * */
 s2plotModule::s2plotModule(): EngineModule("s2plotModule")
 {
@@ -54,9 +57,14 @@ s2plotModule::s2plotModule(): EngineModule("s2plotModule")
 	
 }
 
+////////////////////////////////////////////////////////////////////////////////
 s2plotModule::~s2plotModule()
 {
-	// TO DO FREE MEMORY FOR DATA STRUCTURES
+	// FREE MEMORY FOR DATA STRUCTURES
+	//delete sceneObjects;
+	//delete facets;
+	//delete vertexData;
+	//delete callBacks;
 	
 }
 
@@ -64,9 +72,13 @@ s2plotModule::~s2plotModule()
 void s2plotModule::initialize()
 {
 	// setup the data structures for handling objects internally
-	sceneObjects = new vector<s2plotRenderableObject*>();
-	facets = new vector<s2plotPrimitiveFacet*>();
-	vertexData = new vector<GLfloat>(); // TODO: fix the type of this vector
+	//sceneObjects = new vector<s2plotRenderableObject*>();
+	sceneObjects = new s2plotRenderableObject*[100];
+	//facets = new vector<s2plotPrimitiveFacet*>();
+	facets = new s2plotPrimitiveFacet*[100];
+	//vertexData = new vector<GLfloat>(); // TODO: fix the type of this vector
+	//vertexData = new 
+	callBacks = new vector<callback_function>();
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -77,9 +89,9 @@ void s2plotModule::update(const UpdateContext& context)
 	 * array back to front based on camera position 
 	 * 
 	 * */
-	
+	callBack();
 	cameraPosition = camera->getPosition();
-	//sortFacets(0, facets->size());
+	sortFacets(0, facets->size());
 	
 }
 ////////////////////////////////////////////////////////////////////////////////
@@ -101,6 +113,34 @@ void s2plotModule::sortFacets(int beg, int end)
 		sortFacets(beg, p - 1);
 		sortFacets(p + 1, end);		
 	}	
+	
+}
+
+////////////////////////////////////////////////////////////////////////////////
+void s2plotModule::handleEvent(const Event& evt)
+{
+		callBack();
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////
+void s2plotModule::callBack()
+{
+	vector<callback_function>::iterator callBackIterator = callBacks->begin();
+	
+	while (callBackIterator != callBacks->end())
+	{
+		(*callBackIterator)();
+		++callBackIterator;
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////
+void s2plotModule::addCallBack(callback_function function)
+{
+	callBacks->push_back(function);	
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -124,39 +164,37 @@ int s2plotModule::partition(int beg, int end)
 	}
 	
 	return p;
+	
 }
-////////////////////////////////////////////////////////////////////////////////
-
 
 ////////////////////////////////////////////////////////////////////////////////
-s2plotRenderablePolyObject* s2plotModule::addObject(s2plotRenderablePolyObject* object)
+s2plotRenderablePolyObject* s2plotModule::addObject(s2plotRenderablePolyObject* 
+													object)
 {
 	// push object, then facets, then vertexData into their datastructures
-	sceneObjects->push_back(object);
+	//vector<int>* test2 = new vector<int>();
+	//test->push_back(5);
+	//facets->insert(facets->end(), object->getFacets()->begin(), 
+						//object->getFacets()->end());
 	
-	facets->insert(facets->end(), object->getFacets()->begin(), 
-						object->getFacets()->end());
-	
-	vertexData->insert(vertexData->end(), 
-						object->getVertexIndices()->begin(), 
-						object->getVertexIndices()->end());
+	//vertexData->insert(vertexData->end(), 
+						//object->getVertexIndices()->begin(), 
+						//object->getVertexIndices()->end());
 	return object;
 }
-////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////
 void s2plotModule::addObject(s2plotPrimitiveFacet* facet)
 {
 	// push object, then facet (facet only has one facet), then vertexData into 
 	// their datastructures
-	sceneObjects->push_back(facet);
+
 	facets->push_back(facet);
 	vertexData->insert(vertexData->end(), 
 						facet->getVertexIndices()->begin(), 
-						facet->getVertexIndices()->end());
+						facet->getVertexIndices()->end());*/
 
 }
-////////////////////////////////////////////////////////////////////////////////
 
 /* This delete method is not efficient and needs a better solution
  * O(mn) where m is the size of the vector of all facets in the scene and n is
@@ -206,7 +244,9 @@ bool s2plotModule::deleteObject(s2plotRenderablePolyObject* object)
 		++objectIterator;
 	}
 	return true;
+	
 }
+
 ////////////////////////////////////////////////////////////////////////////////
 bool s2plotModule::deleteObject(s2plotPrimitiveFacet* facet)
 {
@@ -250,6 +290,7 @@ bool s2plotModule::deleteObject(s2plotPrimitiveFacet* facet)
 	delete facet;
 
 	return true;
+	
 }
 
 ////////////////////////////////////////////////////////////////////////////////

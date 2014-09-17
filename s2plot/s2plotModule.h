@@ -62,15 +62,24 @@ namespace s2plot
 			bool deleteObject(s2plotPrimitiveFacet* facet);
 			void addObject(s2plotPrimitiveFacet* facet);
 			s2plotFactory* createFactory();
-			
+			typedef void (*callback_function)(void);
+			void addCallBack(callback_function function);
+			virtual void handleEvent(const Event& evt);
+			Event event();
+						
 		private:
 			void sortFacets(int beg, int end);
 			int partition(int beg, int end);
-			vector<s2plotRenderableObject*>* sceneObjects;
-			vector<s2plotPrimitiveFacet*>* facets;
-			vector<GLfloat>* vertexData;
+			//vector<s2plotRenderableObject*>* sceneObjects;
+			s2plotRenderableObject** sceneObjects;
+			//vector<s2plotPrimitiveFacet*>* facets;
+			s2plotPrimitiveFacet** facets;
+			//vector<GLfloat>* vertexData;
 			Vector3f cameraPosition;
 			Camera* camera;
+			void callBack();
+			vector<int>* test;
+			vector<callback_function>* callBacks;
 	};
 }
 #endif
