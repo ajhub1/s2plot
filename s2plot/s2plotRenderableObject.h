@@ -1,4 +1,3 @@
-
 #ifndef S2PLOTRENDERABLEOBJECT_H
 #define S2PLOTRENDERABLEOBJECT_H
 
@@ -11,12 +10,11 @@
 namespace s2plot
 {
   using namespace omega;
-  
+	
   class s2plotRenderableObject
   {   
 	  public:
-		int id;
-		virtual std::vector<GLuint>* getVertexIndices() = 0;
+		template<typename s2Type> s2Type getFacets();
   };
 }
 #endif

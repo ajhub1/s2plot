@@ -66,7 +66,7 @@ namespace s2plot
 			
 		private:
 			s2plotModule* module;
-		
+			GLuint* offsetptr;
 			
 	};
 }

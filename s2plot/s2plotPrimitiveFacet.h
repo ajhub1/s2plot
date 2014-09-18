@@ -11,9 +11,10 @@ namespace s2plot
   class s2plotPrimitiveFacet: public s2plotRenderableObject
   {
   public:
-    virtual void draw(const GLfloat* indices)=0;
-    virtual GLfloat getDistance(Vector3f cameraPosition)=0;
-	virtual void setBaseOffset(GLuint baseOffset) =0;
+	template<typename s2Type> s2plotVertex** getFacets();
+	virtual GLuint* getIndices() = 0;
+    virtual void draw() = 0;
+    virtual GLfloat getDistance(Vector3f cameraPosition) = 0;
  };
 }
 #endif

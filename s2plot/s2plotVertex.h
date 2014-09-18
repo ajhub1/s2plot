@@ -8,11 +8,15 @@ namespace s2plot
 {
 	using namespace omega;
 	using namespace glm;	
+	
+	class s2plotPrimitiveFacet;
   
-	  class s2plotVertex 
+	  class s2plotVertex : public s2plotPrimitiveFacet
 	  {
 		  public:
-			s2plotVertex(GLfloat x, GLfloat y, GLfloat z, GLfloat w);
+			s2plotVertex(); // empty constructor invoced when creating the arrays in the module
+			s2plotVertex(GLuint* offsetptr, GLfloat x, GLfloat y, GLfloat z, GLfloat w); // when acting as facet
+			s2plotVertex(GLfloat x, GLfloat y, GLfloat z, GLfloat w); // when acting as vertex
 			s2plotVertex(const s2plotVertex& that);
 			~s2plotVertex();
 			s2plotVertex& operator=(const s2plotVertex& that);
@@ -25,12 +29,20 @@ namespace s2plot
 			vec4* getColour();
 			vec4* getNormal();
 			
-			GLfloat* getVertexData();
+			template <typename s2Type> s2plotVertex** getFacets();
+			GLfloat* getVertices();
+			GLuint* getIndices();
+			void draw();
+			GLfloat getDistance(Vector3f cameraPosition);	
 			
 		  private:
+			s2plotVertex** vertices[1]; // represents facet of this vertex
+			GLfloat vertexData[12]; //TODO MAGIC represents data of THIS vertex 
+			GLuint* indexArray; // store the index
 			vec4* position;
 			vec4* colour;
 			vec4* normal;
+			GLuint offset;
 	  };
 }
 

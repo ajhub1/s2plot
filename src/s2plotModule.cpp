@@ -72,13 +72,13 @@ s2plotModule::~s2plotModule()
 void s2plotModule::initialize()
 {
 	// setup the data structures for handling objects internally
-	//sceneObjects = new vector<s2plotRenderableObject*>();
 	sceneObjects = new s2plotRenderableObject*[100];
-	//facets = new vector<s2plotPrimitiveFacet*>();
 	facets = new s2plotPrimitiveFacet*[100];
-	//vertexData = new vector<GLfloat>(); // TODO: fix the type of this vector
-	//vertexData = new 
+	vertexData = new s2plotVertex[300];
 	callBacks = new vector<callback_function>();
+	objectCounter = 0;
+	facetCounter = 0;
+	vertexCounter = 0;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -89,9 +89,9 @@ void s2plotModule::update(const UpdateContext& context)
 	 * array back to front based on camera position 
 	 * 
 	 * */
-	callBack();
+	//callBack();
 	cameraPosition = camera->getPosition();
-	sortFacets(0, facets->size());
+	//sortFacets(0, facets->size());
 	
 }
 ////////////////////////////////////////////////////////////////////////////////
@@ -106,14 +106,14 @@ void s2plotModule::initializeRenderer(Renderer* r)
 ////////////////////////////////////////////////////////////////////////////////
 void s2plotModule::sortFacets(int beg, int end)
 {
-	if(beg < end)
+	/*if(beg < end)
 	{
 		int p = partition(beg, end);
 		
 		sortFacets(beg, p - 1);
 		sortFacets(p + 1, end);		
 	}	
-	
+	*/
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -146,7 +146,7 @@ void s2plotModule::addCallBack(callback_function function)
 ////////////////////////////////////////////////////////////////////////////////
 int s2plotModule::partition(int beg, int end)
 {
-	
+	/*
 	int p = beg, loc;
 	s2plotPrimitiveFacet* pivot = facets->at(beg);
 	
@@ -164,38 +164,34 @@ int s2plotModule::partition(int beg, int end)
 	}
 	
 	return p;
+	*/
+	return 1;
 	
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-s2plotRenderablePolyObject* s2plotModule::addObject(s2plotRenderablePolyObject* 
+s2plotRenderableObject* s2plotModule::addObject(s2plotRenderablePolyObject* 
 													object)
 {
 	// push object, then facets, then vertexData into their datastructures
-	sceneObjects->push_back(object);
-	
-	facets->insert(facets->end(), object->getFacets()->begin(), 
-						object->getFacets()->end());
-	
-	vertexData->insert(vertexData->end(), 
-						object->getVertexIndices()->begin(), 
-						object->getVertexIndices()->end());
+	sceneObjects[0] = object;
+	s2plotPrimitiveFacet** tempFacet = object->getFacets<s2plotPrimitiveFacet**>();
+	memcpy(facets[facetCounter], tempFacet, (sizeof(tempFacet) / 
+			sizeof(tempFacet[0]) * sizeof(tempFacet)));
+			
 	return object;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-void s2plotModule::addObject(s2plotPrimitiveFacet* facet)
+s2plotRenderableObject* s2plotModule::addObject(s2plotPrimitiveFacet* facet)
 {
 	// push object, then facet (facet only has one facet), then vertexData into 
-	// their datastructures
-	sceneObjects->push_back(object);
-	
-	facets->push_back(facet);
-	
-	vertexData->insert(vertexData->end(), 
-						facet->getVertexIndices()->begin(), 
-						facet->getVertexIndices()->end());
-
+	sceneObjects[0] = facet;
+	s2plotPrimitiveFacet** tempFacet = (s2plotPrimitiveFacet**) 
+										facet->getFacets<s2plotVertex**>();
+	memcpy(facets[facetCounter], tempFacet, (sizeof(tempFacet) /  
+			sizeof(tempFacet[0]) * sizeof(tempFacet)));
+	return facet;
 }
 
 /* This delete method is not efficient and needs a better solution
@@ -209,7 +205,7 @@ void s2plotModule::addObject(s2plotPrimitiveFacet* facet)
 bool s2plotModule::deleteObject(s2plotRenderablePolyObject* object)
 {
 	// iterator for the object vector
-	vector<s2plotRenderableObject*>::iterator objectIterator = 
+	/*vector<s2plotRenderableObject*>::iterator objectIterator = 
 														sceneObjects->begin();
 	
 	// loop through the object vector searching for the object
@@ -245,7 +241,7 @@ bool s2plotModule::deleteObject(s2plotRenderablePolyObject* object)
 			delete object;
 		}
 		++objectIterator;
-	}
+	}*/
 	return true;
 	
 }
@@ -254,7 +250,7 @@ bool s2plotModule::deleteObject(s2plotRenderablePolyObject* object)
 bool s2plotModule::deleteObject(s2plotPrimitiveFacet* facet)
 {
 	// iterator for the object vector
-	vector<s2plotRenderableObject*>::iterator objectIterator = 
+	/*vector<s2plotRenderableObject*>::iterator objectIterator = 
 														sceneObjects->begin();
 	
 	// loop through the object vector searching for the facet object
@@ -291,7 +287,7 @@ bool s2plotModule::deleteObject(s2plotPrimitiveFacet* facet)
 
 	// delete the object including facets and verticies
 	delete facet;
-
+	*/
 	return true;
 	
 }

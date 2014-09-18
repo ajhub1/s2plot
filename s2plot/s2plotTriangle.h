@@ -4,7 +4,7 @@
 #include <omegaGl.h>
 #include "s2plot/s2plot.h"
 
-#define NUMBER_OF_VERTICES_PER_TRIANGLE 3
+#define NUMBER_OF_VERTICES_PER_TRIANGLE 3 // TODO change to a constant
 
 namespace s2plot
 {
@@ -13,23 +13,20 @@ namespace s2plot
   class s2plotTriangle: public s2plotPrimitiveFacet
   {
 	  public:
-		s2plotTriangle(GLuint offset, s2plotVertex* p0, s2plotVertex* p1, s2plotVertex* p2);
+		s2plotTriangle(GLuint* offset, s2plotVertex* p0, s2plotVertex* p1, s2plotVertex* p2);
 		s2plotTriangle(const s2plotTriangle& that);
 		s2plotTriangle& operator=(const s2plotTriangle& that);
 		~s2plotTriangle();
 		
-		void draw(const GLfloat* indices);
-		void setBaseOffset(GLuint baseOffset);
+		template <typename s2Type> s2plotVertex** getFacets(); // returns vertices NOT facets
+		GLuint* getIndices();
+		void draw();
+		GLfloat getDistance(Vector3f cameraPosition);	// TODO using omegalib vector
 		
-		GLfloat getDistance(Vector3f cameraPosition);	//TODO IMPORTANT this Vector3f is not glm but omegalib one??
-		std::vector<GLfloat> getVertexData();
-		std::vector<GLuint>* getVertexIndices();
-		virtual std::vector<s2plotPrimitiveFacet*> getFacets();
-		//static get size method??
 	  private:
-		GLuint baseOffset;
 		s2plotVertex* vertices[NUMBER_OF_VERTICES_PER_TRIANGLE];
-		std::vector<GLfloat> vdata;
+		GLuint offset;
+		GLuint indices[NUMBER_OF_VERTICES_PER_TRIANGLE];
   };
  
 }

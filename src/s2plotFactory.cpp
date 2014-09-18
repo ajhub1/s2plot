@@ -39,6 +39,7 @@ using namespace glm;
 s2plotFactory::s2plotFactory(s2plotModule* mod)
 {
 	s2plotModule* module = mod;
+	*offsetptr = 0;
 	//printf("\n factory created\n");
 }
 
@@ -49,18 +50,14 @@ s2plotFactory::~s2plotFactory()
 
 int s2plotFactory::createProgram()
 {
-	printf("\nprog\n");
+	return 1; // TODO
 }
 
 
 
 int s2plotFactory::ns2sphere()
 {
-	printf("\ns2sphere\n");
-	
-
-	
-	printf("\ncreated a sphere\n");
+	return 1; // TODO implement s2plot 
 }
 
 /*
@@ -75,9 +72,6 @@ s2plotRenderableCube* s2plotFactory::ns2scube(float x1, float y1, float z1, floa
 	GLfloat size = fabs(x1 - x2);
 	vec4 centroid = vec4((x1 + (0.5 * x2)), (y1 + (0.5 * y2)), 
 					(z1 + (0.5 * z2)), 1.0f);
-	
-	//s2plotRenderableCube* cube = new s2plotRenderableCube(0, size, centroid);
-	return (s2plotRenderableCube*) module->addObject(new s2plotRenderableCube(0, size, centroid));
-	
+	return (s2plotRenderableCube*) module->addObject(new s2plotRenderableCube(offsetptr, size, centroid));
 }
 

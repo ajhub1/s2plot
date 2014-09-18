@@ -15,22 +15,19 @@ namespace s2plot
   class s2plotRenderableCube: public s2plotRenderablePolyObject
   {
   public:
-	s2plotRenderableCube(GLuint baseOffset, GLfloat size, glm::vec4 position);
-	s2plotRenderableCube(const s2plotRenderableCube& that);
-	s2plotRenderableCube& operator=(const s2plotRenderableCube& that);
+	s2plotRenderableCube(GLuint* offsetptr, GLfloat size, glm::vec4 position);
+	//s2plotRenderableCube(const s2plotRenderableCube& that);
+	//s2plotRenderableCube& operator=(const s2plotRenderableCube& that);
 	~s2plotRenderableCube();
 	
-	void updateFacetOffsets(GLuint baseOffset);
-    std::vector<s2plotPrimitiveFacet*>* getFacets();
-    std::vector<GLuint>* getVertexIndices();
-    int getTestPrint();
+	void updateFacetOffsets(GLuint baseOffset); // TODO shifaz is a bitch 
+    template <typename s2Type> s2plotPrimitiveFacet** getFacets();
     
   private:
-    void init(GLuint baseOffset);
+    void init(GLuint* offsetptr);
     std::vector<s2plotPrimitiveFacet*>* facets;
     std::vector<GLuint>* indices;
     s2plotVertex* vertices[8];				//TODO MAGIC
-    GLuint baseOffset;
   };
 }
 

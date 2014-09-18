@@ -12,7 +12,7 @@ namespace s2plot
   class s2plotRenderablePolyObject: public s2plotRenderableObject
   {
 	public:
-		virtual std::vector<s2plotPrimitiveFacet*>* getFacets() = 0;
+		template<typename s2Type> s2plotPrimitiveFacet** getFacets();
   };
 }
 
