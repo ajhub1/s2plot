@@ -41,10 +41,10 @@ s2plotTriangle::~s2plotTriangle()
 	// no memory to free 
 }
 
-template <typename s2Type> s2plotVertex** s2plotTriangle::getFacets()
+s2plotPrimitiveFacet** s2plotTriangle::getFacets()
 {
 	// method is called getFacets() but return vertices.
-	return vertices; // TODO will this go out of scope seg fault
+	return (s2plotPrimitiveFacet**) vertices; // TODO will this go out of scope seg fault
 }
 		
 void s2plotTriangle::draw()
@@ -55,6 +55,11 @@ void s2plotTriangle::draw()
 GLfloat s2plotTriangle::getDistance(Vector3f cameraPosition)
 {
 	return 1.0f; // TODO 
+}
+
+s2plotVertex** s2plotTriangle::getVertices()
+{
+	return &vertices[0];
 }
 
 GLuint* s2plotTriangle::getIndices()

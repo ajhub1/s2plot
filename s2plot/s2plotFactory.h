@@ -56,14 +56,6 @@ namespace s2plot
 										float x2, float y2, float z2, 
 										float red, float green, float blue, float alpha);
 										
-			//TODO temp
-			enum vaIndices{
-				VA_POSITION_INDEX,
-				VA_COLOR_INDEX,
-				VA_NORMAL_INDEX,
-				VA_TEXTURE_INDEX,
-			};
-			
 		private:
 			s2plotModule* module;
 			GLuint* offsetptr;

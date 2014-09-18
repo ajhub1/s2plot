@@ -81,13 +81,19 @@ vec4* s2plotVertex::getNormal()
 	return normal;
 }
 
-template <typename s2Type> s2plotVertex** s2plotVertex::getFacets()
+s2plotPrimitiveFacet** s2plotVertex::getFacets()
+{
+	vertices[0] = this;
+	return (s2plotPrimitiveFacet**) vertices;
+}
+
+s2plotVertex** s2plotVertex::getVertices()
 {
 	vertices[0] = this;
 	return vertices;
 }
 
-GLfloat* s2plotVertex::getVertices()
+GLfloat* s2plotVertex::getVerticesData()
 {
 	vertexData[0] = position->x;
 	vertexData[1] = position->y; // TODO write a better algorithm not hardcode

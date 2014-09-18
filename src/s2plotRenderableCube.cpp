@@ -105,11 +105,13 @@ void s2plotRenderableCube::init(GLuint* offsetptr)
 	
 }
 
-template <typename s2Type> s2plotPrimitiveFacet** s2plotRenderableCube::getFacets()
+s2plotPrimitiveFacet** s2plotRenderableCube::getFacets()
 {
-	std::vector<s2plotPrimitiveFacet*> v;
-	s2plotPrimitiveFacet** a = &v[0];
-	return a;
+	
+	//std::vector<s2plotPrimitiveFacet*>* v;
+	//s2plotPrimitiveFacet** a = &v[0];
+	//s2plotPrimitiveFacet** returnValue = &facets[0];
+	return (s2plotPrimitiveFacet**)*(&facets);
 }
 
 void s2plotRenderableCube::updateFacetOffsets(GLuint baseOffset)

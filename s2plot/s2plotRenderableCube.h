@@ -21,7 +21,7 @@ namespace s2plot
 	~s2plotRenderableCube();
 	
 	void updateFacetOffsets(GLuint baseOffset); // TODO shifaz is a bitch 
-    template <typename s2Type> s2plotPrimitiveFacet** getFacets();
+    s2plotPrimitiveFacet** getFacets();
     
   private:
     void init(GLuint* offsetptr);

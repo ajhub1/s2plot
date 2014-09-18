@@ -18,7 +18,8 @@ namespace s2plot
 		s2plotTriangle& operator=(const s2plotTriangle& that);
 		~s2plotTriangle();
 		
-		template <typename s2Type> s2plotVertex** getFacets(); // returns vertices NOT facets
+		s2plotPrimitiveFacet** getFacets(); // returns vertices NOT facets
+		s2plotVertex** getVertices();
 		GLuint* getIndices();
 		void draw();
 		GLfloat getDistance(Vector3f cameraPosition);	// TODO using omegalib vector

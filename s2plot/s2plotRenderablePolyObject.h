@@ -9,10 +9,10 @@ namespace s2plot
 {
   using namespace omega;
   
-  class s2plotRenderablePolyObject: public s2plotRenderableObject
+  class s2plotRenderablePolyObject: public s2plotGeom
   {
 	public:
-		template<typename s2Type> s2plotPrimitiveFacet** getFacets();
+
   };
 }
 

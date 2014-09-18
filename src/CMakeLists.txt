@@ -4,7 +4,7 @@
         # Set module name and source files here
         add_library(${MODULE_NAME} MODULE 
 		s2plotFactory.cpp
-		s2plotRenderableObject.cpp
+		s2plotGeom.cpp
 		s2plotPoint.cpp
 		s2plotRenderableCube.cpp
 		s2plotModule.cpp

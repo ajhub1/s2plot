@@ -10,7 +10,7 @@
 #include "s2plot/s2plot/s2plotModule.h"
 #include "s2plot/s2plot/s2plotRenderPass.h"
 #include "s2plot/s2plot/s2plotPoint.h"
-#include "s2plot/s2plot/s2plotRenderableObject.h"
+#include "s2plot/s2plot/s2plotGeom.h"
 #include "s2plot/s2plot/s2plotRenderablePolyObject.h"
 #include "s2plot/s2plot/s2plotPrimitiveFacet.h"
 #include "s2plot/s2plot/s2plotVertex.h"

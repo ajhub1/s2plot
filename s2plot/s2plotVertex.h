@@ -29,14 +29,15 @@ namespace s2plot
 			vec4* getColour();
 			vec4* getNormal();
 			
-			template <typename s2Type> s2plotVertex** getFacets();
-			GLfloat* getVertices();
+			s2plotPrimitiveFacet** getFacets();
+			s2plotVertex** getVertices();
+			GLfloat* getVerticesData();
 			GLuint* getIndices();
 			void draw();
 			GLfloat getDistance(Vector3f cameraPosition);	
 			
 		  private:
-			s2plotVertex** vertices[1]; // represents facet of this vertex
+			s2plotVertex** vertices; // represents facet of this vertex
 			GLfloat vertexData[12]; //TODO MAGIC represents data of THIS vertex 
 			GLuint* indexArray; // store the index
 			vec4* position;

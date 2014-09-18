@@ -44,7 +44,7 @@ namespace s2plot
 {
 	using namespace omega;
 	class s2plotFactory;
-	class s2plotRenderableObject;
+	class s2plotGeom;
 	class s2plotRenderablePolyObject;
 	class s2plotPrimitiveFacet;
 	class s2plotVertex;
@@ -60,8 +60,8 @@ namespace s2plot
 			void Draw();	
 			bool deleteObject(s2plotRenderablePolyObject* object);
 			bool deleteObject(s2plotPrimitiveFacet* facet);
-			s2plotRenderableObject* addObject(s2plotRenderablePolyObject* object);
-			s2plotRenderableObject* addObject(s2plotPrimitiveFacet* facet);
+			s2plotGeom* addObject(s2plotRenderablePolyObject* object);
+			s2plotGeom* addObject(s2plotPrimitiveFacet* facet);
 			s2plotFactory* createFactory();
 			typedef void (*callback_function)(void);
 			void addCallBack(callback_function function);
@@ -71,12 +71,12 @@ namespace s2plot
 		private:
 			void sortFacets(int beg, int end);
 			int partition(int beg, int end);
-			s2plotRenderableObject** sceneObjects;
+			s2plotGeom** sceneObjects;
 			s2plotPrimitiveFacet** facets;
 			s2plotVertex* vertexData;
-			GLuint objectCounter;
-			GLuint facetCounter;
-			GLuint vertexCounter;
+			int objectCounter;
+			int facetCounter;
+			int vertexCounter;
 			GLuint* offsetptr;
 			Vector3f cameraPosition;
 			Camera* camera;
