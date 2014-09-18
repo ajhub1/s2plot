@@ -1,4 +1,4 @@
-# Install script for directory: /home/adam/Desktop/s2plot/example
+# Install script for directory: /home/shifaz/omegalib/source/modules/s2plot/example
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/home/adam/Desktop/s2plot/example/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/home/shifaz/omegalib/source/modules/s2plot/example/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/home/adam/Desktop/s2plot/example/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/home/shifaz/omegalib/source/modules/s2plot/example/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)

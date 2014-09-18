@@ -1,1 +1,1 @@
-/home/adam/Desktop/s2plot/example/CMakeFiles/s2plotApp.dir
+/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/s2plotApp.dir
