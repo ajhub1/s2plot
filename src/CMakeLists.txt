@@ -3,19 +3,17 @@
 
         # Set module name and source files here
         add_library(${MODULE_NAME} MODULE 
-		s2plotFactory.cpp
-		s2plotGeom.cpp
-		s2plotPoint.cpp
-		s2plotRenderableCube.cpp
-		s2plotModule.cpp
-		s2plotRenderPass.cpp
-                s2plotProgram.cpp
-                s2plotShader.cpp
-                s2plotTriangle.cpp
-                s2plotPrimitiveFacet.cpp
-                s2plotRenderablePolyObject.cpp
-                s2plotTransform.cpp
-                s2plotVertex.cpp
+		s2Factory.cpp
+		s2Geom.cpp
+		s2Cube.cpp
+		s2Module.cpp
+		s2RenderPass.cpp
+                s2Program.cpp
+                s2Shader.cpp
+                s2Triangle.cpp
+                s2Primitive.cpp
+                s2PolyObject.cpp
+                s2Vertex.cpp
 		)
 
         # Set the module library dependencies here

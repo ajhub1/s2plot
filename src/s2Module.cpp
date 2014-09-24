@@ -44,7 +44,7 @@ using namespace std;
 void s2plotModule::Draw()
 {
 	// call draw on all objects
-
+	printf("drawing\n");
 }
 
 /* Constructor - creates an engine module with the name "s2plotModule"
@@ -76,9 +76,10 @@ void s2plotModule::initialise()
 	s2plotObjectCounter = 0;
 	facetCounter = 0;
 	vertexCounter = 0;
-	sceneObjects = new s2plotGeom*[100];
-	facets = new s2plotPrimitiveFacet*[100];
-	vertexData = new s2plotVertex[300];
+	
+	sceneObjects = new vector<s2plotGeom*>();
+	facets = new vector<s2plotPrimitiveFacet*>();
+	vertexData = new vector<s2plotVertex*>();
 	callBacks = new vector<callback_function>();
 	printf("initialize() after %d \n", s2plotObjectCounter);
 	
@@ -180,14 +181,26 @@ int s2plotModule::partition(int beg, int end)
 int s2plotModule::getObjectCounter()
 {
 	return s2plotObjectCounter;
-	
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 s2plotGeom* s2plotModule::addObject(s2plotRenderablePolyObject* 
 													object)
 {
-	printf("before add %d \n", s2plotObjectCounter);
+	sceneObjects->push_back(object);
+	printf("added object to sceneObjects\n");
+	
+	facets->insert(facets->end(), object->getFacets()->begin(), 
+					object->getFacets()->end());
+	printf("added facets to facets\n");
+	
+	/*vertexData->insert(vertexData->end(), object->getFacets()->getIndices()->begin(),
+						object->getFacets()->getIndices()->end());
+	printf("added vertex data to vertexData\n");
+	*/					
+	return object;
+	
+	/*printf("before add %d \n", s2plotObjectCounter);
 	s2plotObjectCounter = 1;
 	printf("after add one %d \n", s2plotObjectCounter);
 	// push object, then facets, then vertexData into their datastructures
@@ -202,18 +215,19 @@ s2plotGeom* s2plotModule::addObject(s2plotRenderablePolyObject*
 	facetCounter += numFacets;
 	
 	return object;
+	*/
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 s2plotGeom* s2plotModule::addObject(s2plotPrimitiveFacet* facet)
 {
-	// push object, then facet (facet only has one facet), then vertexData into 
-	sceneObjects[s2plotObjectCounter++] = facet;
-	s2plotPrimitiveFacet** tempFacet = facet->getFacets();
-	GLuint numFacets = (sizeof(tempFacet) / sizeof(tempFacet[0]));
-	memcpy(facets[facetCounter], tempFacet, numFacets * sizeof(tempFacet));
-	facetCounter += numFacets;
+	sceneObjects->push_back(facet);
+	facets->insert(facets->end(), facet->getFacets()->begin(), 
+					facet->getFacets()->end());
+	vertexData->insert(vertexData->end(), object->getFacets()->getIndices()->begin(),
+						object->getFacets()->getIndices()->end());					
 	return facet;
+
 }
 
 /* This delete method is not efficient and needs a better solution

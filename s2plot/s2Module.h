@@ -73,10 +73,12 @@ namespace s2plot
 		private:
 			void sortFacets(int beg, int end);
 			int partition(int beg, int end);
-			s2plotGeom** sceneObjects;
-			s2plotPrimitiveFacet** facets;
-			s2plotVertex* vertexData; 
-			int dgbtemp[1024];
+			
+			std::vector<s2plotGeom*>* sceneObjects;
+			std::vector<s2plotPrimitiveFacet*>* facets;
+			std::vector<s2plotVertex>* vertexData;
+			
+			//int dgbtemp[1024];
 			int s2plotObjectCounter;
 			int facetCounter;
 			int vertexCounter;

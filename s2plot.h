@@ -6,23 +6,16 @@
 #define GLM_FORCE_RADIANS
 #include "s2plot/s2plot/glm/gtc/matrix_transform.hpp"
 
-
-#include "s2plot/s2plot/s2plotModule.h"
-#include "s2plot/s2plot/s2plotRenderPass.h"
-#include "s2plot/s2plot/s2plotPoint.h"
-#include "s2plot/s2plot/s2plotGeom.h"
-#include "s2plot/s2plot/s2plotRenderablePolyObject.h"
-#include "s2plot/s2plot/s2plotPrimitiveFacet.h"
-#include "s2plot/s2plot/s2plotVertex.h"
-#include "s2plot/s2plot/s2plotTriangle.h"
-#include "s2plot/s2plot/s2plotRenderableCube.h"
-#include "s2plot/s2plot/s2plotFactory.h"
-#include "s2plot/s2plot/s2plotProgram.h"
-#include "s2plot/s2plot/s2plotShader.h"
-
-
-
-#include "s2plot/s2plot/s2plotTransform.h"
-
+#include "s2plot/s2plot/s2Module.h"
+#include "s2plot/s2plot/s2RenderPass.h"
+#include "s2plot/s2plot/s2Geom.h"
+#include "s2plot/s2plot/s2PolyObject.h"
+#include "s2plot/s2plot/s2Primitive.h"
+#include "s2plot/s2plot/s2Vertex.h"
+#include "s2plot/s2plot/s2Triangle.h"
+#include "s2plot/s2plot/s2Cube.h"
+#include "s2plot/s2plot/s2Factory.h"
+#include "s2plot/s2plot/s2Program.h"
+#include "s2plot/s2plot/s2Shader.h"
 
 #endif
