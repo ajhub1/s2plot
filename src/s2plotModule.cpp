@@ -53,7 +53,7 @@ void s2plotModule::Draw()
  * */
 s2plotModule::s2plotModule(): EngineModule("s2plotModule")
 {
-	s2plotModule::initialize();
+	s2plotModule::initialise();
 	
 }
 
@@ -69,19 +69,24 @@ s2plotModule::~s2plotModule()
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-void s2plotModule::initialize()
+void s2plotModule::initialise()
 {
 	printf("initialize() before \n");
 	// setup the data structures for handling objects internally
-	objectCounter = 0;
+	s2plotObjectCounter = 0;
 	facetCounter = 0;
 	vertexCounter = 0;
 	sceneObjects = new s2plotGeom*[100];
 	facets = new s2plotPrimitiveFacet*[100];
 	vertexData = new s2plotVertex[300];
 	callBacks = new vector<callback_function>();
-	printf("initialize() after %d \n", objectCounter);
+	printf("initialize() after %d \n", s2plotObjectCounter);
 	
+}
+
+void s2plotModule::initialize()
+{
+	// empty method 
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -172,15 +177,21 @@ int s2plotModule::partition(int beg, int end)
 	
 }
 
+int s2plotModule::getObjectCounter()
+{
+	return s2plotObjectCounter;
+	
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 s2plotGeom* s2plotModule::addObject(s2plotRenderablePolyObject* 
 													object)
 {
-	printf("before add %d \n", objectCounter);
-	objectCounter = 1;
-	printf("after add one %d \n", objectCounter);
+	printf("before add %d \n", s2plotObjectCounter);
+	s2plotObjectCounter = 1;
+	printf("after add one %d \n", s2plotObjectCounter);
 	// push object, then facets, then vertexData into their datastructures
-	sceneObjects[objectCounter] = object;
+	sceneObjects[s2plotObjectCounter] = object;
 	printf("after assign  \n");
 	s2plotPrimitiveFacet** tempFacet = object->getFacets();
 	
@@ -197,7 +208,7 @@ s2plotGeom* s2plotModule::addObject(s2plotRenderablePolyObject*
 s2plotGeom* s2plotModule::addObject(s2plotPrimitiveFacet* facet)
 {
 	// push object, then facet (facet only has one facet), then vertexData into 
-	sceneObjects[objectCounter++] = facet;
+	sceneObjects[s2plotObjectCounter++] = facet;
 	s2plotPrimitiveFacet** tempFacet = facet->getFacets();
 	GLuint numFacets = (sizeof(tempFacet) / sizeof(tempFacet[0]));
 	memcpy(facets[facetCounter], tempFacet, numFacets * sizeof(tempFacet));

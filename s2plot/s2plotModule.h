@@ -54,7 +54,8 @@ namespace s2plot
 		public:
 			s2plotModule();
 			virtual ~s2plotModule();
-			void initialize();
+			void initialise();
+			virtual void initialize();
 			void initializeRenderer(Renderer* r);
 			void update(const UpdateContext& context);	
 			void Draw();	
@@ -67,14 +68,16 @@ namespace s2plot
 			void addCallBack(callback_function function);
 			virtual void handleEvent(const Event& evt);
 			Event event();
+			int getObjectCounter();
 						
 		private:
 			void sortFacets(int beg, int end);
 			int partition(int beg, int end);
 			s2plotGeom** sceneObjects;
 			s2plotPrimitiveFacet** facets;
-			s2plotVertex* vertexData;
-			int objectCounter;
+			s2plotVertex* vertexData; 
+			int dgbtemp[1024];
+			int s2plotObjectCounter;
 			int facetCounter;
 			int vertexCounter;
 			GLuint* offsetptr;
