@@ -42,10 +42,10 @@ namespace s2plot
 	class s2Geom
 	{   
 		public:
-			virtual GLuint getId();
-			virtual void setId(GLuint newId);
+			virtual GLuint getId() {};
+			virtual void setId(GLuint newId) {};
 			
-			virtual vector<s2Primitive*>* getPrimitives();
+			virtual vector<s2Primitive*>* getPrimitives() {};
 			
 		protected:
 			vector<s2Primitive*>* primitives;

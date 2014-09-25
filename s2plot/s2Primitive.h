@@ -43,11 +43,11 @@ namespace s2plot
 	class s2Primitive: public s2Geom
 	{
 		public:
-			virtual void draw();
-			virtual GLfloat getDistance(Vector3f cameraPosition);
-			virtual vector<s2Vertex*>* getVertices();
-			virtual vector<GLfloat>* getVertexData();
-			virtual vector<GLuint>* getIndices();
+			virtual void draw() {};
+			virtual GLfloat getDistance(Vector3f cameraPosition) {};
+			virtual vector<s2Vertex*>* getVertices() {};
+			virtual vector<GLfloat>* getVertexData() {};
+			virtual vector<GLuint>* getIndices() {};
 
 		protected:
 			vector<s2Vertex*>* vertices;

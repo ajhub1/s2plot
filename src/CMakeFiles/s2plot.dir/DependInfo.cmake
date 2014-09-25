@@ -4,19 +4,17 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotFactory.cpp" "/home/dre/Desktop/omegalib/core/modules/s2plot/src/CMakeFiles/s2plot.dir/s2plotFactory.o"
-  "/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotGeom.cpp" "/home/dre/Desktop/omegalib/core/modules/s2plot/src/CMakeFiles/s2plot.dir/s2plotGeom.o"
-  "/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotModule.cpp" "/home/dre/Desktop/omegalib/core/modules/s2plot/src/CMakeFiles/s2plot.dir/s2plotModule.o"
-  "/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotPoint.cpp" "/home/dre/Desktop/omegalib/core/modules/s2plot/src/CMakeFiles/s2plot.dir/s2plotPoint.o"
-  "/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotPrimitiveFacet.cpp" "/home/dre/Desktop/omegalib/core/modules/s2plot/src/CMakeFiles/s2plot.dir/s2plotPrimitiveFacet.o"
-  "/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotProgram.cpp" "/home/dre/Desktop/omegalib/core/modules/s2plot/src/CMakeFiles/s2plot.dir/s2plotProgram.o"
-  "/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotRenderPass.cpp" "/home/dre/Desktop/omegalib/core/modules/s2plot/src/CMakeFiles/s2plot.dir/s2plotRenderPass.o"
-  "/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotRenderableCube.cpp" "/home/dre/Desktop/omegalib/core/modules/s2plot/src/CMakeFiles/s2plot.dir/s2plotRenderableCube.o"
-  "/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotRenderablePolyObject.cpp" "/home/dre/Desktop/omegalib/core/modules/s2plot/src/CMakeFiles/s2plot.dir/s2plotRenderablePolyObject.o"
-  "/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotShader.cpp" "/home/dre/Desktop/omegalib/core/modules/s2plot/src/CMakeFiles/s2plot.dir/s2plotShader.o"
-  "/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotTransform.cpp" "/home/dre/Desktop/omegalib/core/modules/s2plot/src/CMakeFiles/s2plot.dir/s2plotTransform.o"
-  "/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotTriangle.cpp" "/home/dre/Desktop/omegalib/core/modules/s2plot/src/CMakeFiles/s2plot.dir/s2plotTriangle.o"
-  "/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotVertex.cpp" "/home/dre/Desktop/omegalib/core/modules/s2plot/src/CMakeFiles/s2plot.dir/s2plotVertex.o"
+  "/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Cube.cpp" "/home/dre/Desktop/omegalib/core/modules/s2plot/src/CMakeFiles/s2plot.dir/s2Cube.o"
+  "/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Factory.cpp" "/home/dre/Desktop/omegalib/core/modules/s2plot/src/CMakeFiles/s2plot.dir/s2Factory.o"
+  "/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Geom.cpp" "/home/dre/Desktop/omegalib/core/modules/s2plot/src/CMakeFiles/s2plot.dir/s2Geom.o"
+  "/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Module.cpp" "/home/dre/Desktop/omegalib/core/modules/s2plot/src/CMakeFiles/s2plot.dir/s2Module.o"
+  "/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2PolyObject.cpp" "/home/dre/Desktop/omegalib/core/modules/s2plot/src/CMakeFiles/s2plot.dir/s2PolyObject.o"
+  "/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Primitive.cpp" "/home/dre/Desktop/omegalib/core/modules/s2plot/src/CMakeFiles/s2plot.dir/s2Primitive.o"
+  "/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Program.cpp" "/home/dre/Desktop/omegalib/core/modules/s2plot/src/CMakeFiles/s2plot.dir/s2Program.o"
+  "/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2RenderPass.cpp" "/home/dre/Desktop/omegalib/core/modules/s2plot/src/CMakeFiles/s2plot.dir/s2RenderPass.o"
+  "/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Shader.cpp" "/home/dre/Desktop/omegalib/core/modules/s2plot/src/CMakeFiles/s2plot.dir/s2Shader.o"
+  "/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Triangle.cpp" "/home/dre/Desktop/omegalib/core/modules/s2plot/src/CMakeFiles/s2plot.dir/s2Triangle.o"
+  "/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Vertex.cpp" "/home/dre/Desktop/omegalib/core/modules/s2plot/src/CMakeFiles/s2plot.dir/s2Vertex.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

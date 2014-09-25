@@ -116,199 +116,169 @@ s2plot/fast:
 .PHONY : s2plot/fast
 
 # target to build an object file
-s2plotFactory.o:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotFactory.o
-.PHONY : s2plotFactory.o
+s2Cube.o:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Cube.o
+.PHONY : s2Cube.o
 
 # target to preprocess a source file
-s2plotFactory.i:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotFactory.i
-.PHONY : s2plotFactory.i
+s2Cube.i:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Cube.i
+.PHONY : s2Cube.i
 
 # target to generate assembly for a file
-s2plotFactory.s:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotFactory.s
-.PHONY : s2plotFactory.s
+s2Cube.s:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Cube.s
+.PHONY : s2Cube.s
 
 # target to build an object file
-s2plotGeom.o:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotGeom.o
-.PHONY : s2plotGeom.o
+s2Factory.o:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Factory.o
+.PHONY : s2Factory.o
 
 # target to preprocess a source file
-s2plotGeom.i:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotGeom.i
-.PHONY : s2plotGeom.i
+s2Factory.i:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Factory.i
+.PHONY : s2Factory.i
 
 # target to generate assembly for a file
-s2plotGeom.s:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotGeom.s
-.PHONY : s2plotGeom.s
+s2Factory.s:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Factory.s
+.PHONY : s2Factory.s
 
 # target to build an object file
-s2plotModule.o:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotModule.o
-.PHONY : s2plotModule.o
+s2Geom.o:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Geom.o
+.PHONY : s2Geom.o
 
 # target to preprocess a source file
-s2plotModule.i:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotModule.i
-.PHONY : s2plotModule.i
+s2Geom.i:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Geom.i
+.PHONY : s2Geom.i
 
 # target to generate assembly for a file
-s2plotModule.s:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotModule.s
-.PHONY : s2plotModule.s
+s2Geom.s:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Geom.s
+.PHONY : s2Geom.s
 
 # target to build an object file
-s2plotPoint.o:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotPoint.o
-.PHONY : s2plotPoint.o
+s2Module.o:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Module.o
+.PHONY : s2Module.o
 
 # target to preprocess a source file
-s2plotPoint.i:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotPoint.i
-.PHONY : s2plotPoint.i
+s2Module.i:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Module.i
+.PHONY : s2Module.i
 
 # target to generate assembly for a file
-s2plotPoint.s:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotPoint.s
-.PHONY : s2plotPoint.s
+s2Module.s:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Module.s
+.PHONY : s2Module.s
 
 # target to build an object file
-s2plotPrimitiveFacet.o:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotPrimitiveFacet.o
-.PHONY : s2plotPrimitiveFacet.o
+s2PolyObject.o:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2PolyObject.o
+.PHONY : s2PolyObject.o
 
 # target to preprocess a source file
-s2plotPrimitiveFacet.i:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotPrimitiveFacet.i
-.PHONY : s2plotPrimitiveFacet.i
+s2PolyObject.i:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2PolyObject.i
+.PHONY : s2PolyObject.i
 
 # target to generate assembly for a file
-s2plotPrimitiveFacet.s:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotPrimitiveFacet.s
-.PHONY : s2plotPrimitiveFacet.s
+s2PolyObject.s:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2PolyObject.s
+.PHONY : s2PolyObject.s
 
 # target to build an object file
-s2plotProgram.o:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotProgram.o
-.PHONY : s2plotProgram.o
+s2Primitive.o:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Primitive.o
+.PHONY : s2Primitive.o
 
 # target to preprocess a source file
-s2plotProgram.i:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotProgram.i
-.PHONY : s2plotProgram.i
+s2Primitive.i:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Primitive.i
+.PHONY : s2Primitive.i
 
 # target to generate assembly for a file
-s2plotProgram.s:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotProgram.s
-.PHONY : s2plotProgram.s
+s2Primitive.s:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Primitive.s
+.PHONY : s2Primitive.s
 
 # target to build an object file
-s2plotRenderPass.o:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotRenderPass.o
-.PHONY : s2plotRenderPass.o
+s2Program.o:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Program.o
+.PHONY : s2Program.o
 
 # target to preprocess a source file
-s2plotRenderPass.i:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotRenderPass.i
-.PHONY : s2plotRenderPass.i
+s2Program.i:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Program.i
+.PHONY : s2Program.i
 
 # target to generate assembly for a file
-s2plotRenderPass.s:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotRenderPass.s
-.PHONY : s2plotRenderPass.s
+s2Program.s:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Program.s
+.PHONY : s2Program.s
 
 # target to build an object file
-s2plotRenderableCube.o:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotRenderableCube.o
-.PHONY : s2plotRenderableCube.o
+s2RenderPass.o:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2RenderPass.o
+.PHONY : s2RenderPass.o
 
 # target to preprocess a source file
-s2plotRenderableCube.i:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotRenderableCube.i
-.PHONY : s2plotRenderableCube.i
+s2RenderPass.i:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2RenderPass.i
+.PHONY : s2RenderPass.i
 
 # target to generate assembly for a file
-s2plotRenderableCube.s:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotRenderableCube.s
-.PHONY : s2plotRenderableCube.s
+s2RenderPass.s:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2RenderPass.s
+.PHONY : s2RenderPass.s
 
 # target to build an object file
-s2plotRenderablePolyObject.o:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotRenderablePolyObject.o
-.PHONY : s2plotRenderablePolyObject.o
+s2Shader.o:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Shader.o
+.PHONY : s2Shader.o
 
 # target to preprocess a source file
-s2plotRenderablePolyObject.i:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotRenderablePolyObject.i
-.PHONY : s2plotRenderablePolyObject.i
+s2Shader.i:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Shader.i
+.PHONY : s2Shader.i
 
 # target to generate assembly for a file
-s2plotRenderablePolyObject.s:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotRenderablePolyObject.s
-.PHONY : s2plotRenderablePolyObject.s
+s2Shader.s:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Shader.s
+.PHONY : s2Shader.s
 
 # target to build an object file
-s2plotShader.o:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotShader.o
-.PHONY : s2plotShader.o
+s2Triangle.o:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Triangle.o
+.PHONY : s2Triangle.o
 
 # target to preprocess a source file
-s2plotShader.i:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotShader.i
-.PHONY : s2plotShader.i
+s2Triangle.i:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Triangle.i
+.PHONY : s2Triangle.i
 
 # target to generate assembly for a file
-s2plotShader.s:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotShader.s
-.PHONY : s2plotShader.s
+s2Triangle.s:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Triangle.s
+.PHONY : s2Triangle.s
 
 # target to build an object file
-s2plotTransform.o:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotTransform.o
-.PHONY : s2plotTransform.o
+s2Vertex.o:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Vertex.o
+.PHONY : s2Vertex.o
 
 # target to preprocess a source file
-s2plotTransform.i:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotTransform.i
-.PHONY : s2plotTransform.i
+s2Vertex.i:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Vertex.i
+.PHONY : s2Vertex.i
 
 # target to generate assembly for a file
-s2plotTransform.s:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotTransform.s
-.PHONY : s2plotTransform.s
-
-# target to build an object file
-s2plotTriangle.o:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotTriangle.o
-.PHONY : s2plotTriangle.o
-
-# target to preprocess a source file
-s2plotTriangle.i:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotTriangle.i
-.PHONY : s2plotTriangle.i
-
-# target to generate assembly for a file
-s2plotTriangle.s:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotTriangle.s
-.PHONY : s2plotTriangle.s
-
-# target to build an object file
-s2plotVertex.o:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotVertex.o
-.PHONY : s2plotVertex.o
-
-# target to preprocess a source file
-s2plotVertex.i:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotVertex.i
-.PHONY : s2plotVertex.i
-
-# target to generate assembly for a file
-s2plotVertex.s:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotVertex.s
-.PHONY : s2plotVertex.s
+s2Vertex.s:
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot && $(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Vertex.s
+.PHONY : s2Vertex.s
 
 # Help Target
 help:
@@ -319,45 +289,39 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... s2plot"
-	@echo "... s2plotFactory.o"
-	@echo "... s2plotFactory.i"
-	@echo "... s2plotFactory.s"
-	@echo "... s2plotGeom.o"
-	@echo "... s2plotGeom.i"
-	@echo "... s2plotGeom.s"
-	@echo "... s2plotModule.o"
-	@echo "... s2plotModule.i"
-	@echo "... s2plotModule.s"
-	@echo "... s2plotPoint.o"
-	@echo "... s2plotPoint.i"
-	@echo "... s2plotPoint.s"
-	@echo "... s2plotPrimitiveFacet.o"
-	@echo "... s2plotPrimitiveFacet.i"
-	@echo "... s2plotPrimitiveFacet.s"
-	@echo "... s2plotProgram.o"
-	@echo "... s2plotProgram.i"
-	@echo "... s2plotProgram.s"
-	@echo "... s2plotRenderPass.o"
-	@echo "... s2plotRenderPass.i"
-	@echo "... s2plotRenderPass.s"
-	@echo "... s2plotRenderableCube.o"
-	@echo "... s2plotRenderableCube.i"
-	@echo "... s2plotRenderableCube.s"
-	@echo "... s2plotRenderablePolyObject.o"
-	@echo "... s2plotRenderablePolyObject.i"
-	@echo "... s2plotRenderablePolyObject.s"
-	@echo "... s2plotShader.o"
-	@echo "... s2plotShader.i"
-	@echo "... s2plotShader.s"
-	@echo "... s2plotTransform.o"
-	@echo "... s2plotTransform.i"
-	@echo "... s2plotTransform.s"
-	@echo "... s2plotTriangle.o"
-	@echo "... s2plotTriangle.i"
-	@echo "... s2plotTriangle.s"
-	@echo "... s2plotVertex.o"
-	@echo "... s2plotVertex.i"
-	@echo "... s2plotVertex.s"
+	@echo "... s2Cube.o"
+	@echo "... s2Cube.i"
+	@echo "... s2Cube.s"
+	@echo "... s2Factory.o"
+	@echo "... s2Factory.i"
+	@echo "... s2Factory.s"
+	@echo "... s2Geom.o"
+	@echo "... s2Geom.i"
+	@echo "... s2Geom.s"
+	@echo "... s2Module.o"
+	@echo "... s2Module.i"
+	@echo "... s2Module.s"
+	@echo "... s2PolyObject.o"
+	@echo "... s2PolyObject.i"
+	@echo "... s2PolyObject.s"
+	@echo "... s2Primitive.o"
+	@echo "... s2Primitive.i"
+	@echo "... s2Primitive.s"
+	@echo "... s2Program.o"
+	@echo "... s2Program.i"
+	@echo "... s2Program.s"
+	@echo "... s2RenderPass.o"
+	@echo "... s2RenderPass.i"
+	@echo "... s2RenderPass.s"
+	@echo "... s2Shader.o"
+	@echo "... s2Shader.i"
+	@echo "... s2Shader.s"
+	@echo "... s2Triangle.o"
+	@echo "... s2Triangle.i"
+	@echo "... s2Triangle.s"
+	@echo "... s2Vertex.o"
+	@echo "... s2Vertex.i"
+	@echo "... s2Vertex.s"
 .PHONY : help
 
 

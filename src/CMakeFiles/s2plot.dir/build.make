@@ -52,337 +52,287 @@ include src/CMakeFiles/s2plot.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/CMakeFiles/s2plot.dir/flags.make
 
-src/CMakeFiles/s2plot.dir/s2plotFactory.o: src/CMakeFiles/s2plot.dir/flags.make
-src/CMakeFiles/s2plot.dir/s2plotFactory.o: src/s2plotFactory.cpp
+src/CMakeFiles/s2plot.dir/s2Factory.o: src/CMakeFiles/s2plot.dir/flags.make
+src/CMakeFiles/s2plot.dir/s2Factory.o: src/s2Factory.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/dre/Desktop/omegalib/core/modules/s2plot/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/s2plot.dir/s2plotFactory.o"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/s2plot.dir/s2plotFactory.o -c /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotFactory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/s2plot.dir/s2Factory.o"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/s2plot.dir/s2Factory.o -c /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Factory.cpp
 
-src/CMakeFiles/s2plot.dir/s2plotFactory.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/s2plot.dir/s2plotFactory.i"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotFactory.cpp > CMakeFiles/s2plot.dir/s2plotFactory.i
+src/CMakeFiles/s2plot.dir/s2Factory.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/s2plot.dir/s2Factory.i"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Factory.cpp > CMakeFiles/s2plot.dir/s2Factory.i
 
-src/CMakeFiles/s2plot.dir/s2plotFactory.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/s2plot.dir/s2plotFactory.s"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotFactory.cpp -o CMakeFiles/s2plot.dir/s2plotFactory.s
+src/CMakeFiles/s2plot.dir/s2Factory.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/s2plot.dir/s2Factory.s"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Factory.cpp -o CMakeFiles/s2plot.dir/s2Factory.s
 
-src/CMakeFiles/s2plot.dir/s2plotFactory.o.requires:
-.PHONY : src/CMakeFiles/s2plot.dir/s2plotFactory.o.requires
+src/CMakeFiles/s2plot.dir/s2Factory.o.requires:
+.PHONY : src/CMakeFiles/s2plot.dir/s2Factory.o.requires
 
-src/CMakeFiles/s2plot.dir/s2plotFactory.o.provides: src/CMakeFiles/s2plot.dir/s2plotFactory.o.requires
-	$(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotFactory.o.provides.build
-.PHONY : src/CMakeFiles/s2plot.dir/s2plotFactory.o.provides
+src/CMakeFiles/s2plot.dir/s2Factory.o.provides: src/CMakeFiles/s2plot.dir/s2Factory.o.requires
+	$(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Factory.o.provides.build
+.PHONY : src/CMakeFiles/s2plot.dir/s2Factory.o.provides
 
-src/CMakeFiles/s2plot.dir/s2plotFactory.o.provides.build: src/CMakeFiles/s2plot.dir/s2plotFactory.o
+src/CMakeFiles/s2plot.dir/s2Factory.o.provides.build: src/CMakeFiles/s2plot.dir/s2Factory.o
 
-src/CMakeFiles/s2plot.dir/s2plotGeom.o: src/CMakeFiles/s2plot.dir/flags.make
-src/CMakeFiles/s2plot.dir/s2plotGeom.o: src/s2plotGeom.cpp
+src/CMakeFiles/s2plot.dir/s2Geom.o: src/CMakeFiles/s2plot.dir/flags.make
+src/CMakeFiles/s2plot.dir/s2Geom.o: src/s2Geom.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/dre/Desktop/omegalib/core/modules/s2plot/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/s2plot.dir/s2plotGeom.o"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/s2plot.dir/s2plotGeom.o -c /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotGeom.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/s2plot.dir/s2Geom.o"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/s2plot.dir/s2Geom.o -c /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Geom.cpp
 
-src/CMakeFiles/s2plot.dir/s2plotGeom.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/s2plot.dir/s2plotGeom.i"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotGeom.cpp > CMakeFiles/s2plot.dir/s2plotGeom.i
+src/CMakeFiles/s2plot.dir/s2Geom.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/s2plot.dir/s2Geom.i"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Geom.cpp > CMakeFiles/s2plot.dir/s2Geom.i
 
-src/CMakeFiles/s2plot.dir/s2plotGeom.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/s2plot.dir/s2plotGeom.s"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotGeom.cpp -o CMakeFiles/s2plot.dir/s2plotGeom.s
+src/CMakeFiles/s2plot.dir/s2Geom.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/s2plot.dir/s2Geom.s"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Geom.cpp -o CMakeFiles/s2plot.dir/s2Geom.s
 
-src/CMakeFiles/s2plot.dir/s2plotGeom.o.requires:
-.PHONY : src/CMakeFiles/s2plot.dir/s2plotGeom.o.requires
+src/CMakeFiles/s2plot.dir/s2Geom.o.requires:
+.PHONY : src/CMakeFiles/s2plot.dir/s2Geom.o.requires
 
-src/CMakeFiles/s2plot.dir/s2plotGeom.o.provides: src/CMakeFiles/s2plot.dir/s2plotGeom.o.requires
-	$(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotGeom.o.provides.build
-.PHONY : src/CMakeFiles/s2plot.dir/s2plotGeom.o.provides
+src/CMakeFiles/s2plot.dir/s2Geom.o.provides: src/CMakeFiles/s2plot.dir/s2Geom.o.requires
+	$(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Geom.o.provides.build
+.PHONY : src/CMakeFiles/s2plot.dir/s2Geom.o.provides
 
-src/CMakeFiles/s2plot.dir/s2plotGeom.o.provides.build: src/CMakeFiles/s2plot.dir/s2plotGeom.o
+src/CMakeFiles/s2plot.dir/s2Geom.o.provides.build: src/CMakeFiles/s2plot.dir/s2Geom.o
 
-src/CMakeFiles/s2plot.dir/s2plotPoint.o: src/CMakeFiles/s2plot.dir/flags.make
-src/CMakeFiles/s2plot.dir/s2plotPoint.o: src/s2plotPoint.cpp
+src/CMakeFiles/s2plot.dir/s2Cube.o: src/CMakeFiles/s2plot.dir/flags.make
+src/CMakeFiles/s2plot.dir/s2Cube.o: src/s2Cube.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/dre/Desktop/omegalib/core/modules/s2plot/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/s2plot.dir/s2plotPoint.o"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/s2plot.dir/s2plotPoint.o -c /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotPoint.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/s2plot.dir/s2Cube.o"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/s2plot.dir/s2Cube.o -c /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Cube.cpp
 
-src/CMakeFiles/s2plot.dir/s2plotPoint.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/s2plot.dir/s2plotPoint.i"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotPoint.cpp > CMakeFiles/s2plot.dir/s2plotPoint.i
+src/CMakeFiles/s2plot.dir/s2Cube.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/s2plot.dir/s2Cube.i"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Cube.cpp > CMakeFiles/s2plot.dir/s2Cube.i
 
-src/CMakeFiles/s2plot.dir/s2plotPoint.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/s2plot.dir/s2plotPoint.s"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotPoint.cpp -o CMakeFiles/s2plot.dir/s2plotPoint.s
+src/CMakeFiles/s2plot.dir/s2Cube.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/s2plot.dir/s2Cube.s"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Cube.cpp -o CMakeFiles/s2plot.dir/s2Cube.s
 
-src/CMakeFiles/s2plot.dir/s2plotPoint.o.requires:
-.PHONY : src/CMakeFiles/s2plot.dir/s2plotPoint.o.requires
+src/CMakeFiles/s2plot.dir/s2Cube.o.requires:
+.PHONY : src/CMakeFiles/s2plot.dir/s2Cube.o.requires
 
-src/CMakeFiles/s2plot.dir/s2plotPoint.o.provides: src/CMakeFiles/s2plot.dir/s2plotPoint.o.requires
-	$(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotPoint.o.provides.build
-.PHONY : src/CMakeFiles/s2plot.dir/s2plotPoint.o.provides
+src/CMakeFiles/s2plot.dir/s2Cube.o.provides: src/CMakeFiles/s2plot.dir/s2Cube.o.requires
+	$(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Cube.o.provides.build
+.PHONY : src/CMakeFiles/s2plot.dir/s2Cube.o.provides
 
-src/CMakeFiles/s2plot.dir/s2plotPoint.o.provides.build: src/CMakeFiles/s2plot.dir/s2plotPoint.o
+src/CMakeFiles/s2plot.dir/s2Cube.o.provides.build: src/CMakeFiles/s2plot.dir/s2Cube.o
 
-src/CMakeFiles/s2plot.dir/s2plotRenderableCube.o: src/CMakeFiles/s2plot.dir/flags.make
-src/CMakeFiles/s2plot.dir/s2plotRenderableCube.o: src/s2plotRenderableCube.cpp
+src/CMakeFiles/s2plot.dir/s2Module.o: src/CMakeFiles/s2plot.dir/flags.make
+src/CMakeFiles/s2plot.dir/s2Module.o: src/s2Module.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/dre/Desktop/omegalib/core/modules/s2plot/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/s2plot.dir/s2plotRenderableCube.o"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/s2plot.dir/s2plotRenderableCube.o -c /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotRenderableCube.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/s2plot.dir/s2Module.o"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/s2plot.dir/s2Module.o -c /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Module.cpp
 
-src/CMakeFiles/s2plot.dir/s2plotRenderableCube.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/s2plot.dir/s2plotRenderableCube.i"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotRenderableCube.cpp > CMakeFiles/s2plot.dir/s2plotRenderableCube.i
+src/CMakeFiles/s2plot.dir/s2Module.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/s2plot.dir/s2Module.i"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Module.cpp > CMakeFiles/s2plot.dir/s2Module.i
 
-src/CMakeFiles/s2plot.dir/s2plotRenderableCube.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/s2plot.dir/s2plotRenderableCube.s"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotRenderableCube.cpp -o CMakeFiles/s2plot.dir/s2plotRenderableCube.s
+src/CMakeFiles/s2plot.dir/s2Module.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/s2plot.dir/s2Module.s"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Module.cpp -o CMakeFiles/s2plot.dir/s2Module.s
 
-src/CMakeFiles/s2plot.dir/s2plotRenderableCube.o.requires:
-.PHONY : src/CMakeFiles/s2plot.dir/s2plotRenderableCube.o.requires
+src/CMakeFiles/s2plot.dir/s2Module.o.requires:
+.PHONY : src/CMakeFiles/s2plot.dir/s2Module.o.requires
 
-src/CMakeFiles/s2plot.dir/s2plotRenderableCube.o.provides: src/CMakeFiles/s2plot.dir/s2plotRenderableCube.o.requires
-	$(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotRenderableCube.o.provides.build
-.PHONY : src/CMakeFiles/s2plot.dir/s2plotRenderableCube.o.provides
+src/CMakeFiles/s2plot.dir/s2Module.o.provides: src/CMakeFiles/s2plot.dir/s2Module.o.requires
+	$(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Module.o.provides.build
+.PHONY : src/CMakeFiles/s2plot.dir/s2Module.o.provides
 
-src/CMakeFiles/s2plot.dir/s2plotRenderableCube.o.provides.build: src/CMakeFiles/s2plot.dir/s2plotRenderableCube.o
+src/CMakeFiles/s2plot.dir/s2Module.o.provides.build: src/CMakeFiles/s2plot.dir/s2Module.o
 
-src/CMakeFiles/s2plot.dir/s2plotModule.o: src/CMakeFiles/s2plot.dir/flags.make
-src/CMakeFiles/s2plot.dir/s2plotModule.o: src/s2plotModule.cpp
+src/CMakeFiles/s2plot.dir/s2RenderPass.o: src/CMakeFiles/s2plot.dir/flags.make
+src/CMakeFiles/s2plot.dir/s2RenderPass.o: src/s2RenderPass.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/dre/Desktop/omegalib/core/modules/s2plot/CMakeFiles $(CMAKE_PROGRESS_5)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/s2plot.dir/s2plotModule.o"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/s2plot.dir/s2plotModule.o -c /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotModule.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/s2plot.dir/s2RenderPass.o"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/s2plot.dir/s2RenderPass.o -c /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2RenderPass.cpp
 
-src/CMakeFiles/s2plot.dir/s2plotModule.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/s2plot.dir/s2plotModule.i"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotModule.cpp > CMakeFiles/s2plot.dir/s2plotModule.i
+src/CMakeFiles/s2plot.dir/s2RenderPass.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/s2plot.dir/s2RenderPass.i"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2RenderPass.cpp > CMakeFiles/s2plot.dir/s2RenderPass.i
 
-src/CMakeFiles/s2plot.dir/s2plotModule.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/s2plot.dir/s2plotModule.s"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotModule.cpp -o CMakeFiles/s2plot.dir/s2plotModule.s
+src/CMakeFiles/s2plot.dir/s2RenderPass.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/s2plot.dir/s2RenderPass.s"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2RenderPass.cpp -o CMakeFiles/s2plot.dir/s2RenderPass.s
 
-src/CMakeFiles/s2plot.dir/s2plotModule.o.requires:
-.PHONY : src/CMakeFiles/s2plot.dir/s2plotModule.o.requires
+src/CMakeFiles/s2plot.dir/s2RenderPass.o.requires:
+.PHONY : src/CMakeFiles/s2plot.dir/s2RenderPass.o.requires
 
-src/CMakeFiles/s2plot.dir/s2plotModule.o.provides: src/CMakeFiles/s2plot.dir/s2plotModule.o.requires
-	$(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotModule.o.provides.build
-.PHONY : src/CMakeFiles/s2plot.dir/s2plotModule.o.provides
+src/CMakeFiles/s2plot.dir/s2RenderPass.o.provides: src/CMakeFiles/s2plot.dir/s2RenderPass.o.requires
+	$(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2RenderPass.o.provides.build
+.PHONY : src/CMakeFiles/s2plot.dir/s2RenderPass.o.provides
 
-src/CMakeFiles/s2plot.dir/s2plotModule.o.provides.build: src/CMakeFiles/s2plot.dir/s2plotModule.o
+src/CMakeFiles/s2plot.dir/s2RenderPass.o.provides.build: src/CMakeFiles/s2plot.dir/s2RenderPass.o
 
-src/CMakeFiles/s2plot.dir/s2plotRenderPass.o: src/CMakeFiles/s2plot.dir/flags.make
-src/CMakeFiles/s2plot.dir/s2plotRenderPass.o: src/s2plotRenderPass.cpp
+src/CMakeFiles/s2plot.dir/s2Program.o: src/CMakeFiles/s2plot.dir/flags.make
+src/CMakeFiles/s2plot.dir/s2Program.o: src/s2Program.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/dre/Desktop/omegalib/core/modules/s2plot/CMakeFiles $(CMAKE_PROGRESS_6)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/s2plot.dir/s2plotRenderPass.o"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/s2plot.dir/s2plotRenderPass.o -c /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotRenderPass.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/s2plot.dir/s2Program.o"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/s2plot.dir/s2Program.o -c /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Program.cpp
 
-src/CMakeFiles/s2plot.dir/s2plotRenderPass.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/s2plot.dir/s2plotRenderPass.i"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotRenderPass.cpp > CMakeFiles/s2plot.dir/s2plotRenderPass.i
+src/CMakeFiles/s2plot.dir/s2Program.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/s2plot.dir/s2Program.i"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Program.cpp > CMakeFiles/s2plot.dir/s2Program.i
 
-src/CMakeFiles/s2plot.dir/s2plotRenderPass.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/s2plot.dir/s2plotRenderPass.s"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotRenderPass.cpp -o CMakeFiles/s2plot.dir/s2plotRenderPass.s
+src/CMakeFiles/s2plot.dir/s2Program.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/s2plot.dir/s2Program.s"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Program.cpp -o CMakeFiles/s2plot.dir/s2Program.s
 
-src/CMakeFiles/s2plot.dir/s2plotRenderPass.o.requires:
-.PHONY : src/CMakeFiles/s2plot.dir/s2plotRenderPass.o.requires
+src/CMakeFiles/s2plot.dir/s2Program.o.requires:
+.PHONY : src/CMakeFiles/s2plot.dir/s2Program.o.requires
 
-src/CMakeFiles/s2plot.dir/s2plotRenderPass.o.provides: src/CMakeFiles/s2plot.dir/s2plotRenderPass.o.requires
-	$(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotRenderPass.o.provides.build
-.PHONY : src/CMakeFiles/s2plot.dir/s2plotRenderPass.o.provides
+src/CMakeFiles/s2plot.dir/s2Program.o.provides: src/CMakeFiles/s2plot.dir/s2Program.o.requires
+	$(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Program.o.provides.build
+.PHONY : src/CMakeFiles/s2plot.dir/s2Program.o.provides
 
-src/CMakeFiles/s2plot.dir/s2plotRenderPass.o.provides.build: src/CMakeFiles/s2plot.dir/s2plotRenderPass.o
+src/CMakeFiles/s2plot.dir/s2Program.o.provides.build: src/CMakeFiles/s2plot.dir/s2Program.o
 
-src/CMakeFiles/s2plot.dir/s2plotProgram.o: src/CMakeFiles/s2plot.dir/flags.make
-src/CMakeFiles/s2plot.dir/s2plotProgram.o: src/s2plotProgram.cpp
+src/CMakeFiles/s2plot.dir/s2Shader.o: src/CMakeFiles/s2plot.dir/flags.make
+src/CMakeFiles/s2plot.dir/s2Shader.o: src/s2Shader.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/dre/Desktop/omegalib/core/modules/s2plot/CMakeFiles $(CMAKE_PROGRESS_7)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/s2plot.dir/s2plotProgram.o"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/s2plot.dir/s2plotProgram.o -c /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotProgram.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/s2plot.dir/s2Shader.o"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/s2plot.dir/s2Shader.o -c /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Shader.cpp
 
-src/CMakeFiles/s2plot.dir/s2plotProgram.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/s2plot.dir/s2plotProgram.i"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotProgram.cpp > CMakeFiles/s2plot.dir/s2plotProgram.i
+src/CMakeFiles/s2plot.dir/s2Shader.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/s2plot.dir/s2Shader.i"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Shader.cpp > CMakeFiles/s2plot.dir/s2Shader.i
 
-src/CMakeFiles/s2plot.dir/s2plotProgram.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/s2plot.dir/s2plotProgram.s"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotProgram.cpp -o CMakeFiles/s2plot.dir/s2plotProgram.s
+src/CMakeFiles/s2plot.dir/s2Shader.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/s2plot.dir/s2Shader.s"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Shader.cpp -o CMakeFiles/s2plot.dir/s2Shader.s
 
-src/CMakeFiles/s2plot.dir/s2plotProgram.o.requires:
-.PHONY : src/CMakeFiles/s2plot.dir/s2plotProgram.o.requires
+src/CMakeFiles/s2plot.dir/s2Shader.o.requires:
+.PHONY : src/CMakeFiles/s2plot.dir/s2Shader.o.requires
 
-src/CMakeFiles/s2plot.dir/s2plotProgram.o.provides: src/CMakeFiles/s2plot.dir/s2plotProgram.o.requires
-	$(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotProgram.o.provides.build
-.PHONY : src/CMakeFiles/s2plot.dir/s2plotProgram.o.provides
+src/CMakeFiles/s2plot.dir/s2Shader.o.provides: src/CMakeFiles/s2plot.dir/s2Shader.o.requires
+	$(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Shader.o.provides.build
+.PHONY : src/CMakeFiles/s2plot.dir/s2Shader.o.provides
 
-src/CMakeFiles/s2plot.dir/s2plotProgram.o.provides.build: src/CMakeFiles/s2plot.dir/s2plotProgram.o
+src/CMakeFiles/s2plot.dir/s2Shader.o.provides.build: src/CMakeFiles/s2plot.dir/s2Shader.o
 
-src/CMakeFiles/s2plot.dir/s2plotShader.o: src/CMakeFiles/s2plot.dir/flags.make
-src/CMakeFiles/s2plot.dir/s2plotShader.o: src/s2plotShader.cpp
+src/CMakeFiles/s2plot.dir/s2Triangle.o: src/CMakeFiles/s2plot.dir/flags.make
+src/CMakeFiles/s2plot.dir/s2Triangle.o: src/s2Triangle.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/dre/Desktop/omegalib/core/modules/s2plot/CMakeFiles $(CMAKE_PROGRESS_8)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/s2plot.dir/s2plotShader.o"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/s2plot.dir/s2plotShader.o -c /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotShader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/s2plot.dir/s2Triangle.o"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/s2plot.dir/s2Triangle.o -c /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Triangle.cpp
 
-src/CMakeFiles/s2plot.dir/s2plotShader.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/s2plot.dir/s2plotShader.i"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotShader.cpp > CMakeFiles/s2plot.dir/s2plotShader.i
+src/CMakeFiles/s2plot.dir/s2Triangle.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/s2plot.dir/s2Triangle.i"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Triangle.cpp > CMakeFiles/s2plot.dir/s2Triangle.i
 
-src/CMakeFiles/s2plot.dir/s2plotShader.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/s2plot.dir/s2plotShader.s"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotShader.cpp -o CMakeFiles/s2plot.dir/s2plotShader.s
+src/CMakeFiles/s2plot.dir/s2Triangle.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/s2plot.dir/s2Triangle.s"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Triangle.cpp -o CMakeFiles/s2plot.dir/s2Triangle.s
 
-src/CMakeFiles/s2plot.dir/s2plotShader.o.requires:
-.PHONY : src/CMakeFiles/s2plot.dir/s2plotShader.o.requires
+src/CMakeFiles/s2plot.dir/s2Triangle.o.requires:
+.PHONY : src/CMakeFiles/s2plot.dir/s2Triangle.o.requires
 
-src/CMakeFiles/s2plot.dir/s2plotShader.o.provides: src/CMakeFiles/s2plot.dir/s2plotShader.o.requires
-	$(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotShader.o.provides.build
-.PHONY : src/CMakeFiles/s2plot.dir/s2plotShader.o.provides
+src/CMakeFiles/s2plot.dir/s2Triangle.o.provides: src/CMakeFiles/s2plot.dir/s2Triangle.o.requires
+	$(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Triangle.o.provides.build
+.PHONY : src/CMakeFiles/s2plot.dir/s2Triangle.o.provides
 
-src/CMakeFiles/s2plot.dir/s2plotShader.o.provides.build: src/CMakeFiles/s2plot.dir/s2plotShader.o
+src/CMakeFiles/s2plot.dir/s2Triangle.o.provides.build: src/CMakeFiles/s2plot.dir/s2Triangle.o
 
-src/CMakeFiles/s2plot.dir/s2plotTriangle.o: src/CMakeFiles/s2plot.dir/flags.make
-src/CMakeFiles/s2plot.dir/s2plotTriangle.o: src/s2plotTriangle.cpp
+src/CMakeFiles/s2plot.dir/s2Primitive.o: src/CMakeFiles/s2plot.dir/flags.make
+src/CMakeFiles/s2plot.dir/s2Primitive.o: src/s2Primitive.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/dre/Desktop/omegalib/core/modules/s2plot/CMakeFiles $(CMAKE_PROGRESS_9)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/s2plot.dir/s2plotTriangle.o"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/s2plot.dir/s2plotTriangle.o -c /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotTriangle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/s2plot.dir/s2Primitive.o"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/s2plot.dir/s2Primitive.o -c /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Primitive.cpp
 
-src/CMakeFiles/s2plot.dir/s2plotTriangle.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/s2plot.dir/s2plotTriangle.i"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotTriangle.cpp > CMakeFiles/s2plot.dir/s2plotTriangle.i
+src/CMakeFiles/s2plot.dir/s2Primitive.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/s2plot.dir/s2Primitive.i"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Primitive.cpp > CMakeFiles/s2plot.dir/s2Primitive.i
 
-src/CMakeFiles/s2plot.dir/s2plotTriangle.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/s2plot.dir/s2plotTriangle.s"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotTriangle.cpp -o CMakeFiles/s2plot.dir/s2plotTriangle.s
+src/CMakeFiles/s2plot.dir/s2Primitive.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/s2plot.dir/s2Primitive.s"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Primitive.cpp -o CMakeFiles/s2plot.dir/s2Primitive.s
 
-src/CMakeFiles/s2plot.dir/s2plotTriangle.o.requires:
-.PHONY : src/CMakeFiles/s2plot.dir/s2plotTriangle.o.requires
+src/CMakeFiles/s2plot.dir/s2Primitive.o.requires:
+.PHONY : src/CMakeFiles/s2plot.dir/s2Primitive.o.requires
 
-src/CMakeFiles/s2plot.dir/s2plotTriangle.o.provides: src/CMakeFiles/s2plot.dir/s2plotTriangle.o.requires
-	$(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotTriangle.o.provides.build
-.PHONY : src/CMakeFiles/s2plot.dir/s2plotTriangle.o.provides
+src/CMakeFiles/s2plot.dir/s2Primitive.o.provides: src/CMakeFiles/s2plot.dir/s2Primitive.o.requires
+	$(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Primitive.o.provides.build
+.PHONY : src/CMakeFiles/s2plot.dir/s2Primitive.o.provides
 
-src/CMakeFiles/s2plot.dir/s2plotTriangle.o.provides.build: src/CMakeFiles/s2plot.dir/s2plotTriangle.o
+src/CMakeFiles/s2plot.dir/s2Primitive.o.provides.build: src/CMakeFiles/s2plot.dir/s2Primitive.o
 
-src/CMakeFiles/s2plot.dir/s2plotPrimitiveFacet.o: src/CMakeFiles/s2plot.dir/flags.make
-src/CMakeFiles/s2plot.dir/s2plotPrimitiveFacet.o: src/s2plotPrimitiveFacet.cpp
+src/CMakeFiles/s2plot.dir/s2PolyObject.o: src/CMakeFiles/s2plot.dir/flags.make
+src/CMakeFiles/s2plot.dir/s2PolyObject.o: src/s2PolyObject.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/dre/Desktop/omegalib/core/modules/s2plot/CMakeFiles $(CMAKE_PROGRESS_10)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/s2plot.dir/s2plotPrimitiveFacet.o"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/s2plot.dir/s2plotPrimitiveFacet.o -c /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotPrimitiveFacet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/s2plot.dir/s2PolyObject.o"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/s2plot.dir/s2PolyObject.o -c /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2PolyObject.cpp
 
-src/CMakeFiles/s2plot.dir/s2plotPrimitiveFacet.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/s2plot.dir/s2plotPrimitiveFacet.i"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotPrimitiveFacet.cpp > CMakeFiles/s2plot.dir/s2plotPrimitiveFacet.i
+src/CMakeFiles/s2plot.dir/s2PolyObject.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/s2plot.dir/s2PolyObject.i"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2PolyObject.cpp > CMakeFiles/s2plot.dir/s2PolyObject.i
 
-src/CMakeFiles/s2plot.dir/s2plotPrimitiveFacet.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/s2plot.dir/s2plotPrimitiveFacet.s"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotPrimitiveFacet.cpp -o CMakeFiles/s2plot.dir/s2plotPrimitiveFacet.s
+src/CMakeFiles/s2plot.dir/s2PolyObject.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/s2plot.dir/s2PolyObject.s"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2PolyObject.cpp -o CMakeFiles/s2plot.dir/s2PolyObject.s
 
-src/CMakeFiles/s2plot.dir/s2plotPrimitiveFacet.o.requires:
-.PHONY : src/CMakeFiles/s2plot.dir/s2plotPrimitiveFacet.o.requires
+src/CMakeFiles/s2plot.dir/s2PolyObject.o.requires:
+.PHONY : src/CMakeFiles/s2plot.dir/s2PolyObject.o.requires
 
-src/CMakeFiles/s2plot.dir/s2plotPrimitiveFacet.o.provides: src/CMakeFiles/s2plot.dir/s2plotPrimitiveFacet.o.requires
-	$(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotPrimitiveFacet.o.provides.build
-.PHONY : src/CMakeFiles/s2plot.dir/s2plotPrimitiveFacet.o.provides
+src/CMakeFiles/s2plot.dir/s2PolyObject.o.provides: src/CMakeFiles/s2plot.dir/s2PolyObject.o.requires
+	$(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2PolyObject.o.provides.build
+.PHONY : src/CMakeFiles/s2plot.dir/s2PolyObject.o.provides
 
-src/CMakeFiles/s2plot.dir/s2plotPrimitiveFacet.o.provides.build: src/CMakeFiles/s2plot.dir/s2plotPrimitiveFacet.o
+src/CMakeFiles/s2plot.dir/s2PolyObject.o.provides.build: src/CMakeFiles/s2plot.dir/s2PolyObject.o
 
-src/CMakeFiles/s2plot.dir/s2plotRenderablePolyObject.o: src/CMakeFiles/s2plot.dir/flags.make
-src/CMakeFiles/s2plot.dir/s2plotRenderablePolyObject.o: src/s2plotRenderablePolyObject.cpp
+src/CMakeFiles/s2plot.dir/s2Vertex.o: src/CMakeFiles/s2plot.dir/flags.make
+src/CMakeFiles/s2plot.dir/s2Vertex.o: src/s2Vertex.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/dre/Desktop/omegalib/core/modules/s2plot/CMakeFiles $(CMAKE_PROGRESS_11)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/s2plot.dir/s2plotRenderablePolyObject.o"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/s2plot.dir/s2plotRenderablePolyObject.o -c /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotRenderablePolyObject.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/s2plot.dir/s2Vertex.o"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/s2plot.dir/s2Vertex.o -c /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Vertex.cpp
 
-src/CMakeFiles/s2plot.dir/s2plotRenderablePolyObject.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/s2plot.dir/s2plotRenderablePolyObject.i"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotRenderablePolyObject.cpp > CMakeFiles/s2plot.dir/s2plotRenderablePolyObject.i
+src/CMakeFiles/s2plot.dir/s2Vertex.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/s2plot.dir/s2Vertex.i"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Vertex.cpp > CMakeFiles/s2plot.dir/s2Vertex.i
 
-src/CMakeFiles/s2plot.dir/s2plotRenderablePolyObject.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/s2plot.dir/s2plotRenderablePolyObject.s"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotRenderablePolyObject.cpp -o CMakeFiles/s2plot.dir/s2plotRenderablePolyObject.s
+src/CMakeFiles/s2plot.dir/s2Vertex.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/s2plot.dir/s2Vertex.s"
+	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Vertex.cpp -o CMakeFiles/s2plot.dir/s2Vertex.s
 
-src/CMakeFiles/s2plot.dir/s2plotRenderablePolyObject.o.requires:
-.PHONY : src/CMakeFiles/s2plot.dir/s2plotRenderablePolyObject.o.requires
+src/CMakeFiles/s2plot.dir/s2Vertex.o.requires:
+.PHONY : src/CMakeFiles/s2plot.dir/s2Vertex.o.requires
 
-src/CMakeFiles/s2plot.dir/s2plotRenderablePolyObject.o.provides: src/CMakeFiles/s2plot.dir/s2plotRenderablePolyObject.o.requires
-	$(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotRenderablePolyObject.o.provides.build
-.PHONY : src/CMakeFiles/s2plot.dir/s2plotRenderablePolyObject.o.provides
+src/CMakeFiles/s2plot.dir/s2Vertex.o.provides: src/CMakeFiles/s2plot.dir/s2Vertex.o.requires
+	$(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2Vertex.o.provides.build
+.PHONY : src/CMakeFiles/s2plot.dir/s2Vertex.o.provides
 
-src/CMakeFiles/s2plot.dir/s2plotRenderablePolyObject.o.provides.build: src/CMakeFiles/s2plot.dir/s2plotRenderablePolyObject.o
-
-src/CMakeFiles/s2plot.dir/s2plotTransform.o: src/CMakeFiles/s2plot.dir/flags.make
-src/CMakeFiles/s2plot.dir/s2plotTransform.o: src/s2plotTransform.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dre/Desktop/omegalib/core/modules/s2plot/CMakeFiles $(CMAKE_PROGRESS_12)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/s2plot.dir/s2plotTransform.o"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/s2plot.dir/s2plotTransform.o -c /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotTransform.cpp
-
-src/CMakeFiles/s2plot.dir/s2plotTransform.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/s2plot.dir/s2plotTransform.i"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotTransform.cpp > CMakeFiles/s2plot.dir/s2plotTransform.i
-
-src/CMakeFiles/s2plot.dir/s2plotTransform.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/s2plot.dir/s2plotTransform.s"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotTransform.cpp -o CMakeFiles/s2plot.dir/s2plotTransform.s
-
-src/CMakeFiles/s2plot.dir/s2plotTransform.o.requires:
-.PHONY : src/CMakeFiles/s2plot.dir/s2plotTransform.o.requires
-
-src/CMakeFiles/s2plot.dir/s2plotTransform.o.provides: src/CMakeFiles/s2plot.dir/s2plotTransform.o.requires
-	$(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotTransform.o.provides.build
-.PHONY : src/CMakeFiles/s2plot.dir/s2plotTransform.o.provides
-
-src/CMakeFiles/s2plot.dir/s2plotTransform.o.provides.build: src/CMakeFiles/s2plot.dir/s2plotTransform.o
-
-src/CMakeFiles/s2plot.dir/s2plotVertex.o: src/CMakeFiles/s2plot.dir/flags.make
-src/CMakeFiles/s2plot.dir/s2plotVertex.o: src/s2plotVertex.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dre/Desktop/omegalib/core/modules/s2plot/CMakeFiles $(CMAKE_PROGRESS_13)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/s2plot.dir/s2plotVertex.o"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/s2plot.dir/s2plotVertex.o -c /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotVertex.cpp
-
-src/CMakeFiles/s2plot.dir/s2plotVertex.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/s2plot.dir/s2plotVertex.i"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotVertex.cpp > CMakeFiles/s2plot.dir/s2plotVertex.i
-
-src/CMakeFiles/s2plot.dir/s2plotVertex.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/s2plot.dir/s2plotVertex.s"
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotVertex.cpp -o CMakeFiles/s2plot.dir/s2plotVertex.s
-
-src/CMakeFiles/s2plot.dir/s2plotVertex.o.requires:
-.PHONY : src/CMakeFiles/s2plot.dir/s2plotVertex.o.requires
-
-src/CMakeFiles/s2plot.dir/s2plotVertex.o.provides: src/CMakeFiles/s2plot.dir/s2plotVertex.o.requires
-	$(MAKE) -f src/CMakeFiles/s2plot.dir/build.make src/CMakeFiles/s2plot.dir/s2plotVertex.o.provides.build
-.PHONY : src/CMakeFiles/s2plot.dir/s2plotVertex.o.provides
-
-src/CMakeFiles/s2plot.dir/s2plotVertex.o.provides.build: src/CMakeFiles/s2plot.dir/s2plotVertex.o
+src/CMakeFiles/s2plot.dir/s2Vertex.o.provides.build: src/CMakeFiles/s2plot.dir/s2Vertex.o
 
 # Object files for target s2plot
 s2plot_OBJECTS = \
-"CMakeFiles/s2plot.dir/s2plotFactory.o" \
-"CMakeFiles/s2plot.dir/s2plotGeom.o" \
-"CMakeFiles/s2plot.dir/s2plotPoint.o" \
-"CMakeFiles/s2plot.dir/s2plotRenderableCube.o" \
-"CMakeFiles/s2plot.dir/s2plotModule.o" \
-"CMakeFiles/s2plot.dir/s2plotRenderPass.o" \
-"CMakeFiles/s2plot.dir/s2plotProgram.o" \
-"CMakeFiles/s2plot.dir/s2plotShader.o" \
-"CMakeFiles/s2plot.dir/s2plotTriangle.o" \
-"CMakeFiles/s2plot.dir/s2plotPrimitiveFacet.o" \
-"CMakeFiles/s2plot.dir/s2plotRenderablePolyObject.o" \
-"CMakeFiles/s2plot.dir/s2plotTransform.o" \
-"CMakeFiles/s2plot.dir/s2plotVertex.o"
+"CMakeFiles/s2plot.dir/s2Factory.o" \
+"CMakeFiles/s2plot.dir/s2Geom.o" \
+"CMakeFiles/s2plot.dir/s2Cube.o" \
+"CMakeFiles/s2plot.dir/s2Module.o" \
+"CMakeFiles/s2plot.dir/s2RenderPass.o" \
+"CMakeFiles/s2plot.dir/s2Program.o" \
+"CMakeFiles/s2plot.dir/s2Shader.o" \
+"CMakeFiles/s2plot.dir/s2Triangle.o" \
+"CMakeFiles/s2plot.dir/s2Primitive.o" \
+"CMakeFiles/s2plot.dir/s2PolyObject.o" \
+"CMakeFiles/s2plot.dir/s2Vertex.o"
 
 # External object files for target s2plot
 s2plot_EXTERNAL_OBJECTS =
 
-src/s2plot.so: src/CMakeFiles/s2plot.dir/s2plotFactory.o
-src/s2plot.so: src/CMakeFiles/s2plot.dir/s2plotGeom.o
-src/s2plot.so: src/CMakeFiles/s2plot.dir/s2plotPoint.o
-src/s2plot.so: src/CMakeFiles/s2plot.dir/s2plotRenderableCube.o
-src/s2plot.so: src/CMakeFiles/s2plot.dir/s2plotModule.o
-src/s2plot.so: src/CMakeFiles/s2plot.dir/s2plotRenderPass.o
-src/s2plot.so: src/CMakeFiles/s2plot.dir/s2plotProgram.o
-src/s2plot.so: src/CMakeFiles/s2plot.dir/s2plotShader.o
-src/s2plot.so: src/CMakeFiles/s2plot.dir/s2plotTriangle.o
-src/s2plot.so: src/CMakeFiles/s2plot.dir/s2plotPrimitiveFacet.o
-src/s2plot.so: src/CMakeFiles/s2plot.dir/s2plotRenderablePolyObject.o
-src/s2plot.so: src/CMakeFiles/s2plot.dir/s2plotTransform.o
-src/s2plot.so: src/CMakeFiles/s2plot.dir/s2plotVertex.o
+src/s2plot.so: src/CMakeFiles/s2plot.dir/s2Factory.o
+src/s2plot.so: src/CMakeFiles/s2plot.dir/s2Geom.o
+src/s2plot.so: src/CMakeFiles/s2plot.dir/s2Cube.o
+src/s2plot.so: src/CMakeFiles/s2plot.dir/s2Module.o
+src/s2plot.so: src/CMakeFiles/s2plot.dir/s2RenderPass.o
+src/s2plot.so: src/CMakeFiles/s2plot.dir/s2Program.o
+src/s2plot.so: src/CMakeFiles/s2plot.dir/s2Shader.o
+src/s2plot.so: src/CMakeFiles/s2plot.dir/s2Triangle.o
+src/s2plot.so: src/CMakeFiles/s2plot.dir/s2Primitive.o
+src/s2plot.so: src/CMakeFiles/s2plot.dir/s2PolyObject.o
+src/s2plot.so: src/CMakeFiles/s2plot.dir/s2Vertex.o
 src/s2plot.so: src/CMakeFiles/s2plot.dir/build.make
 src/s2plot.so: src/CMakeFiles/s2plot.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX shared module s2plot.so"
@@ -392,19 +342,17 @@ src/s2plot.so: src/CMakeFiles/s2plot.dir/link.txt
 src/CMakeFiles/s2plot.dir/build: src/s2plot.so
 .PHONY : src/CMakeFiles/s2plot.dir/build
 
-src/CMakeFiles/s2plot.dir/requires: src/CMakeFiles/s2plot.dir/s2plotFactory.o.requires
-src/CMakeFiles/s2plot.dir/requires: src/CMakeFiles/s2plot.dir/s2plotGeom.o.requires
-src/CMakeFiles/s2plot.dir/requires: src/CMakeFiles/s2plot.dir/s2plotPoint.o.requires
-src/CMakeFiles/s2plot.dir/requires: src/CMakeFiles/s2plot.dir/s2plotRenderableCube.o.requires
-src/CMakeFiles/s2plot.dir/requires: src/CMakeFiles/s2plot.dir/s2plotModule.o.requires
-src/CMakeFiles/s2plot.dir/requires: src/CMakeFiles/s2plot.dir/s2plotRenderPass.o.requires
-src/CMakeFiles/s2plot.dir/requires: src/CMakeFiles/s2plot.dir/s2plotProgram.o.requires
-src/CMakeFiles/s2plot.dir/requires: src/CMakeFiles/s2plot.dir/s2plotShader.o.requires
-src/CMakeFiles/s2plot.dir/requires: src/CMakeFiles/s2plot.dir/s2plotTriangle.o.requires
-src/CMakeFiles/s2plot.dir/requires: src/CMakeFiles/s2plot.dir/s2plotPrimitiveFacet.o.requires
-src/CMakeFiles/s2plot.dir/requires: src/CMakeFiles/s2plot.dir/s2plotRenderablePolyObject.o.requires
-src/CMakeFiles/s2plot.dir/requires: src/CMakeFiles/s2plot.dir/s2plotTransform.o.requires
-src/CMakeFiles/s2plot.dir/requires: src/CMakeFiles/s2plot.dir/s2plotVertex.o.requires
+src/CMakeFiles/s2plot.dir/requires: src/CMakeFiles/s2plot.dir/s2Factory.o.requires
+src/CMakeFiles/s2plot.dir/requires: src/CMakeFiles/s2plot.dir/s2Geom.o.requires
+src/CMakeFiles/s2plot.dir/requires: src/CMakeFiles/s2plot.dir/s2Cube.o.requires
+src/CMakeFiles/s2plot.dir/requires: src/CMakeFiles/s2plot.dir/s2Module.o.requires
+src/CMakeFiles/s2plot.dir/requires: src/CMakeFiles/s2plot.dir/s2RenderPass.o.requires
+src/CMakeFiles/s2plot.dir/requires: src/CMakeFiles/s2plot.dir/s2Program.o.requires
+src/CMakeFiles/s2plot.dir/requires: src/CMakeFiles/s2plot.dir/s2Shader.o.requires
+src/CMakeFiles/s2plot.dir/requires: src/CMakeFiles/s2plot.dir/s2Triangle.o.requires
+src/CMakeFiles/s2plot.dir/requires: src/CMakeFiles/s2plot.dir/s2Primitive.o.requires
+src/CMakeFiles/s2plot.dir/requires: src/CMakeFiles/s2plot.dir/s2PolyObject.o.requires
+src/CMakeFiles/s2plot.dir/requires: src/CMakeFiles/s2plot.dir/s2Vertex.o.requires
 .PHONY : src/CMakeFiles/s2plot.dir/requires
 
 src/CMakeFiles/s2plot.dir/clean:

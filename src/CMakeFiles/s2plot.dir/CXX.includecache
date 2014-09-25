@@ -6,31 +6,31 @@
 
 #IncludeRegexTransform: 
 
-/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotFactory.cpp
+/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Cube.cpp
 s2plot/s2plot.h
 /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plot/s2plot.h
 
-/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotGeom.cpp
+/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Factory.cpp
 s2plot/s2plot.h
 /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plot/s2plot.h
 
-/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotModule.cpp
-s2plot/s2plot.h
-/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plot/s2plot.h
-omicron.h
--
-omp.h
--
-
-/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotPoint.cpp
+/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Geom.cpp
 s2plot/s2plot.h
 /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plot/s2plot.h
 
-/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotPrimitiveFacet.cpp
+/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Module.cpp
 s2plot/s2plot.h
 /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plot/s2plot.h
 
-/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotProgram.cpp
+/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2PolyObject.cpp
+s2plot/s2plot.h
+/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plot/s2plot.h
+
+/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Primitive.cpp
+s2plot/s2plot.h
+/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plot/s2plot.h
+
+/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Program.cpp
 omega.h
 -
 omegaGl.h
@@ -44,39 +44,21 @@ streambuf
 s2plot/s2plot.h
 /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plot/s2plot.h
 
-/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotRenderPass.cpp
+/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2RenderPass.cpp
 s2plot/s2plot.h
 /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plot/s2plot.h
 
-/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotRenderableCube.cpp
-omegaGl.h
--
-omega.h
--
-s2plot/s2plot.h
-/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plot/s2plot.h
+/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Shader.cpp
 
-/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotRenderablePolyObject.cpp
-s2plot/s2plot.h
-/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plot/s2plot.h
-
-/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotShader.cpp
-
-/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotTransform.cpp
-s2plot/s2plot.h
-/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plot/s2plot.h
-
-/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotTriangle.cpp
+/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Triangle.cpp
 s2plot/s2plot.h
 /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plot/s2plot.h
 omegaGl.h
 -
 
-/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plotVertex.cpp
-omega.h
--
-omegaGl.h
--
+/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Vertex.cpp
 s2plot/s2plot.h
 /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plot/s2plot.h
+cmath
+-
 
