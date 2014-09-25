@@ -27,7 +27,7 @@
  * D.G.Barnes, C.J.Fluke, P.D.Bourke & O.T.Parry, 2006, Publications
  * of the Astronomical Society of Australia, 23(2), 82-93.
  *
- * s2plotModule
+ * s2Factory.cpp
  * 
  ******************************************************************************/
 #include "s2plot/s2plot.h"
@@ -36,26 +36,34 @@ using namespace s2plot;
 using namespace omega;
 using namespace glm;
 
-s2plotFactory::s2plotFactory(s2plotModule* mod)
+s2Factory::s2Factory(s2Module* mod)
 {
-	s2plotModule* module = mod;
+	s2Module* module = mod;
+	offsetptr = new GLuint();
 	*offsetptr = 0;
-	//printf("\n factory created\n");
 }
 
-s2plotFactory::~s2plotFactory()
+s2Factory::~s2Factory()
 {
-
+	delete offsetptr;
 }
 
-int s2plotFactory::createProgram()
+const s2Geom* s2Factory::getObject(GLuint id)
+{
+	return module->getObject(id);
+}
+
+bool s2Factory::deleteObject(GLuint id)
+{
+	return module->deleteObject(id);
+}
+			
+int s2Factory::createProgram()
 {
 	return 1; // TODO
 }
 
-
-
-int s2plotFactory::ns2sphere()
+GLuint s2Factory::ns2sphere()
 {
 	return 1; // TODO implement s2plot 
 }
@@ -65,16 +73,21 @@ int s2plotFactory::ns2sphere()
  * the old S2PLOT API uses two XYZ structs, we calculate centroid based on
  * these x, y, z points. we pass 1.0f as the w value.
  */
-s2plotRenderableCube* s2plotFactory::ns2scube(float x1, float y1, float z1, float x2, 
-										float y2, float z2, float red, 
-										float green, float blue, float alpha)
+GLuint s2Factory::ns2scube( float x1, 
+							float y1, 
+							float z1, 
+							float x2, 
+							float y2, 
+							float z2, 
+							float red, 
+							float green, 
+							float blue, 
+							float alpha)
 {	
 	GLfloat size = fabs(x1 - x2);
 	vec4 centroid = vec4((x1 + (0.5 * x2)), (y1 + (0.5 * y2)), 
-					(z1 + (0.5 * z2)), 1.0f);
-					
-	printf("objCtr %d \n", module->getObjectCounter());
-					
-	return (s2plotRenderableCube*) module->addObject(new s2plotRenderableCube(offsetptr, size, centroid));
+					(z1 + (0.5 * z2)), 1.0f);					
+	
+	return module->addObject(new s2Cube(offsetptr, size, centroid));
 }
 

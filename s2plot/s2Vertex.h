@@ -56,14 +56,14 @@ namespace s2plot
 			// when acting as vertex
 			s2Vertex(GLfloat x, GLfloat y, GLfloat z, GLfloat w); 
 			
-			// copy constructor
-			s2Vertex(const s2Vertex& that);
-			
 			// destructor
 			~s2Vertex();
 			
+			// copy constructor
+			//s2Vertex(const s2Vertex& that);
+			
 			// copy assignment operator
-			s2Vertex& operator=(const s2Vertex& that);
+			//s2Vertex& operator=(const s2Vertex& that);
 			
 			// setters
 			void setPosition(vec4* position);
@@ -74,6 +74,13 @@ namespace s2plot
 			vec4* getPosition();
 			vec4* getColour();
 			vec4* getNormal();
+			
+			GLfloat getDistance(Vector3f cameraPosition);
+			void draw();
+			vector<GLuint>* getIndices();
+			vector<GLfloat>* getVertexData();
+			vector<s2Vertex*>* getVertices();
+			vector<s2Primitive*>* getPrimitives();
 			
 		  private:
 			// vertex attributes

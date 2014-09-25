@@ -27,37 +27,45 @@
  * D.G.Barnes, C.J.Fluke, P.D.Bourke & O.T.Parry, 2006, Publications
  * of the Astronomical Society of Australia, 23(2), 82-93.
  *
- * s2plotFactory
+ * s2Factory.h
  * 
  ******************************************************************************/
 
-#ifndef S2PLOTFACTORY_H
-#define S2PLOTFACTORY_H
+#ifndef S2FACTORY_H
+#define S2FACTORY_H
 
-#include <stdio.h>
-#include <omega.h>
-#include <omegaGl.h>
 #include "s2plot/s2plot.h"
-#include <cmath>
 
 namespace s2plot 
 {
 	using namespace omega;
 	
-	class s2plotFactory
+	class s2Factory
 	{
 		public:
-			s2plotFactory(s2plotModule* mod);
-			virtual ~s2plotFactory();
+			s2Factory(s2Module* mod);
+			~s2Factory();
 			int createProgram();
 			
-			int ns2sphere();
-			s2plotRenderableCube* ns2scube(float x1, float y1, float z1, 
-										float x2, float y2, float z2, 
-										float red, float green, float blue, float alpha);
+			const s2Geom* getObject(GLuint id);
+			bool deleteObject(GLuint id);
+			
+			// the S2Plot API
+			GLuint ns2sphere();
+			
+			GLuint ns2scube(float x1, 
+							float y1, 
+							float z1, 
+							float x2, 
+							float y2, 
+							float z2, 
+							float red, 
+							float green, 
+							float blue, 
+							float alpha);
 										
 		private:
-			s2plotModule* module;
+			s2Module* module;
 			GLuint* offsetptr;
 			
 	};

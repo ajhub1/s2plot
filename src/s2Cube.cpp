@@ -42,40 +42,35 @@ s2Cube::s2Cube(GLuint* offsetptr, GLfloat size, vec4 position)
 	initialise(offsetptr);
 }
 
-
+/*
 s2Cube::s2Cube(const s2Cube& that)
 {
 	//TODO incomplete
-	this->initialise(that.offsetptr);
+	//this->initialise(that.offsetptr);
 }
 
 s2Cube& s2Cube::operator=(const s2Cube& that)
 {
+	//TODO incomplete
 	if (this != &that)
 	{
-		//TODO incomplete
-		this->initialise(that.offsetptr);
+		//this->initialise(that.offsetptr);
 	}
 	return *this;
 }
-
+*/
 
 s2Cube::~s2Cube()
 {
-	delete indices;
 	delete primitives;
 }
 	
 void s2Cube::initialise(GLuint* offsetptr)
 {
 	primitives = new vector<s2Primitive*>();
-	indices = new vector<GLuint>();
-
 	
 	GLuint temp[] = {0,1,2, 1,2,3, 2,5,3, 3,5,7, 5,4,7, 7,4,6, 
 		4,0,6, 6,0,1, 1,6,7, 1,3,7, 0,4,5, 5,0,2};
-	indices->assign(temp, temp + NUMBER_OF_INDICES);	//convert array into a vector
-
 
 	//vertices
 	vertices[0] = new s2Vertex(0.0f, 0.0f, 0.0f, 0.0f);
@@ -88,18 +83,18 @@ void s2Cube::initialise(GLuint* offsetptr)
 	vertices[7] = new s2Vertex(1.0f, 1.0f, 1.0f, 0.0f);
 	
 	//indices
-	triple t1 = triple(0, 1, 2);
-	triple t2 = triple(1, 2, 3);
-	triple t3 = triple(2, 5, 3);
-	triple t4 = triple(3, 5, 7);
-	triple t5 = triple(5, 4, 7);
-	triple t6 = triple(7, 4, 6);
-	triple t7 = triple(4, 0, 6);
-	triple t8 = triple(6, 0, 1);
-	triple t9 = triple(1, 6, 7);
-	triple t10 = triple(1, 3, 7);
-	triple t11 = triple(0, 4, 5);
-	triple t12 = triple(5, 0, 2);
+	vec3 t1 = vec3(0, 1, 2);
+	vec3 t2 = vec3(1, 2, 3);
+	vec3 t3 = vec3(2, 5, 3);
+	vec3 t4 = vec3(3, 5, 7);
+	vec3 t5 = vec3(5, 4, 7);
+	vec3 t6 = vec3(7, 4, 6);
+	vec3 t7 = vec3(4, 0, 6);
+	vec3 t8 = vec3(6, 0, 1);
+	vec3 t9 = vec3(1, 6, 7);
+	vec3 t10 = vec3(1, 3, 7);
+	vec3 t11 = vec3(0, 4, 5);
+	vec3 t12 = vec3(5, 0, 2);
 	
 	
 	//front face

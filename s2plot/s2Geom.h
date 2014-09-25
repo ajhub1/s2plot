@@ -48,6 +48,7 @@ namespace s2plot
 			virtual vector<s2Primitive*>* getPrimitives();
 			
 		protected:
+			vector<s2Primitive*>* primitives;
 			GLuint id;
 	};
 }

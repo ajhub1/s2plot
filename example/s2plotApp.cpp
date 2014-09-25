@@ -20,15 +20,15 @@ class s2plotApp: public EngineModule
 	
 		s2plotApp() : EngineModule("s2plotApp2")
 		{
-			mys2plot = new s2plotModule();
+			mys2plot = new s2Module();
 			ModuleServices::addModule(mys2plot);
 			factory = mys2plot->createFactory();
 			mydraw();
 		}
 	
 	private:
-		s2plotModule* mys2plot;
-		s2plotFactory* factory;
+		s2Module* mys2plot;
+		s2Factory* factory;
 };
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int main(int argc, char** argv)

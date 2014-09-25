@@ -27,61 +27,55 @@
  * D.G.Barnes, C.J.Fluke, P.D.Bourke & O.T.Parry, 2006, Publications
  * of the Astronomical Society of Australia, 23(2), 82-93.
  *
- * s2plotModule
+ * s2Module.h
  * 
  ******************************************************************************/
-#ifndef S2PLOTMODULE_H
-#define S2PLOTMODULE_H
+#ifndef S2MODULE_H
+#define S2MODULE_H
 
-#include <stdio.h>
-#include <omega.h>
-#include <omegaGl.h>
-#include <vector>
-#include <utility>
 #include "s2plot/s2plot.h"
 
 namespace s2plot 
 {
 	using namespace omega;
-	class s2plotFactory;
-	class s2plotGeom;
-	class s2plotRenderablePolyObject;
-	class s2plotPrimitiveFacet;
-	class s2plotVertex;
+	class s2Factory;
+	class s2Geom;
+	class s2PolyObject;
+	class s2Primitive;
+	class s2Vertex;
 	
-	class s2plotModule: public EngineModule
+	class s2Module: public EngineModule
 	{
 		public:
-			s2plotModule();
-			virtual ~s2plotModule();
+			s2Module();
+			virtual ~s2Module();
 			void initialise();
-			virtual void initialize();
-			void initializeRenderer(Renderer* r);
+			
 			void update(const UpdateContext& context);	
-			void Draw();	
-			bool deleteObject(s2plotRenderablePolyObject* object);
-			bool deleteObject(s2plotPrimitiveFacet* facet);
-			s2plotGeom* addObject(s2plotRenderablePolyObject* object);
-			s2plotGeom* addObject(s2plotPrimitiveFacet* facet);
-			s2plotFactory* createFactory();
+			void draw();
+			
+			GLuint addObject(s2PolyObject* object);
+			GLuint addObject(s2Primitive* facet);
+			bool deleteObject(GLuint id);
+			const s2Geom* getObject(GLuint id);
+			
+			void initializeRenderer(Renderer* r);
+			s2Factory* createFactory();
+			
 			typedef void (*callback_function)(void);
 			void addCallBack(callback_function function);
 			virtual void handleEvent(const Event& evt);
 			Event event();
-			int getObjectCounter();
-						
+									
 		private:
 			void sortFacets(int beg, int end);
 			int partition(int beg, int end);
 			
-			std::vector<s2plotGeom*>* sceneObjects;
-			std::vector<s2plotPrimitiveFacet*>* facets;
-			std::vector<s2plotVertex>* vertexData;
-			
-			//int dgbtemp[1024];
-			int s2plotObjectCounter;
-			int facetCounter;
-			int vertexCounter;
+			vector<s2Geom*>* sceneObjects;
+			vector<s2Primitive*>* facets;
+			vector<GLfloat>* vertexData;
+			vector<GLuint>* indices;
+						
 			GLuint* offsetptr;
 			Vector3f cameraPosition;
 			Camera* camera;

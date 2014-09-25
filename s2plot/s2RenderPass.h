@@ -27,26 +27,24 @@
  * D.G.Barnes, C.J.Fluke, P.D.Bourke & O.T.Parry, 2006, Publications
  * of the Astronomical Society of Australia, 23(2), 82-93.
  *
- * s2plotRenderPass
+ * s2RenderPass.h
  * 
  ******************************************************************************/
-#include <stdio.h>
-#include <omega.h>
-#include <omegaGl.h>
+#include "s2plot/s2plot.h"
 
 namespace s2plot 
 {
 	using namespace omega;
 
-	class s2plotRenderPass: public RenderPass
+	class s2RenderPass: public RenderPass
 	{
 		public:
-			s2plotRenderPass(Renderer* client, const String& name);
-			virtual ~s2plotRenderPass();
+			s2RenderPass(Renderer* client, const String& name);
+			virtual ~s2RenderPass();
 			virtual void render(Renderer* client, const DrawContext& context);	
 			void initialize();		
 			
 		private:
-			s2plotModule* myModule;
+			s2Module* myModule;
 	};
 }

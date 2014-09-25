@@ -38,38 +38,31 @@ namespace s2plot
 {
 	using namespace omega;
 	using namespace std;
+	using namespace glm;
 
 	class s2Triangle: public s2Primitive
 	{
-		public:
+		public:			
 			s2Triangle(GLuint* offset, 
 						s2Vertex* p0, 
 						s2Vertex* p1, 
 						s2Vertex* p2,
-						triple indices);
+						vec3 vertexIndices);
 						
-			s2Triangle(const s2Triangle& that);
-			s2Triangle& operator=(const s2Triangle& that);
+			//s2Triangle(const s2Triangle& that);
+			//s2Triangle& operator=(const s2Triangle& that);
 			~s2Triangle();
-		
-			typedef struct s_triple
-			{
-				GLuint v1;
-				GLuint v2;
-				GLunit v3;
-				triple(GLuint v1, GLuint v2, GLuint v3)
-				{
-					this.v1 = v1;
-					this.v2 = v2;
-					this.v3 = v3;
-				}
-			} triple;
+			vector<s2Primitive*>* getPrimitives();
+			vector<s2Vertex*>* getVertices();
+			vector<GLuint>* getIndices();
+			void draw();
+			GLfloat getDistance(Vector3f cameraPosition);
 			
 		private:
 			void initialise(s2Vertex* p0, 
 							s2Vertex* p1, 
 							s2Vertex* p2,
-							triple indices);
+							vec3 vertexIndices);
 	};
 }
 

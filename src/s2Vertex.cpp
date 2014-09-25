@@ -56,6 +56,7 @@ s2Vertex::s2Vertex(GLuint* offsetptr, GLfloat x, GLfloat y, GLfloat z, GLfloat w
 	offset = *offsetptr;	
 }
 
+/**
 s2Vertex::s2Vertex(const s2Vertex& that) :
 	position(that.position), colour(that.colour), normal(that.normal)
 {
@@ -74,7 +75,7 @@ s2Vertex& s2Vertex::operator=(const s2Vertex& that)
 	}
 	return *this;
 }
-
+*/
 s2Vertex::~s2Vertex()
 {
 	delete position;
@@ -142,11 +143,11 @@ void s2Vertex::draw()
 	glDrawRangeElements(GL_POINT, offset, offset, 1, GL_UNSIGNED_INT, 0);
 }
 
-GLfloat s2plotVertex::getDistance(Vector3f cameraPosition)
+GLfloat s2Vertex::getDistance(Vector3f cameraPosition)
 {
-	return pow(cameraPosition.x - position.x, 2.0f) +
-		   pow(cameraPosition.y - position.y, 2.0f) +
-		   pow(cameraPosition.z - position.z, 2.0f); 
+	return pow(cameraPosition.x() - position->x, 2.0f) +
+		   pow(cameraPosition.y() - position->y, 2.0f) +
+		   pow(cameraPosition.z() - position->z, 2.0f); 
 }
 	
 // setters

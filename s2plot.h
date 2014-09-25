@@ -6,6 +6,15 @@
 #define GLM_FORCE_RADIANS
 #include "s2plot/s2plot/glm/gtc/matrix_transform.hpp"
 
+#include <stdio.h>
+#include <omega.h>
+#include <omegaGl.h>
+#include <vector>
+#include <utility>
+#include <cmath>
+#include <omicron.h>
+#include <omp.h>
+
 #include "s2plot/s2plot/s2Module.h"
 #include "s2plot/s2plot/s2RenderPass.h"
 #include "s2plot/s2plot/s2Geom.h"

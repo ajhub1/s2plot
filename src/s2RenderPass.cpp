@@ -27,28 +27,28 @@
  * D.G.Barnes, C.J.Fluke, P.D.Bourke & O.T.Parry, 2006, Publications
  * of the Astronomical Society of Australia, 23(2), 82-93.
  *
- * s2plotRenderPass
+ * s2RenderPass.cpp
  * 
  ******************************************************************************/
-
 #include "s2plot/s2plot.h"
 
 using namespace s2plot;
 using namespace omega;
 
-s2plotRenderPass::s2plotRenderPass(Renderer* client, const String& name): RenderPass(client, name)
+s2RenderPass::s2RenderPass(Renderer* client, const String& name): 
+														RenderPass(client, name)
 {
 	
 }
 
-void s2plotRenderPass::initialize()
+void s2RenderPass::initialize()
 {
 	RenderPass::initialize();
 
-    myModule = (s2plotModule*) getUserData();
+    myModule = (s2Module*) getUserData();
 }
 
-void s2plotRenderPass::render(Renderer* client, const DrawContext& context)
+void s2RenderPass::render(Renderer* client, const DrawContext& context)
 {
 	/* render pass gets passed a pointer to an array of sorted verticies and
 	 * calls draw on each verticie in turn, how the verticie handles the re-
@@ -56,41 +56,10 @@ void s2plotRenderPass::render(Renderer* client, const DrawContext& context)
 	 * to s2plotModules architecture
 	 * */
 	
-	if(context.task == DrawContext::SceneDrawTask)
-	{
-		client->getRenderer()->beginDraw3D(context);
-	if(oglError) return;
-	
-	//s2plotProgram* s2prog = new s2plotProgram();
-	//glUseProgram(s2prog->theProgram);
-	
-	/*
-	// Enable depth testing and lighting.
-		glEnable(GL_DEPTH_TEST);
-	if(oglError) return;
-		glEnable(GL_LIGHTING);
-	if(oglError) return;
-	
-		// Setup light.
-		glEnable(GL_LIGHT0);
-	if(oglError) return;
-		glEnable(GL_COLOR_MATERIAL);
-	if(oglError) return;
-		glLightfv(GL_LIGHT0, GL_DIFFUSE, Color(1.0, 1.0, 1.0).data());
-	if(oglError) return;
-		glLightfv(GL_LIGHT0, GL_POSITION, Vector3s(0.0f, 0.0f, 1.0f).data());
-	if(oglError) return;
-	**/
-	myModule->Draw();
-	
-	if(oglError) return;
-		client->getRenderer()->endDraw();
-	if(oglError) return;
-	}
-
+	myModule->draw();
 }
 
-s2plotRenderPass::~s2plotRenderPass()
+s2RenderPass::~s2RenderPass()
 {
 	
 }

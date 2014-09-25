@@ -41,14 +41,14 @@ namespace s2plot
 {
 	using namespace omega;
 	using namespace std;
-	using namepsace glm;
+	using namespace glm;
 
 	class s2Cube: public s2PolyObject
 	{
 		public:
 			s2Cube(GLuint* offsetptr, GLfloat size, vec4 position);
-			s2Cube(const s2Cube& that);
-			s2Cube& operator=(const s2Cube& that);
+			//s2Cube(const s2Cube& that);
+			//s2Cube& operator=(const s2Cube& that);
 			~s2Cube();
 
 			vector<s2Primitive*>* getPrimitives();
@@ -56,7 +56,7 @@ namespace s2plot
 
 		private:
 			void initialise(GLuint* offsetptr);
-			s2Vertex vertices[8];		//TODO local because a sphere might use a vector
+			s2Vertex* vertices[8];		//TODO local because a sphere might use a vector
 	};
 }
 
