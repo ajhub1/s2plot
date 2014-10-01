@@ -46,7 +46,7 @@ namespace s2plot
 			virtual void setId(GLuint newId) {};
 			
 			virtual vector<s2Primitive*>* getPrimitives() {};
-			
+			virtual vector<GLfloat>* getVertexData() {};
 		protected:
 			vector<s2Primitive*>* primitives;
 			GLuint id;

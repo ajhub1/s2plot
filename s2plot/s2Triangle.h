@@ -54,6 +54,7 @@ namespace s2plot
 			~s2Triangle();
 			vector<s2Primitive*>* getPrimitives();
 			vector<s2Vertex*>* getVertices();
+			vector<GLfloat>* getVertexData();
 			vector<GLuint>* getIndices();
 			void draw();
 			GLfloat getDistance(Vector3f cameraPosition);

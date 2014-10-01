@@ -53,10 +53,13 @@ namespace s2plot
 
 			vector<s2Primitive*>* getPrimitives();
 			void updateFacetOffsets(GLuint baseOffset); // TODO shifaz is a bitch 
+			
+			vector<GLfloat>* getVertexData();
 
 		private:
 			void initialise(GLuint* offsetptr);
 			s2Vertex* vertices[8];		//TODO local because a sphere might use a vector
+			vector<GLfloat>* vertexData;
 	};
 }
 

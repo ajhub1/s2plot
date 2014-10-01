@@ -125,6 +125,11 @@ vector<s2Vertex*>* s2Triangle::getVertices()
 	return vertices;
 }
 
+vector<GLfloat>*  s2Triangle::getVertexData()
+{
+	return vertexData;
+}
+
 vector<GLuint>* s2Triangle::getIndices()
 {
 	return indices;

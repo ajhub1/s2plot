@@ -63,6 +63,8 @@ s2Cube& s2Cube::operator=(const s2Cube& that)
 s2Cube::~s2Cube()
 {
 	delete primitives;
+	delete vertexData;
+	//delete vertices and triangles??
 }
 	
 void s2Cube::initialise(GLuint* offsetptr)
@@ -73,8 +75,8 @@ void s2Cube::initialise(GLuint* offsetptr)
 		4,0,6, 6,0,1, 1,6,7, 1,3,7, 0,4,5, 5,0,2};
 
 	//vertices
-	vertices[0] = new s2Vertex(0.0f, 0.0f, 0.0f, 0.0f);
-	vertices[1] = new s2Vertex(0.0f, 1.0f, 0.0f, 0.0f);
+	vertices[0] = new s2Vertex(010.0f, 0.0f, 0.0f, 0.0f);
+	vertices[1] = new s2Vertex(020.0f, 1.0f, 0.0f, 0.0f);
 	vertices[2] = new s2Vertex(1.0f, 0.0f, 0.0f, 0.0f);
 	vertices[3] = new s2Vertex(1.0f, 1.0f, 0.0f, 0.0f);
 	vertices[4] = new s2Vertex(0.0f, 0.0f, 1.0f, 0.0f);
@@ -133,12 +135,27 @@ void s2Cube::initialise(GLuint* offsetptr)
 	primitives->push_back(new s2Triangle(offsetptr, 
 						vertices[5], vertices[0], vertices[2], t12));
 	
+	
+	//load vertex data
+	vertexData = new vector<GLfloat>;
+	for(int i = 0; i < 8; i++)
+	{
+		vertexData->insert(vertexData->end(),
+						vertices[i]->getVertexData()->begin(),
+						vertices[i]->getVertexData()->end());
+	}
 }
 
 vector<s2Primitive*>* s2Cube::getPrimitives()
 {
 	return primitives;
 }
+
+vector<GLfloat>*  s2Cube::getVertexData()
+{
+	return vertexData;
+}
+
 
 void s2Cube::updateFacetOffsets(GLuint baseOffset)
 {

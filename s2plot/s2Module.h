@@ -43,6 +43,7 @@ namespace s2plot
 	class s2PolyObject;
 	class s2Primitive;
 	class s2Vertex;
+	class s2Program;
 	
 	class s2Module: public EngineModule
 	{
@@ -66,7 +67,7 @@ namespace s2plot
 			void addCallBack(callback_function function);
 			virtual void handleEvent(const Event& evt);
 			Event event();
-									
+													
 		private:
 			void sortFacets(int beg, int end);
 			int partition(int beg, int end);

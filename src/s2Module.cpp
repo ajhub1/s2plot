@@ -37,14 +37,6 @@ using namespace omega;
 using namespace omicron;
 using namespace std;
 
-/* Draw function - the call back from the s2plotModules Render Pass
- * */
-void s2Module::draw()
-{
-	// call draw on all objects
-	printf("drawing\n");
-}
-
 /* Constructor - creates an engine module with the name "s2plotModule"
  * The module handles event call backs data structures and the 
  * renderpass
@@ -75,6 +67,86 @@ void s2Module::initialise()
 	callBacks = new vector<callback_function>();	
 }
 
+void s2Module::initializeRenderer(Renderer* r)
+{
+    s2RenderPass* s2plotrp = new s2RenderPass(r, "s2RenderPass");
+    s2plotrp->setUserData(this);
+    r->addRenderPass(s2plotrp);
+    camera = r->getEngine()->getDefaultCamera();
+}
+
+/* Draw function - the call back from the s2plotModules Render Pass
+ * */
+void s2Module::draw()
+{
+	// call draw on all objects
+	
+	GLfloat sampleTriangle[] = { //remember specify coordinates anti clockwise ->normal openGL convention
+		 1.0f, 0.0f, 0.0f, 1.0f, //1
+		 1.0f, 0.0f, 0.0f, 0.0f,
+		 0.0f, 0.0f, 0.0f, 0.0f,
+
+		 0.0f, 1.0f, 0.0f, 1.0f, //3
+		 0.0f, 1.0f, 0.0f, 0.0f,
+		 0.0f, 0.0f, 0.0f, 0.0f,
+
+		 -1.0f, 0.0f, 0.0f, 1.0f, //2
+		 0.0f, 0.0f, 1.0f, 0.0f,
+		 0.0f, 0.0f, 0.0f, 0.0f,
+
+		 0.0f, 0.0f, 1.0f, 1.0f, //4
+		 0.0f, 0.0f, 1.0f, 0.0f,
+		 0.0f, 0.0f, 0.0f, 5.0f,
+	};	
+	
+	vector<GLfloat>* vData = new vector<GLfloat>();
+	vData->assign(sampleTriangle, sampleTriangle + 48);
+	
+	//vData->resize(vData->size());
+		 
+	 printf("drawing %d %d %f\n", (int) sizeof(vData), (int)  (sizeof(GLfloat) * vData->size() )
+						, vData->at(47));
+						
+	
+	 s2Program* s2prog = new s2Program();
+	 GLuint sampleVBO; //remember unsigne int here
+	 
+	 glGenBuffers(1, &sampleVBO); //1 = number of vbos to make
+	 glBindBuffer(GL_ARRAY_BUFFER, sampleVBO);
+	 
+	 //glBufferData(GL_ARRAY_BUFFER, (sizeof(sampleTriangle) ), sampleTriangle, GL_STATIC_DRAW);
+	 glBufferData(GL_ARRAY_BUFFER, (sizeof(GLfloat) * vData->size()), &vData[0], GL_STATIC_DRAW);
+	 
+
+	 //GLushort indices[] = { 1,2,3, 4,3,2};
+	 GLuint indexBufferID;
+	 glGenBuffers(1, &indexBufferID);
+	 glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexBufferID);
+	 glBufferData(GL_ELEMENT_ARRAY_BUFFER, (sizeof(GLuint) * indices->size()), &indices[0], GL_STATIC_DRAW);
+
+
+	 glEnableVertexAttribArray(0); 
+	 glEnableVertexAttribArray(1);
+
+	 GLsizei sizeOfVector4InBytes = sizeof(GLfloat) * 12;
+	 glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, sizeOfVector4InBytes, 0);
+	 glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, sizeOfVector4InBytes,
+	 (void*) (sizeof(GLfloat) * 4)) ;
+
+
+	 //GLint posAttrib = glGetAttribLocation(shaderProgram, "position");
+	 //glVertexAttribPointer(posAttrib, 2, GL_FLOAT, GL_FALSE, 0, 0);
+	
+	
+	 glUseProgram(s2prog->getShaderProgramRef());
+
+	 glDrawArrays(GL_TRIANGLES, 0, 3);
+	//glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_SHORT, 0);
+	
+	
+	
+}
+
 void s2Module::update(const UpdateContext& context)
 {
 	/* delete any geometry as instructed by the user and handle any other events
@@ -86,14 +158,6 @@ void s2Module::update(const UpdateContext& context)
 	cameraPosition = camera->getPosition();
 	//sortFacets(0, facets->size());
 	
-}
-
-void s2Module::initializeRenderer(Renderer* r)
-{
-    s2RenderPass* s2plotrp = new s2RenderPass(r, "s2RenderPass");
-    s2plotrp->setUserData(this);
-    r->addRenderPass(s2plotrp);
-    camera = r->getEngine()->getDefaultCamera();
 }
 
 void s2Module::handleEvent(const Event& evt)
@@ -166,19 +230,19 @@ GLuint s2Module::addObject(s2PolyObject* object)
 	
 	vector<s2Primitive*>* tempPrimVec = object->getPrimitives();
 	
+	vertexData->insert(vertexData->end(),
+					object->getVertexData()->begin(),
+					object->getVertexData()->end());
+
 	int i = 0;
 	while(i < tempPrimVec->size())
-	{
-		vertexData->insert(	vertexData->end(), 
-							tempPrimVec->at(i)->getVertexData()->begin(),
-							tempPrimVec->at(i)->getVertexData()->end());
-							
+	{	
 		indices->insert(indices->end(), 
 						tempPrimVec->at(i)->getIndices()->begin(),
 						tempPrimVec->at(i)->getIndices()->end());
 		
 		i++;
-	}	
+	}
 										
 	return sceneObjects->size() - 1;
 }

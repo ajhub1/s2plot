@@ -38,7 +38,7 @@ using namespace glm;
 
 s2Factory::s2Factory(s2Module* mod)
 {
-	s2Module* module = mod;
+	module = mod;
 	offsetptr = new GLuint();
 	*offsetptr = 0;
 }
@@ -86,8 +86,9 @@ GLuint s2Factory::ns2scube( float x1,
 {	
 	GLfloat size = fabs(x1 - x2);
 	vec4 centroid = vec4((x1 + (0.5 * x2)), (y1 + (0.5 * y2)), 
-					(z1 + (0.5 * z2)), 1.0f);					
-	
-	return module->addObject(new s2Cube(offsetptr, size, centroid));
+					(z1 + (0.5 * z2)), 1.0f);
+	//TODO temp pointer for debugging	
+	s2Cube* tempCube =  new s2Cube(offsetptr, size, centroid);
+	return module->addObject(tempCube);
 }
 
