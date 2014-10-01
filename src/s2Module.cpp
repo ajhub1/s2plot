@@ -41,18 +41,20 @@ using namespace std;
  * */
 void s2Module::draw()
 {
-	// call draw on all objects
-	printf("drawing\n");
+	int i;
+	for(i = 0; i < facets->size(); i++)
+	{
+		facets->at(i)->draw();
+	}	
 }
 
 /* Constructor - creates an engine module with the name "s2plotModule"
  * The module handles event call backs data structures and the 
  * renderpass
  * */
-s2Module::s2Module(): EngineModule("s2plotModule")
+s2Module::s2Module(): EngineModule("s2Module")
 {
 	s2Module::initialise();
-	
 }
 
 s2Module::~s2Module()
@@ -62,21 +64,47 @@ s2Module::~s2Module()
 	//delete facets;
 	//delete vertexData;
 	//delete callBacks;
-	
 }
 
+/**
+ * initialises the vector data structures required by the module. 
+ **/
 void s2Module::initialise()
 {	
 	sceneObjects = new vector<s2Geom*>();
 	facets = new vector<s2Primitive*>();
 	vertexData = new vector<GLfloat>();
 	indices = new vector<GLuint>();
-	
 	callBacks = new vector<callback_function>();	
+}
+
+/**
+ * initialises open GL buffer and shader program constructs.
+ **/
+void s2Module::initialiseGL()
+{
+	shaderProgram = new s2Program();
+	
+	glGenBuffers(1, &vertexBufferRef);
+	glBindBuffer(GL_ARRAY_BUFFER, vertexBufferRef);
+	
+	glGenBuffers(1, &indexBufferRef);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexBufferRef);
+	
+	glEnableVertexAttribArray(0);
+	glEnableVertexAttribArray(1);
+	
+	GLsizei stride = sizeof(GLfloat) * 12; // TODO magic number
+	
+	glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, stride, 0);
+	glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, stride, 
+							(void*) (sizeof(GLfloat) * 4));
+	glUseProgram(shaderProgram->theProgram);
 }
 
 void s2Module::update(const UpdateContext& context)
 {
+	s2Module::initialiseGL();
 	/* delete any geometry as instructed by the user and handle any other events
 	 * by broadcasting the event to each object then finally sort the verticie 
 	 * array back to front based on camera position 
@@ -86,6 +114,9 @@ void s2Module::update(const UpdateContext& context)
 	cameraPosition = camera->getPosition();
 	//sortFacets(0, facets->size());
 	
+	// must be called last
+	glBufferData(GL_ARRAY_BUFFER, (sizeof(GLfloat) * vertexData->size()), &vertexData[0], GL_STATIC_DRAW);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, (sizeof(GLuint) * indices->size()), &indices[0], GL_STATIC_DRAW);
 }
 
 void s2Module::initializeRenderer(Renderer* r)
@@ -159,25 +190,25 @@ int s2Module::partition(int beg, int end)
  * */
 GLuint s2Module::addObject(s2PolyObject* object)
 {
-	sceneObjects->push_back(object);
 	
+	 
+	sceneObjects->push_back(object);
+
 	facets->insert(facets->end(), object->getPrimitives()->begin(), 
 					object->getPrimitives()->end());
+					
+	vertexData->insert( vertexData->end(),
+						object->getVertexData()->begin(),
+						object->getVertexData()->end());
 	
 	vector<s2Primitive*>* tempPrimVec = object->getPrimitives();
 	
-	int i = 0;
-	while(i < tempPrimVec->size())
-	{
-		vertexData->insert(	vertexData->end(), 
-							tempPrimVec->at(i)->getVertexData()->begin(),
-							tempPrimVec->at(i)->getVertexData()->end());
-							
+	int i;
+	for(i = 0; i < tempPrimVec->size(); i++)
+	{					
 		indices->insert(indices->end(), 
 						tempPrimVec->at(i)->getIndices()->begin(),
 						tempPrimVec->at(i)->getIndices()->end());
-		
-		i++;
 	}	
 										
 	return sceneObjects->size() - 1;
@@ -190,20 +221,18 @@ GLuint s2Module::addObject(s2Primitive* primitive)
 	facets->insert(facets->end(), primitive->getPrimitives()->begin(), 
 					primitive->getPrimitives()->end());
 	
+	vertexData->insert( vertexData->end(),
+						primitive->getVertexData()->begin(),
+						primitive->getVertexData()->end());
+	
 	vector<s2Primitive*>* tempPrimVec = primitive->getPrimitives();
 		
-	int i = 0;
-	while(i < tempPrimVec->size())
+	int i;
+	for(i = 0; i < tempPrimVec->size(); i++)
 	{
-		vertexData->insert(	vertexData->end(), 
-							tempPrimVec->at(i)->getVertexData()->begin(),
-							tempPrimVec->at(i)->getVertexData()->end());
-							
 		indices->insert(indices->end(), 
 						tempPrimVec->at(i)->getIndices()->begin(),
 						tempPrimVec->at(i)->getIndices()->end());
-		
-		i++;
 	}		
 										
 	return sceneObjects->size() - 1;

@@ -133,6 +133,15 @@ void s2Cube::initialise(GLuint* offsetptr)
 	primitives->push_back(new s2Triangle(offsetptr, 
 						vertices[5], vertices[0], vertices[2], t12));
 	
+	vertexData = new vector<GLfloat>;
+	int i;
+	for(i = 0; i < NUMBER_OF_VERTICES_PER_CUBE; i++)
+	{
+		vertexData->insert( vertexData->end(),
+							vertices[i]->getVertexData()->begin(),
+							vertices[i]->getVertexData()->end());
+	}
+	
 }
 
 vector<s2Primitive*>* s2Cube::getPrimitives()
@@ -144,3 +153,13 @@ void s2Cube::updateFacetOffsets(GLuint baseOffset)
 {
 	// TODO shifaz is a bitch, andreas is THE ass
 }
+
+vector<GLfloat>* s2Cube::getVertexData()
+{
+	return vertexData;
+}
+
+
+
+
+

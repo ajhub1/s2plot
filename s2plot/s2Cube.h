@@ -36,6 +36,7 @@
 
 #define NUMBER_OF_FACETS 12
 #define NUMBER_OF_INDICES 12 * 3 //NUMBER_OF_FACETS * VERTEX PER FACET, formula holds only if primitive is composed of same type of facets
+#define NUMBER_OF_VERTICES_PER_CUBE 8
 
 namespace s2plot
 {
@@ -53,10 +54,12 @@ namespace s2plot
 
 			vector<s2Primitive*>* getPrimitives();
 			void updateFacetOffsets(GLuint baseOffset); // TODO shifaz is a bitch 
+			vector<GLfloat>* getVertexData();
 
 		private:
 			void initialise(GLuint* offsetptr);
 			s2Vertex* vertices[8];		//TODO local because a sphere might use a vector
+			vector<GLfloat>* vertexData;
 	};
 }
 

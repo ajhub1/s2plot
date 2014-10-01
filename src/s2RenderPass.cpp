@@ -55,7 +55,6 @@ void s2RenderPass::render(Renderer* client, const DrawContext& context)
 	 * ferencing back to each objects openGL code and shader program is up 
 	 * to s2plotModules architecture
 	 * */
-	
 	myModule->draw();
 }
 

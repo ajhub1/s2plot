@@ -43,13 +43,16 @@ namespace s2plot
 	class s2PolyObject;
 	class s2Primitive;
 	class s2Vertex;
+	class s2Program;
 	
 	class s2Module: public EngineModule
 	{
 		public:
+			int test;
 			s2Module();
 			virtual ~s2Module();
 			void initialise();
+			void initialiseGL();
 			
 			void update(const UpdateContext& context);	
 			void draw();
@@ -66,6 +69,7 @@ namespace s2plot
 			void addCallBack(callback_function function);
 			virtual void handleEvent(const Event& evt);
 			Event event();
+			
 									
 		private:
 			void sortFacets(int beg, int end);
@@ -81,6 +85,11 @@ namespace s2plot
 			Camera* camera;
 			void callBack();
 			vector<callback_function>* callBacks;
+			
+			// openGL variables
+			s2Program* shaderProgram;
+			GLuint vertexBufferRef;
+			GLuint indexBufferRef;
 	};
 }
 #endif

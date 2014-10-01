@@ -34,6 +34,8 @@
 #define S2TRIANGLE_H
 #include "s2plot/s2plot.h"
 
+#define NUMBER_OF_VERTICES_PER_TRIANGLE 3
+
 namespace s2plot
 {
 	using namespace omega;

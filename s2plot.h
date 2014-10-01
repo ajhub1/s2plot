@@ -14,6 +14,10 @@
 #include <cmath>
 #include <omicron.h>
 #include <omp.h>
+#include <string>
+#include <iostream>
+#include <fstream>
+#include <streambuf>
 
 #include "s2plot/s2plot/s2Module.h"
 #include "s2plot/s2plot/s2RenderPass.h"

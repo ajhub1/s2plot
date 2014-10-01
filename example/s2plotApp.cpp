@@ -18,7 +18,7 @@ class s2plotApp: public EngineModule
 		}
 	
 	
-		s2plotApp() : EngineModule("s2plotApp2")
+		s2plotApp() : EngineModule("s2plotApp")
 		{
 			mys2plot = new s2Module();
 			ModuleServices::addModule(mys2plot);

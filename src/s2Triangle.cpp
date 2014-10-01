@@ -38,8 +38,6 @@ using namespace omega;
 using namespace std;
 using namespace glm;
 
-#define NUMBER_OF_VERTICES_PER_TRIANGLE 3
-
 s2Triangle::s2Triangle(GLuint* offsetptr, 
 						s2Vertex* p0, 
 						s2Vertex* p1, 

@@ -38,7 +38,7 @@ using namespace glm;
 
 s2Factory::s2Factory(s2Module* mod)
 {
-	s2Module* module = mod;
+	module = mod;
 	offsetptr = new GLuint();
 	*offsetptr = 0;
 }

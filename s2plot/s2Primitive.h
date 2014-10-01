@@ -46,7 +46,6 @@ namespace s2plot
 			virtual void draw() {};
 			virtual GLfloat getDistance(Vector3f cameraPosition) {};
 			virtual vector<s2Vertex*>* getVertices() {};
-			virtual vector<GLfloat>* getVertexData() {};
 			virtual vector<GLuint>* getIndices() {};
 
 		protected:

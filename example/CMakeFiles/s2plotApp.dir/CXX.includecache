@@ -10013,6 +10013,14 @@ omicron.h
 -
 omp.h
 -
+string
+-
+iostream
+-
+fstream
+-
+streambuf
+-
 s2plot/s2plot/s2Module.h
 /home/dre/Desktop/omegalib/core/modules/s2plot/s2plot/s2plot/s2Module.h
 s2plot/s2plot/s2RenderPass.h
@@ -10675,6 +10683,8 @@ s2plot/s2plot.h
 /home/dre/Desktop/omegalib/core/modules/s2plot/s2plot/s2plot/s2plot.h
 
 /home/dre/Desktop/omegalib/core/modules/s2plot/s2plot/s2Program.h
+s2plot/s2plot.h
+/home/dre/Desktop/omegalib/core/modules/s2plot/s2plot/s2plot/s2plot.h
 
 /home/dre/Desktop/omegalib/core/modules/s2plot/s2plot/s2RenderPass.h
 s2plot/s2plot.h
