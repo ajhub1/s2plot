@@ -130,7 +130,7 @@ vector<GLuint>* s2Triangle::getIndices()
 void s2Triangle::draw()
 {
 	//TODO recheck
-	glDrawRangeElements(GL_TRIANGLES, offset, offset + 2, 3, GL_UNSIGNED_INT, 0);
+	glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, (void*)(offset * sizeof(GLuint)));
 }
 
 GLfloat s2Triangle::getDistance(Vector3f cameraPosition)

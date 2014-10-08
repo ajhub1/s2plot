@@ -69,36 +69,36 @@ void s2Module::draw()
 	vector<GLfloat>* vData = new vector<GLfloat>();
 	vData->assign(sampleTriangle, sampleTriangle + 48);
 	
-	 facets->clear();
-	 vertexData->clear();
-	 indices->clear();
+	 //facets->clear();
+	 //vertexData->clear();
+	 //indices->clear();
 	 
-	 s2Vertex* v1 = new s2Vertex(-1.0f, 0.0f, 0.0f, 1.0f);
-	 s2Vertex* v2 = new s2Vertex(0.0f, 1.0f, 0.0f, 1.0f);
-	 s2Vertex* v3 = new s2Vertex(1.0f, 0.0f, 0.0f, 1.0f);
+	 //s2Vertex* v1 = new s2Vertex(-1.0f, 0.0f, 0.0f, 1.0f);
+	 //s2Vertex* v2 = new s2Vertex(0.0f, 1.0f, 0.0f, 1.0f);
+	 //s2Vertex* v3 = new s2Vertex(1.0f, 0.0f, 0.0f, 1.0f);
 	
-	 vec3 t1 = vec3(0, 1, 2);
+	 //vec3 t1 = vec3(0, 1, 2);
 	 
-	 GLuint* a = new GLuint;
-	 *a = 0;
+	 //GLuint* a = new GLuint;
+	 //*a = 0;
 	 
-	 facets->push_back(new s2Triangle(a, v1, v2, v3, t1));
+	 //facets->push_back(new s2Triangle(a, v1, v2, v3, t1));
 	 
 
-	 vertexData->insert( vertexData->end(),
-							v1->getVertexData()->begin(),
-							v1->getVertexData()->end());
-	 vertexData->insert( vertexData->end(),
-							v2->getVertexData()->begin(),
-							v2->getVertexData()->end());
-	 vertexData->insert( vertexData->end(),
-							v3->getVertexData()->begin(),
-							v3->getVertexData()->end());
+	 //vertexData->insert( vertexData->end(),
+							//v1->getVertexData()->begin(),
+							//v1->getVertexData()->end());
+	 //vertexData->insert( vertexData->end(),
+							//v2->getVertexData()->begin(),
+							//v2->getVertexData()->end());
+	 //vertexData->insert( vertexData->end(),
+							//v3->getVertexData()->begin(),
+							//v3->getVertexData()->end());
 	
 	 
-	 indices->push_back(0);
-	 indices->push_back(1);
-	 indices->push_back(2);
+	 //indices->push_back(0);
+	 //indices->push_back(1);
+	 //indices->push_back(2);
 	
 	//vData->resize(vData->size());
 	
@@ -138,8 +138,15 @@ void s2Module::draw()
 	
 	 glUseProgram(s2prog->getShaderProgramRef());
 
-	 glDrawArrays(GL_TRIANGLES, 0, 3);
+	 //glDrawArrays(GL_TRIANGLES, 0, 3);
 	 //glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, (void*)(0 * sizeof(GLuint)));
+	 
+	int i;
+	for(i = 0; i < facets->size(); i++)
+	{
+		facets->at(i)->draw();
+	}
+	 
 }
 
 /* Constructor - creates an engine module with the name "s2plotModule"
