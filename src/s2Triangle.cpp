@@ -31,7 +31,6 @@
  * 
  ******************************************************************************/
 #include "s2plot/s2plot.h"
-#include <omegaGl.h>
 
 using namespace s2plot;
 using namespace omega;

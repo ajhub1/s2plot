@@ -40,12 +40,35 @@ using namespace std;
 /* Draw function - the call back from the s2plotModules Render Pass
  * */
 void s2Module::draw()
-{
+{	
+	// hacky fix: initialises open GL constructs once 
+	// done like this because of omegalib issues
+	if (flag == 0)
+	{
+		initialiseGL();
+		printf("ya mum");
+		flag = 1;
+	}
+	
 	int i;
 	for(i = 0; i < facets->size(); i++)
 	{
 		facets->at(i)->draw();
-	}	
+	}
+	
+		//int i;
+		//for(i = 0; i < facets->size(); i++)
+		//{
+			//facets->at(i)->draw();
+			
+			//int j;
+			//for(j = 0; j < facets->at(i)->getIndices()->size(); j++)
+			//{
+				//std::cout << "facet " << facets->at(i)->getIndices()->at(j) << std::endl;
+			//}
+			
+		//}	
+	//}		
 }
 
 /* Constructor - creates an engine module with the name "s2plotModule"
@@ -55,6 +78,7 @@ void s2Module::draw()
 s2Module::s2Module(): EngineModule("s2Module")
 {
 	s2Module::initialise();
+	flag = 0;
 }
 
 s2Module::~s2Module()
@@ -83,7 +107,7 @@ void s2Module::initialise()
  **/
 void s2Module::initialiseGL()
 {
-	shaderProgram = new s2Program();
+	//shaderProgram = new s2Program();
 	
 	glGenBuffers(1, &vertexBufferRef);
 	glBindBuffer(GL_ARRAY_BUFFER, vertexBufferRef);
@@ -99,12 +123,15 @@ void s2Module::initialiseGL()
 	glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, stride, 0);
 	glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, stride, 
 							(void*) (sizeof(GLfloat) * 4));
-	glUseProgram(shaderProgram->theProgram);
+	//glUseProgram(shaderProgram->getShaderProgramRef());
+	
+	// must be called last
+	glBufferData(GL_ARRAY_BUFFER, (sizeof(GLfloat) * vertexData->size()), &vertexData[0], GL_STATIC_DRAW);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, (sizeof(GLuint) * indices->size()), &indices[0], GL_STATIC_DRAW);
 }
 
 void s2Module::update(const UpdateContext& context)
 {
-	s2Module::initialiseGL();
 	/* delete any geometry as instructed by the user and handle any other events
 	 * by broadcasting the event to each object then finally sort the verticie 
 	 * array back to front based on camera position 
@@ -113,10 +140,6 @@ void s2Module::update(const UpdateContext& context)
 	//callBack();
 	cameraPosition = camera->getPosition();
 	//sortFacets(0, facets->size());
-	
-	// must be called last
-	glBufferData(GL_ARRAY_BUFFER, (sizeof(GLfloat) * vertexData->size()), &vertexData[0], GL_STATIC_DRAW);
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, (sizeof(GLuint) * indices->size()), &indices[0], GL_STATIC_DRAW);
 }
 
 void s2Module::initializeRenderer(Renderer* r)

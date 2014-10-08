@@ -72,6 +72,10 @@ namespace s2plot
 			
 									
 		private:
+			// hacky fix: initialises open GL constructs once 
+			// done like this because of omegalib issues
+			GLuint flag;
+			
 			void sortFacets(int beg, int end);
 			int partition(int beg, int end);
 			
