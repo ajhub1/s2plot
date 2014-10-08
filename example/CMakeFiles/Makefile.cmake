@@ -7,14 +7,14 @@ SET(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 SET(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/home/dre/Desktop/omegalib/build/OmegalibConfig.cmake"
-  "/home/dre/Desktop/omegalib/build/omicron/omicron/UseOmicron.cmake"
-  "/home/dre/Desktop/omegalib/core/CMakeModules/FindOmegalib.cmake"
+  "/home/shifaz/omegalib/build/OmegalibConfig.cmake"
+  "/home/shifaz/omegalib/build/omicron/omicron/UseOmicron.cmake"
+  "/home/shifaz/omegalib/source/CMakeModules/FindOmegalib.cmake"
   "CMakeFiles/2.8.12.2/CMakeCCompiler.cmake"
   "CMakeFiles/2.8.12.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/2.8.12.2/CMakeSystem.cmake"
   "CMakeLists.txt"
-  "/home/dre/Desktop/omegalib/core/omicron/CMakeModules/FindOmicron.cmake"
+  "/home/shifaz/omegalib/source/omicron/CMakeModules/FindOmicron.cmake"
   "/usr/share/cmake-2.8/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-2.8/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-2.8/Modules/CMakeCommonLanguageInclude.cmake"

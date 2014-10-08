@@ -38,10 +38,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/cmake-gui
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dre/Desktop/omegalib/core/modules/s2plot/example
+CMAKE_SOURCE_DIR = /home/shifaz/omegalib/source/modules/s2plot/example
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dre/Desktop/omegalib/core/modules/s2plot/example
+CMAKE_BINARY_DIR = /home/shifaz/omegalib/source/modules/s2plot/example
 
 # Include any dependencies generated for this target.
 include CMakeFiles/s2plotApp.dir/depend.make
@@ -54,17 +54,17 @@ include CMakeFiles/s2plotApp.dir/flags.make
 
 CMakeFiles/s2plotApp.dir/s2plotApp.cpp.o: CMakeFiles/s2plotApp.dir/flags.make
 CMakeFiles/s2plotApp.dir/s2plotApp.cpp.o: s2plotApp.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/s2plotApp.dir/s2plotApp.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/s2plotApp.dir/s2plotApp.cpp.o -c /home/dre/Desktop/omegalib/core/modules/s2plot/example/s2plotApp.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/s2plotApp.dir/s2plotApp.cpp.o -c /home/shifaz/omegalib/source/modules/s2plot/example/s2plotApp.cpp
 
 CMakeFiles/s2plotApp.dir/s2plotApp.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/s2plotApp.dir/s2plotApp.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dre/Desktop/omegalib/core/modules/s2plot/example/s2plotApp.cpp > CMakeFiles/s2plotApp.dir/s2plotApp.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/shifaz/omegalib/source/modules/s2plot/example/s2plotApp.cpp > CMakeFiles/s2plotApp.dir/s2plotApp.cpp.i
 
 CMakeFiles/s2plotApp.dir/s2plotApp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/s2plotApp.dir/s2plotApp.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dre/Desktop/omegalib/core/modules/s2plot/example/s2plotApp.cpp -o CMakeFiles/s2plotApp.dir/s2plotApp.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/shifaz/omegalib/source/modules/s2plot/example/s2plotApp.cpp -o CMakeFiles/s2plotApp.dir/s2plotApp.cpp.s
 
 CMakeFiles/s2plotApp.dir/s2plotApp.cpp.o.requires:
 .PHONY : CMakeFiles/s2plotApp.dir/s2plotApp.cpp.o.requires
@@ -84,23 +84,20 @@ s2plotApp_EXTERNAL_OBJECTS =
 
 s2plotApp: CMakeFiles/s2plotApp.dir/s2plotApp.cpp.o
 s2plotApp: CMakeFiles/s2plotApp.dir/build.make
-s2plotApp: /home/dre/Desktop/omegalib/build/bin/libomicron.so
-s2plotApp: /usr/lib/x86_64-linux-gnu/libGL.so
-s2plotApp: /usr/lib/x86_64-linux-gnu/libSM.so
-s2plotApp: /usr/lib/x86_64-linux-gnu/libICE.so
-s2plotApp: /usr/lib/x86_64-linux-gnu/libX11.so
-s2plotApp: /usr/lib/x86_64-linux-gnu/libXext.so
-s2plotApp: /home/dre/Desktop/omegalib/build/bin/libomega.so
+s2plotApp: /home/shifaz/omegalib/build/bin/libomicron.so
+s2plotApp: /home/shifaz/omegalib/build/bin/libomega.so
 s2plotApp: /usr/lib/x86_64-linux-gnu/libGLU.so
 s2plotApp: /usr/lib/x86_64-linux-gnu/libGL.so
 s2plotApp: /usr/lib/x86_64-linux-gnu/libSM.so
 s2plotApp: /usr/lib/x86_64-linux-gnu/libICE.so
 s2plotApp: /usr/lib/x86_64-linux-gnu/libX11.so
 s2plotApp: /usr/lib/x86_64-linux-gnu/libXext.so
-s2plotApp: /home/dre/Desktop/omegalib/build/bin/s2plot.so
-s2plotApp: /home/dre/Desktop/omegalib/build/bin/libomega.so
-s2plotApp: /usr/lib/x86_64-linux-gnu/libGLU.so
-s2plotApp: /home/dre/Desktop/omegalib/build/bin/s2plot.so
+s2plotApp: /usr/lib/x86_64-linux-gnu/libGL.so
+s2plotApp: /usr/lib/x86_64-linux-gnu/libSM.so
+s2plotApp: /usr/lib/x86_64-linux-gnu/libICE.so
+s2plotApp: /usr/lib/x86_64-linux-gnu/libX11.so
+s2plotApp: /usr/lib/x86_64-linux-gnu/libXext.so
+s2plotApp: /home/shifaz/omegalib/build/bin/s2plot.so
 s2plotApp: CMakeFiles/s2plotApp.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable s2plotApp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/s2plotApp.dir/link.txt --verbose=$(VERBOSE)
@@ -117,6 +114,6 @@ CMakeFiles/s2plotApp.dir/clean:
 .PHONY : CMakeFiles/s2plotApp.dir/clean
 
 CMakeFiles/s2plotApp.dir/depend:
-	cd /home/dre/Desktop/omegalib/core/modules/s2plot/example && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dre/Desktop/omegalib/core/modules/s2plot/example /home/dre/Desktop/omegalib/core/modules/s2plot/example /home/dre/Desktop/omegalib/core/modules/s2plot/example /home/dre/Desktop/omegalib/core/modules/s2plot/example /home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/s2plotApp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/shifaz/omegalib/source/modules/s2plot/example && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shifaz/omegalib/source/modules/s2plot/example /home/shifaz/omegalib/source/modules/s2plot/example /home/shifaz/omegalib/source/modules/s2plot/example /home/shifaz/omegalib/source/modules/s2plot/example /home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/s2plotApp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/s2plotApp.dir/depend
 
