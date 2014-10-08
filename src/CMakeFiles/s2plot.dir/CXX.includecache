@@ -6,7 +6,31 @@
 
 #IncludeRegexTransform: 
 
+/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Cube.cpp
+s2plot/s2plot.h
+/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plot/s2plot.h
+
+/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Factory.cpp
+s2plot/s2plot.h
+/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plot/s2plot.h
+
 /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Module.cpp
+s2plot/s2plot.h
+/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plot/s2plot.h
+
+/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Program.cpp
+s2plot/s2plot.h
+/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plot/s2plot.h
+omega.h
+-
+omegaGl.h
+-
+
+/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2RenderPass.cpp
+s2plot/s2plot.h
+/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plot/s2plot.h
+
+/home/dre/Desktop/omegalib/core/modules/s2plot/src/s2Triangle.cpp
 s2plot/s2plot.h
 /home/dre/Desktop/omegalib/core/modules/s2plot/src/s2plot/s2plot.h
 

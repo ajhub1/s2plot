@@ -1,0 +1,70 @@
+omegalib data search paths:
+::: /home/dre/Desktop/omegalib/core/modules/s2plot/example
+::: /home/dre/Desktop/omegalib/core
+omegalib application config lookup:
+::: trying s2plotApp/s2plotApp.cfg
+::: not found, trying s2plotApp.cfg
+::: found config: s2plotApp.cfg
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> OMEGALIB BOOT
+Opened config file: s2plotApp.cfg
+SystemManager::setup: using app config as sysem config file
+SystemManager::setupDisplaySystem: type = Equalizer
+Bezel size: 0 0
+SharedDataServices::registerObject: queuing interp for registration
+!!! WARNING: could not find a local omegalib python installation. 
+Omegalib will attempt to use the system python interpreter (if available)
+PythonInterpreter::addPythonPath: ./
+PythonInterpreter::addPythonPath: /home/dre/Desktop/omegalib/core/modules/s2plot/example/
+PythonInterpreter::addPythonPath: /home/dre/Desktop/omegalib/core/modules
+PythonInterpreter: starting interactive shell thread.
+Python Interpreter initialized.
+ModuleServices::addModule: s2Module
+ModuleServices::addModule: s2plotApp
+Service added: MouseService
+Service added: KeyboardService
+Initializing mission control server on port 22500
+ModuleServices::addModule: MissionControlClient
+Mission control connection open (id=0)
+ServiceManager::initialize
+Event buffer allocated. Max events: 512
+s2plotApp>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< OMEGALIB BOOT
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> DISPLAY INITIALIZATION
+======[EQ] ConfigImpl::ConfigImpl
+[EQ] ConfigImpl::init
+ModuleServices::addModule: EventSharingModule
+ModuleServices::addModule: console
+Camera controller: keyboardmouse
+ModuleServices::addModule: CameraController
+Engine: Running with sound disabled.
+Death switch timeout: 240 seconds
+[EQ] NodeImpl::NodeImpl
+[EQ] NodeImpl::configInit 1881e0e349753356:a7236f7f41b48d31
+8647 eq::Pipe::P /home/dre/Desktop/omegalib/build/src/omega/equalizer-prefix/src/equalizer/libs/client/glXPipe.cpp:59 8 Can't open display (0x10016) :0.1: Resource temporarily unavailable (11)
+8647 eq::Pipe::P /home/dre/Desktop/omegalib/build/src/omega/equalizer-prefix/src/equalizer/libs/client/pipe.cpp:516 8 System pipe context initialization failed: Can't open display (0x10016)
+@Renderer::Initialize: id = 0
+@Renderer::Initialize: id = 0
+!!! StatsManager::createStat: stat ctx0 frame already exists
+@Renderer::Initialize: id = 0
+!!! StatsManager::createStat: stat ctx0 frame already exists
+8647 eq::server: /home/dre/Desktop/omegalib/build/src/omega/equalizer-prefix/src/equalizer/libs/server/configUpdateSyncVisitor.h:115 134 eq::server::Channel initialization failed: Window not running (0x1003f)
+8647 eq::server: /home/dre/Desktop/omegalib/build/src/omega/equalizer-prefix/src/equalizer/libs/server/configUpdateSyncVisitor.h:115 134 eq::server::Window initialization failed: Pipe not running (0x10020)
+8647 eq::server: /home/dre/Desktop/omegalib/build/src/omega/equalizer-prefix/src/equalizer/libs/server/configUpdateSyncVisitor.h:115 134 eq::server::Channel initialization failed: Window not running (0x1003f)
+8647 eq::server: /home/dre/Desktop/omegalib/build/src/omega/equalizer-prefix/src/equalizer/libs/server/configUpdateSyncVisitor.h:115 134 eq::server::Window initialization failed: Pipe not running (0x10020)
+8647 eq::server: /home/dre/Desktop/omegalib/build/src/omega/equalizer-prefix/src/equalizer/libs/server/pipe.cpp:219 134 Pipe initialization failed: error 0x0
+8647 eq::server: /home/dre/Desktop/omegalib/build/src/omega/equalizer-prefix/src/equalizer/libs/server/configUpdateSyncVisitor.h:115 134 eq::server::Pipe initialization failed: Can't open display (0x10016)
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< DISPLAY INITIALIZATION
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> APPLICATION LOOP
+Mission control connection open (id=0)
+Connection 0 name changed to server
+Creating death switch thread
+Renderer(0): adding render pass s2RenderPass
+Renderer(0): adding render pass s2RenderPass
+Renderer(0): adding render pass s2RenderPass
+Renderer(0): adding render pass console
+Renderer(0): adding render pass console
+Renderer(0): adding render pass console
+Engine::refreshPointer: creating pointer 0

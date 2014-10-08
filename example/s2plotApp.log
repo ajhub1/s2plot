@@ -1,6 +1,6 @@
 omegalib data search paths:
-::: /home/shifaz/omegalib/source/modules/s2plot/example
-::: /home/shifaz/omegalib/source
+::: /home/dre/Desktop/omegalib/core/modules/s2plot/example
+::: /home/dre/Desktop/omegalib/core
 omegalib application config lookup:
 ::: trying s2plotApp/s2plotApp.cfg
 ::: not found, trying s2plotApp.cfg
@@ -12,7 +12,14 @@ SystemManager::setup: systemConfig = system/desktop.cfg
 Opened config file: system/desktop.cfg
 SystemManager::setupDisplaySystem: type = Equalizer
 Bezel size: 0 0
-canvas pixel size: 854 480
+SharedDataServices::registerObject: queuing interp for registration
+!!! WARNING: could not find a local omegalib python installation. 
+Omegalib will attempt to use the system python interpreter (if available)
+PythonInterpreter::addPythonPath: ./
+PythonInterpreter::addPythonPath: /home/dre/Desktop/omegalib/core/modules/s2plot/example/
+PythonInterpreter::addPythonPath: /home/dre/Desktop/omegalib/core/modules
+PythonInterpreter: starting interactive shell thread.
+Python Interpreter initialized.
 ModuleServices::addModule: s2Module
 ModuleServices::addModule: s2plotApp
 Service added: MouseService
@@ -36,7 +43,7 @@ ModuleServices::addModule: CameraController
 Engine: Running with sound disabled.
 Death switch timeout: 240 seconds
 [EQ] NodeImpl::NodeImpl
-[EQ] NodeImpl::configInit ed02f940849587bb:4aab985cb0340fe6
+[EQ] NodeImpl::configInit 90dee86599b139c6:564096a0d160a1ab
 @Renderer::Initialize: id = 0
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< DISPLAY INITIALIZATION
 
@@ -48,5 +55,3 @@ Creating death switch thread
 Renderer(0): adding render pass s2RenderPass
 Renderer(0): adding render pass console
 Engine::refreshPointer: creating pointer 0
-EqualizerDisplaySystem::killCluster
-number of nodes: 1

@@ -1,4 +1,4 @@
-The system is: Linux - 3.13.0-24-generic - x86_64
+The system is: Linux - 3.13.0-35-generic - x86_64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
 Compiler: /usr/bin/cc 
 Build flags: 
@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/2.8.12.2/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/2.8.12.2/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/c++ 
@@ -23,38 +23,35 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/2.8.12.2/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/2.8.12.2/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp
+Change Dir: /home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec1950477943/fast"
-make[1]: Entering directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec1950477943.dir/build.make CMakeFiles/cmTryCompileExec1950477943.dir/build
-make[2]: Entering directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec1950477943.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1950477943.dir/testCCompiler.c.o   -c /home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTryCompileExec1950477943
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1950477943.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTryCompileExec1950477943.dir/testCCompiler.c.o  -o cmTryCompileExec1950477943 -rdynamic 
-make[2]: Leaving directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp'
+Run Build Command:/usr/bin/make "cmTryCompileExec1856657996/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1856657996.dir/build.make CMakeFiles/cmTryCompileExec1856657996.dir/build
+make[1]: Entering directory `/home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1856657996.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1856657996.dir/testCCompiler.c.o   -c /home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTryCompileExec1856657996
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1856657996.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1856657996.dir/testCCompiler.c.o  -o cmTryCompileExec1856657996 -rdynamic 
+make[1]: Leaving directory `/home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp
+Change Dir: /home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec3859881204/fast"
-make[1]: Entering directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3859881204.dir/build.make CMakeFiles/cmTryCompileExec3859881204.dir/build
-make[2]: Entering directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec3859881204.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3859881204.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c
-Linking C executable cmTryCompileExec3859881204
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3859881204.dir/link.txt --verbose=1
-/usr/bin/cc     -v CMakeFiles/cmTryCompileExec3859881204.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec3859881204 -rdynamic  
+Run Build Command:/usr/bin/make "cmTryCompileExec1926776368/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1926776368.dir/build.make CMakeFiles/cmTryCompileExec1926776368.dir/build
+make[1]: Entering directory `/home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1926776368.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1926776368.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c
+Linking C executable cmTryCompileExec1926776368
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1926776368.dir/link.txt --verbose=1
+/usr/bin/cc     -v CMakeFiles/cmTryCompileExec1926776368.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec1926776368 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.8/lto-wrapper
@@ -64,26 +61,24 @@ Thread model: posix
 gcc version 4.8.2 (Ubuntu 4.8.2-19ubuntu1) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec3859881204' '-rdynamic' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec3859881204 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec3859881204.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
-make[2]: Leaving directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec1926776368' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec1926776368 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec1926776368.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory `/home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec3859881204/fast"]
-  ignore line: [make[1]: Entering directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp']
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec3859881204.dir/build.make CMakeFiles/cmTryCompileExec3859881204.dir/build]
-  ignore line: [make[2]: Entering directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp']
-  ignore line: [/usr/bin/cmake -E cmake_progress_report /home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp/CMakeFiles 1]
-  ignore line: [Building C object CMakeFiles/cmTryCompileExec3859881204.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3859881204.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTryCompileExec3859881204]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3859881204.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTryCompileExec3859881204.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec3859881204 -rdynamic  ]
+  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec1926776368/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec1926776368.dir/build.make CMakeFiles/cmTryCompileExec1926776368.dir/build]
+  ignore line: [make[1]: Entering directory `/home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/cmake -E cmake_progress_report /home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building C object CMakeFiles/cmTryCompileExec1926776368.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1926776368.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTryCompileExec1926776368]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1926776368.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTryCompileExec1926776368.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec1926776368 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.8/lto-wrapper]
@@ -93,8 +88,8 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 4.8.2 (Ubuntu 4.8.2-19ubuntu1) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec3859881204' '-rdynamic' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec3859881204 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec3859881204.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec1926776368' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec1926776368 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec1926776368.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/collect2] ==> ignore
     arg [--sysroot=/] ==> ignore
     arg [--build-id] ==> ignore
@@ -108,7 +103,7 @@ Parsed C implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTryCompileExec3859881204] ==> ignore
+    arg [cmTryCompileExec1926776368] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o] ==> ignore
@@ -120,7 +115,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../..]
-    arg [CMakeFiles/cmTryCompileExec3859881204.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTryCompileExec1926776368.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -150,35 +145,32 @@ Parsed C implicit link information from above output:
 
 
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp
+Change Dir: /home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec4014408854/fast"
-make[1]: Entering directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec4014408854.dir/build.make CMakeFiles/cmTryCompileExec4014408854.dir/build
-make[2]: Entering directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec4014408854.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTryCompileExec4014408854.dir/testCXXCompiler.cxx.o -c /home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTryCompileExec4014408854
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4014408854.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTryCompileExec4014408854.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec4014408854 -rdynamic 
-make[2]: Leaving directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp'
+Run Build Command:/usr/bin/make "cmTryCompileExec3834583186/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3834583186.dir/build.make CMakeFiles/cmTryCompileExec3834583186.dir/build
+make[1]: Entering directory `/home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3834583186.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec3834583186.dir/testCXXCompiler.cxx.o -c /home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTryCompileExec3834583186
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3834583186.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTryCompileExec3834583186.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec3834583186 -rdynamic 
+make[1]: Leaving directory `/home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp
+Change Dir: /home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec2468572355/fast"
-make[1]: Entering directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec2468572355.dir/build.make CMakeFiles/cmTryCompileExec2468572355.dir/build
-make[2]: Entering directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec2468572355.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTryCompileExec2468572355.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTryCompileExec2468572355
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2468572355.dir/link.txt --verbose=1
-/usr/bin/c++      -v CMakeFiles/cmTryCompileExec2468572355.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec2468572355 -rdynamic  
+Run Build Command:/usr/bin/make "cmTryCompileExec1916376996/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1916376996.dir/build.make CMakeFiles/cmTryCompileExec1916376996.dir/build
+make[1]: Entering directory `/home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1916376996.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec1916376996.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTryCompileExec1916376996
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1916376996.dir/link.txt --verbose=1
+/usr/bin/c++      -v CMakeFiles/cmTryCompileExec1916376996.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec1916376996 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.8/lto-wrapper
@@ -188,26 +180,24 @@ Thread model: posix
 gcc version 4.8.2 (Ubuntu 4.8.2-19ubuntu1) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2468572355' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec2468572355 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec2468572355.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
-make[2]: Leaving directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec1916376996' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec1916376996 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec1916376996.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory `/home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec2468572355/fast"]
-  ignore line: [make[1]: Entering directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp']
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec2468572355.dir/build.make CMakeFiles/cmTryCompileExec2468572355.dir/build]
-  ignore line: [make[2]: Entering directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp']
-  ignore line: [/usr/bin/cmake -E cmake_progress_report /home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp/CMakeFiles 1]
-  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec2468572355.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTryCompileExec2468572355.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTryCompileExec2468572355]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2468572355.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTryCompileExec2468572355.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec2468572355 -rdynamic  ]
+  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec1916376996/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec1916376996.dir/build.make CMakeFiles/cmTryCompileExec1916376996.dir/build]
+  ignore line: [make[1]: Entering directory `/home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/cmake -E cmake_progress_report /home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec1916376996.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTryCompileExec1916376996.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTryCompileExec1916376996]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1916376996.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTryCompileExec1916376996.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec1916376996 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.8/lto-wrapper]
@@ -217,8 +207,8 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 4.8.2 (Ubuntu 4.8.2-19ubuntu1) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2468572355' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec2468572355 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec2468572355.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec1916376996' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec1916376996 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec1916376996.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/collect2] ==> ignore
     arg [--sysroot=/] ==> ignore
     arg [--build-id] ==> ignore
@@ -232,7 +222,7 @@ Parsed CXX implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTryCompileExec2468572355] ==> ignore
+    arg [cmTryCompileExec1916376996] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o] ==> ignore
@@ -244,7 +234,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../..]
-    arg [CMakeFiles/cmTryCompileExec2468572355.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTryCompileExec1916376996.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -272,92 +262,92 @@ Parsed CXX implicit link information from above output:
 
 
 Determining if the function XOpenDisplay exists in the /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so passed with the following output:
-Change Dir: /home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp
+Change Dir: /home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec647676685/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec647676685.dir/build.make CMakeFiles/cmTryCompileExec647676685.dir/build
-make[1]: Entering directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec647676685.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTryCompileExec647676685.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec647676685
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec647676685.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTryCompileExec647676685.dir/CheckFunctionExists.c.o  -o cmTryCompileExec647676685 -rdynamic -lX11 -lXext 
-make[1]: Leaving directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp'
+Run Build Command:/usr/bin/make "cmTryCompileExec2768395755/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2768395755.dir/build.make CMakeFiles/cmTryCompileExec2768395755.dir/build
+make[1]: Entering directory `/home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2768395755.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTryCompileExec2768395755.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2768395755
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2768395755.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTryCompileExec2768395755.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2768395755 -rdynamic -lX11 -lXext 
+make[1]: Leaving directory `/home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp'
 
 
 Determining if the function gethostbyname exists passed with the following output:
-Change Dir: /home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp
+Change Dir: /home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec2214143593/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec2214143593.dir/build.make CMakeFiles/cmTryCompileExec2214143593.dir/build
-make[1]: Entering directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec2214143593.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTryCompileExec2214143593.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec2214143593
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2214143593.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTryCompileExec2214143593.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2214143593 -rdynamic 
-make[1]: Leaving directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp'
+Run Build Command:/usr/bin/make "cmTryCompileExec4175515485/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4175515485.dir/build.make CMakeFiles/cmTryCompileExec4175515485.dir/build
+make[1]: Entering directory `/home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4175515485.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTryCompileExec4175515485.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec4175515485
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4175515485.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTryCompileExec4175515485.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4175515485 -rdynamic 
+make[1]: Leaving directory `/home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp'
 
 
 Determining if the function connect exists passed with the following output:
-Change Dir: /home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp
+Change Dir: /home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec3416474137/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3416474137.dir/build.make CMakeFiles/cmTryCompileExec3416474137.dir/build
-make[1]: Entering directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec3416474137.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTryCompileExec3416474137.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec3416474137
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3416474137.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTryCompileExec3416474137.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3416474137 -rdynamic 
-make[1]: Leaving directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp'
+Run Build Command:/usr/bin/make "cmTryCompileExec3428670021/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3428670021.dir/build.make CMakeFiles/cmTryCompileExec3428670021.dir/build
+make[1]: Entering directory `/home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3428670021.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTryCompileExec3428670021.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3428670021
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3428670021.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTryCompileExec3428670021.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3428670021 -rdynamic 
+make[1]: Leaving directory `/home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp'
 
 
 Determining if the function remove exists passed with the following output:
-Change Dir: /home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp
+Change Dir: /home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec993869814/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec993869814.dir/build.make CMakeFiles/cmTryCompileExec993869814.dir/build
-make[1]: Entering directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec993869814.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTryCompileExec993869814.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec993869814
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec993869814.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTryCompileExec993869814.dir/CheckFunctionExists.c.o  -o cmTryCompileExec993869814 -rdynamic 
-make[1]: Leaving directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp'
+Run Build Command:/usr/bin/make "cmTryCompileExec4033074771/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4033074771.dir/build.make CMakeFiles/cmTryCompileExec4033074771.dir/build
+make[1]: Entering directory `/home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4033074771.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTryCompileExec4033074771.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec4033074771
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4033074771.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTryCompileExec4033074771.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4033074771 -rdynamic 
+make[1]: Leaving directory `/home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp'
 
 
 Determining if the function shmat exists passed with the following output:
-Change Dir: /home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp
+Change Dir: /home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec3727536717/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3727536717.dir/build.make CMakeFiles/cmTryCompileExec3727536717.dir/build
-make[1]: Entering directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec3727536717.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTryCompileExec3727536717.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec3727536717
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3727536717.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTryCompileExec3727536717.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3727536717 -rdynamic 
-make[1]: Leaving directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp'
+Run Build Command:/usr/bin/make "cmTryCompileExec3600853594/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3600853594.dir/build.make CMakeFiles/cmTryCompileExec3600853594.dir/build
+make[1]: Entering directory `/home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3600853594.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTryCompileExec3600853594.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3600853594
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3600853594.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTryCompileExec3600853594.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3600853594 -rdynamic 
+make[1]: Leaving directory `/home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp'
 
 
 Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
-Change Dir: /home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp
+Change Dir: /home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec2321676751/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec2321676751.dir/build.make CMakeFiles/cmTryCompileExec2321676751.dir/build
-make[1]: Entering directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec2321676751.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTryCompileExec2321676751.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec2321676751
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2321676751.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTryCompileExec2321676751.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2321676751 -rdynamic -lICE 
-make[1]: Leaving directory `/home/shifaz/omegalib/source/modules/s2plot/example/CMakeFiles/CMakeTmp'
+Run Build Command:/usr/bin/make "cmTryCompileExec1926747208/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1926747208.dir/build.make CMakeFiles/cmTryCompileExec1926747208.dir/build
+make[1]: Entering directory `/home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1926747208.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTryCompileExec1926747208.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1926747208
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1926747208.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTryCompileExec1926747208.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1926747208 -rdynamic -lICE 
+make[1]: Leaving directory `/home/dre/Desktop/omegalib/core/modules/s2plot/example/CMakeFiles/CMakeTmp'
 
 
