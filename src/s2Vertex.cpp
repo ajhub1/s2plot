@@ -89,7 +89,7 @@ s2Vertex::~s2Vertex()
 void s2Vertex::initialise(GLfloat x, GLfloat y, GLfloat z, GLfloat w)
 {
 	position = new vec4(x,y,z,w);
-	colour = new vec4(1.0f,1.0f,1.0f,1.0f);
+	colour = new vec4(0.5f,0.5f,0.5f,1.0f);
 	normal = new vec4(1.0f,1.0f,1.0f,1.0f); // TODO think about normal default
 
 	primitives = new vector<s2Primitive*>();

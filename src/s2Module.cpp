@@ -41,105 +41,12 @@ using namespace std;
  * */
 void s2Module::draw()
 {	
-	// call draw on all objects
-	
-	GLfloat sampleTriangle[] = { //remember specify coordinates anti clockwise ->normal openGL convention
-		 -1.0f, 0.0f, 0.0f, 1.0f, //1
-		 1.0f, 0.0f, 0.0f, 0.0f,
-		 0.0f, 0.0f, 0.0f, 0.0f,
-
-		 -1.0f, 1.0f, 0.0f, 1.0f, //3
-		 0.0f, 1.0f, 0.0f, 0.0f,
-		 0.0f, 0.0f, 0.0f, 0.0f,
-
-		 1.0f, 1.0f, 0.0f, 1.0f, //2
-		 0.0f, 0.0f, 1.0f, 0.0f,
-		 0.0f, 0.0f, 0.0f, 0.0f,
-
-		 1.0f, 0.0f, 0.0f, 1.0f, //4
-		 0.0f, 0.0f, 1.0f, 0.0f,
-		 0.0f, 0.0f, 0.0f, 1.0f,
-	};	
-	
-	GLuint temp[] = {0,1,2, 0,2,3, 2,5,3, 3,5,7, 5,4,7, 7,4,6, 
-		4,0,6, 6,0,1, 1,6,7, 1,3,7, 0,4,5, 5,0,2};
-	
-	GLuint sampleIndices[] = { 0,1,2, 0,2,3};
-	
-	vector<GLfloat>* vData = new vector<GLfloat>();
-	vData->assign(sampleTriangle, sampleTriangle + 48);
-	
-	 //facets->clear();
-	 //vertexData->clear();
-	 //indices->clear();
-	 
-	 //s2Vertex* v1 = new s2Vertex(-1.0f, 0.0f, 0.0f, 1.0f);
-	 //s2Vertex* v2 = new s2Vertex(0.0f, 1.0f, 0.0f, 1.0f);
-	 //s2Vertex* v3 = new s2Vertex(1.0f, 0.0f, 0.0f, 1.0f);
-	
-	 //vec3 t1 = vec3(0, 1, 2);
-	 
-	 //GLuint* a = new GLuint;
-	 //*a = 0;
-	 
-	 //facets->push_back(new s2Triangle(a, v1, v2, v3, t1));
-	 
-
-	 //vertexData->insert( vertexData->end(),
-							//v1->getVertexData()->begin(),
-							//v1->getVertexData()->end());
-	 //vertexData->insert( vertexData->end(),
-							//v2->getVertexData()->begin(),
-							//v2->getVertexData()->end());
-	 //vertexData->insert( vertexData->end(),
-							//v3->getVertexData()->begin(),
-							//v3->getVertexData()->end());
-	
-	 
-	 //indices->push_back(0);
-	 //indices->push_back(1);
-	 //indices->push_back(2);
-	
-	//vData->resize(vData->size());
-	
-	 // printf("size %d \n", (int) vData->size()); 
-	 printf("drawing %d %d %f\n", 
-						 (int) (sizeof(GLuint) * indices->size()), 
-						 (int) (sizeof(GLfloat) * vertexData->size())
-						, vertexData->at(0));
-
-	 s2Program* s2prog = new s2Program();
-	 GLuint sampleVBO; //remember unsigne int here
-	 
-	 glGenBuffers(1, &sampleVBO); //1 = number of vbos to make
-	 glBindBuffer(GL_ARRAY_BUFFER, sampleVBO);
-	 //glBufferData(GL_ARRAY_BUFFER, (sizeof(sampleTriangle)), sampleTriangle, GL_STATIC_DRAW);
-	 glBufferData(GL_ARRAY_BUFFER, (sizeof(GLfloat) * vertexData->size()), vertexData->data(), GL_STATIC_DRAW);
-	 
-
-	 GLuint indexBufferID;
-	 glGenBuffers(1, &indexBufferID);
-	 glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexBufferID);
-	 //glBufferData(GL_ELEMENT_ARRAY_BUFFER, (sizeof(sampleIndices)), sampleIndices, GL_STATIC_DRAW);
-	 glBufferData(GL_ELEMENT_ARRAY_BUFFER, (sizeof(GLuint) * indices->size()), indices->data(), GL_STATIC_DRAW);
-
-	 glEnableVertexAttribArray(0); 
-	 glEnableVertexAttribArray(1);
-
-	 GLsizei sizeOfVector4InBytes = sizeof(GLfloat) * 12;
-	 glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, sizeOfVector4InBytes, 0);
-	 glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, sizeOfVector4InBytes,
-	 (void*) (sizeof(GLfloat) * 4));
-
-
-	 //GLint posAttrib = glGetAttribLocation(shaderProgram, "position");
-	 //glVertexAttribPointer(posAttrib, 2, GL_FLOAT, GL_FALSE, 0, 0);
-	
-	
-	 glUseProgram(s2prog->getShaderProgramRef());
+	//TODO use a flag to do this once
+	glBufferData(GL_ARRAY_BUFFER, (sizeof(GLfloat) * vertexData->size()), vertexData->data(), GL_STATIC_DRAW);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, (sizeof(GLuint) * indices->size()), indices->data(), GL_STATIC_DRAW);
 
 	int i;
-	for(i = 2; i < facets->size(); i++)
+	for(i = 0; i < facets->size(); i++)
 	{
 		facets->at(i)->draw();
 	}
@@ -153,7 +60,6 @@ void s2Module::draw()
 s2Module::s2Module(): EngineModule("s2Module")
 {
 	s2Module::initialise();
-	//s2Module::initialiseGL();
 	flag = 0;
 }
 
@@ -201,8 +107,6 @@ void s2Module::initialiseGL()
 							(void*) (sizeof(GLfloat) * 4));
 							
 	glUseProgram(shaderProgram->getShaderProgramRef());
-	
-
 }
 
 void s2Module::update(const UpdateContext& context)

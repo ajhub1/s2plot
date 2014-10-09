@@ -1,10 +1,12 @@
-#version 150
+#version 110
 
-in vec4 position;
-
+attribute vec4 position;
+varying vec4 outColor;
 
 void main()
 {
-	gl_Position = vec4(position);
+	gl_Position = gl_Vertex * gl_ModelViewMatrix;
+	gl_FrontColor = gl_Color;
+	outColor = position;
 
 }

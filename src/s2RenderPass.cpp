@@ -46,6 +46,7 @@ void s2RenderPass::initialize()
 	RenderPass::initialize();
 
     myModule = (s2Module*) getUserData();
+    myModule->initialiseGL();
 }
 
 void s2RenderPass::render(Renderer* client, const DrawContext& context)
