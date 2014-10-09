@@ -30,11 +30,9 @@
  * s2Program.cpp
  * 
  ******************************************************************************/
- //temp -> TODO code copied from www.arcsynthesis.org
+//TODO REFERENCE code copied from www.arcsynthesis.org
 
 #include "s2plot/s2plot.h"
-#include <omega.h>
-#include <omegaGl.h>
 
 using namespace omega;
 using namespace s2plot;
@@ -42,49 +40,57 @@ using namespace std;
 
 s2Program::s2Program()
 {
-	std::ifstream t("vertexShader.vert");
+	ifstream vertShaderStream("vertexShader.vert");
+	if (!vertShaderStream) 
+	{
+		fprintf(stderr, "Cannot find vertex shader file 'vertexShader.vert' in current directory\n");
+		return;
+	}
+	vertShaderStream.seekg(0, ios::end);   
+	strVertexShader.reserve(vertShaderStream.tellg());
+	vertShaderStream.seekg(0, ios::beg);
 	
-
-	t.seekg(0, std::ios::end);   
-	strvs.reserve(t.tellg());
-	t.seekg(0, std::ios::beg);
-
-	strvs.assign((std::istreambuf_iterator<char>(t)),
-				std::istreambuf_iterator<char>());
+	strVertexShader.assign((istreambuf_iterator<char>(vertShaderStream)),
+							istreambuf_iterator<char>());
 				
-	std::ifstream tt("fragmentShader.frag");
+	ifstream fragShaderStream("fragmentShader.frag");
+	if (!fragShaderStream) 
+	{
+		fprintf(stderr, "Cannot find fragment shader file 'fragmentShader.vert' in current directory\n");
+		return;
+	}
+	fragShaderStream.seekg(0, ios::end);   
+	strFragmentShader.reserve(fragShaderStream.tellg());
+	fragShaderStream.seekg(0, ios::beg);
 	
-	tt.seekg(0, std::ios::end);   
-	strfs.reserve(tt.tellg());
-	tt.seekg(0, std::ios::beg);
-
-	strfs.assign((std::istreambuf_iterator<char>(tt)),
-				std::istreambuf_iterator<char>());   
-	
-	s2ProgramInit(strvs, strfs);
+	strFragmentShader.assign((istreambuf_iterator<char>(fragShaderStream)),
+							istreambuf_iterator<char>());   
+				
+	s2ProgramInit(strVertexShader, strFragmentShader);
 }
+
 
 GLuint s2Program::getShaderProgramRef()
 {
 	return shaderProgramRef;
 }
 
-
-void s2Program::s2ProgramInit(std::string strVertexShader, std::string strFragmentShader) //use init list?? TODO
+void s2Program::s2ProgramInit(string strVertexShader, string strFragmentShader)
 {
 	shaderList.push_back(CreateShader(GL_VERTEX_SHADER, strVertexShader));
 	shaderList.push_back(CreateShader(GL_FRAGMENT_SHADER, strFragmentShader));
 	
 	shaderProgramRef = s2Program::CreateProgram(shaderList);
 
-	std::for_each(shaderList.begin(), shaderList.end(), glDeleteShader);
+	for_each(shaderList.begin(), shaderList.end(), glDeleteShader);
 }
 
-GLuint s2Program::CreateShader(GLenum eShaderType, const std::string &strShaderFile)
+GLuint s2Program::CreateShader(GLenum eShaderType, const string &strShaderFile)
 {
 	GLuint shader = glCreateShader(eShaderType);
 	const char *strFileData = strShaderFile.c_str();
 	glShaderSource(shader, 1, &strFileData, NULL);
+	
 	glCompileShader(shader);
 	
 	GLint status;
@@ -112,7 +118,7 @@ GLuint s2Program::CreateShader(GLenum eShaderType, const std::string &strShaderF
 	return shader;
 }
 
-GLuint s2Program::CreateProgram(const std::vector<GLuint> &shaderList)
+GLuint s2Program::CreateProgram(const vector<GLuint> &shaderList)
 {
 	GLuint program = glCreateProgram();
 	
@@ -136,7 +142,6 @@ GLuint s2Program::CreateProgram(const std::vector<GLuint> &shaderList)
 	
 	for(size_t iLoop = 0; iLoop < shaderList.size(); iLoop++)
 		glDetachShader(program, shaderList[iLoop]);
-	//printf("\nCreateProgram exit\n");
 	return program;
 }
 

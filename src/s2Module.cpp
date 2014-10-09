@@ -52,9 +52,7 @@ void s2Module::draw()
 	{
 		facets->at(i)->draw();
 	}
-	gluLookAt(5.0f, 5.0f, 5.0f,
-				0.0f, 0.0f, 0.0f,
-				0.0f, 1.0f, 0.0f);
+
 	Vector3f cameraPosition = camera->getPosition();
 	printf("x:%f\ty:%f\tz:%f\n", cameraPosition.x(), cameraPosition.y(), cameraPosition.z());
 }

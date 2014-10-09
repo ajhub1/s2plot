@@ -151,7 +151,7 @@ vector<s2Primitive*>* s2Cube::getPrimitives()
 
 void s2Cube::updateFacetOffsets(GLuint baseOffset)
 {
-	// TODO shifaz is a bitch, andreas is THE ass
+	// TODO
 }
 
 vector<GLfloat>* s2Cube::getVertexData()

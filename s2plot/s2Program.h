@@ -56,8 +56,8 @@ namespace s2plot
 			//~s2Program();
 		private:
 			vector<GLuint> shaderList;
-			string strvs;	//stores text file
-			string strfs;
+			string strVertexShader;	//stores text file
+			string strFragmentShader;
 			GLuint shaderProgramRef;
 	};
 }
