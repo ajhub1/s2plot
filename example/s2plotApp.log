@@ -36,7 +36,7 @@ ModuleServices::addModule: CameraController
 Engine: Running with sound disabled.
 Death switch timeout: 240 seconds
 [EQ] NodeImpl::NodeImpl
-[EQ] NodeImpl::configInit c26b007500f4eefe:985086b9dd4218d3
+[EQ] NodeImpl::configInit 5fac41d4a0814f75:193193e476895d46
 @Renderer::Initialize: id = 0
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< DISPLAY INITIALIZATION
 

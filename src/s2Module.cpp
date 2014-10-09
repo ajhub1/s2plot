@@ -138,11 +138,8 @@ void s2Module::draw()
 	
 	 glUseProgram(s2prog->getShaderProgramRef());
 
-	 //glDrawArrays(GL_TRIANGLES, 0, 3);
-	 //glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, (void*)(0 * sizeof(GLuint)));
-	 
 	int i;
-	for(i = 0; i < facets->size(); i++)
+	for(i = 2; i < facets->size(); i++)
 	{
 		facets->at(i)->draw();
 	}

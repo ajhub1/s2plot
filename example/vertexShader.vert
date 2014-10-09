@@ -1,6 +1,6 @@
-#version 110
+#version 150
 
-attribute vec4 position;
+in vec4 position;
 
 
 void main()
