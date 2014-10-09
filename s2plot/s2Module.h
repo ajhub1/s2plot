@@ -94,6 +94,11 @@ namespace s2plot
 			s2Program* shaderProgram;
 			GLuint vertexBufferRef;
 			GLuint indexBufferRef;
+			
+			//attribute locations in shader 
+			GLint vertexLoc;
+			GLint colorLoc;
+			GLint normalLoc;
 	};
 }
 #endif

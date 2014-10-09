@@ -41,6 +41,8 @@ using namespace std;
  * */
 void s2Module::draw()
 {	
+	
+	
 	//TODO use a flag to do this once
 	glBufferData(GL_ARRAY_BUFFER, (sizeof(GLfloat) * vertexData->size()), vertexData->data(), GL_STATIC_DRAW);
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, (sizeof(GLuint) * indices->size()), indices->data(), GL_STATIC_DRAW);
@@ -50,7 +52,11 @@ void s2Module::draw()
 	{
 		facets->at(i)->draw();
 	}
-	 
+	gluLookAt(5.0f, 5.0f, 5.0f,
+				0.0f, 0.0f, 0.0f,
+				0.0f, 1.0f, 0.0f);
+	Vector3f cameraPosition = camera->getPosition();
+	printf("x:%f\ty:%f\tz:%f\n", cameraPosition.x(), cameraPosition.y(), cameraPosition.z());
 }
 
 /* Constructor - creates an engine module with the name "s2plotModule"
@@ -97,14 +103,22 @@ void s2Module::initialiseGL()
 	glGenBuffers(1, &indexBufferRef);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexBufferRef);
 	
-	glEnableVertexAttribArray(0);
-	glEnableVertexAttribArray(1);
+	vertexLoc = glGetAttribLocation(shaderProgram->getShaderProgramRef(), "position");
+	colorLoc = glGetAttribLocation(shaderProgram->getShaderProgramRef(), "color");
+	normalLoc = glGetAttribLocation(shaderProgram->getShaderProgramRef(), "normal");
+	
+	
+	glEnableVertexAttribArray(vertexLoc);
+	glEnableVertexAttribArray(colorLoc);
+	glEnableVertexAttribArray(normalLoc);
 	
 	GLsizei stride = sizeof(GLfloat) * 12; // TODO magic number
 	
-	glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, stride, 0);
-	glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, stride, 
+	glVertexAttribPointer(vertexLoc, 4, GL_FLOAT, GL_FALSE, stride, 0);
+	glVertexAttribPointer(colorLoc, 4, GL_FLOAT, GL_FALSE, stride, 
 							(void*) (sizeof(GLfloat) * 4));
+	glVertexAttribPointer(normalLoc, 4, GL_FLOAT, GL_FALSE, stride, 
+							(void*) (sizeof(GLfloat) * 8));
 							
 	glUseProgram(shaderProgram->getShaderProgramRef());
 }

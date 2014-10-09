@@ -73,10 +73,10 @@ void s2Cube::initialise(GLuint* offsetptr)
 		4,0,6, 6,0,1, 1,6,7, 1,3,7, 0,4,5, 5,0,2};
 
 	//vertices
-	vertices[0] = new s2Vertex(0.0f, 0.0f, 0.0f, 1.0f);
-	vertices[1] = new s2Vertex(0.0f, 1.0f, 0.0f, 1.0f);
-	vertices[2] = new s2Vertex(1.0f, 0.0f, 0.0f, 1.0f);
-	vertices[3] = new s2Vertex(1.0f, 1.0f, 0.0f, 1.0f);
+	vertices[0] = new s2Vertex(0.0f, 0.0f, -1.0f, 1.0f);
+	vertices[1] = new s2Vertex(0.0f, 1.0f, -1.0f, 1.0f);
+	vertices[2] = new s2Vertex(1.0f, 0.0f, -1.0f, 1.0f);
+	vertices[3] = new s2Vertex(1.0f, 1.0f, -1.0f, 1.0f);
 	vertices[4] = new s2Vertex(0.0f, 0.0f, 1.0f, 1.0f);
 	vertices[5] = new s2Vertex(0.0f, 1.0f, 1.0f, 1.0f);
 	vertices[6] = new s2Vertex(1.0f, 0.0f, 1.0f, 1.0f);
